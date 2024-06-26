@@ -1,4 +1,4 @@
-FROM golang:1.20.3-windowsservercore-1809
+FROM golang:1.22.4-windowsservercore-1809
 
 SHELL ["powershell", "-command"]
 
