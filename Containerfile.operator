@@ -23,8 +23,8 @@ COPY .bingo .bingo
 COPY conf conf
 COPY go.* ./
 
-RUN go mod verify
-RUN make build-go 
+RUN go work vendor
+RUN go run build.go -build-tags=strictfipsruntime build 
 
 # Need to copy the generated binaries to a non-platform specific location to handle
 # s390x builds for example
