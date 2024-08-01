@@ -1,0 +1,106 @@
+# Golang build container
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.22 AS builder 
+
+WORKDIR $GOPATH/src/github.com/grafana/grafana
+
+ARG COMMIT_SHA="5b85c4c2fcf5d32d4f68aaef345c53096359b2f1"
+ARG BUILD_BRANCH=""
+ARG GO_BUILD_TAGS="oss"
+ARG WIRE_TAGS="oss"
+ARG BINGO="true"
+
+COPY go.mod go.sum embed.go Makefile build.go package.json ./
+COPY kinds kinds
+COPY local local
+COPY packages/grafana-schema packages/grafana-schema/
+COPY public/app/plugins public/app/plugins/
+COPY public/api-merged.json public/api-merged.json
+COPY plugins-bundled plugins-bundled
+COPY pkg pkg/
+COPY scripts scripts/
+COPY cue.mod cue.mod/
+COPY .bingo .bingo
+COPY conf conf
+COPY go.* ./
+
+RUN go mod verify
+RUN make build-go 
+
+# Need to copy the generated binaries to a non-platform specific location to handle
+# s390x builds for example
+RUN cp $GOPATH/src/github.com/grafana/grafana/bin/linux-$(go env GOARCH)/grafana* /usr/bin/
+
+# Final container
+FROM registry.access.redhat.com/ubi9/ubi:latest
+
+ARG VCS_REF
+ARG VCS_URL
+ARG IMAGE_NAME
+ARG IMAGE_DESCRIPTION
+ARG IMAGE_DISPLAY_NAME
+ARG IMAGE_NAME_ARCH
+ARG IMAGE_MAINTAINER
+ARG IMAGE_VENDOR
+ARG IMAGE_VERSION
+ARG IMAGE_RELEASE
+ARG IMAGE_SUMMARY
+ARG IMAGE_OPENSHIFT_TAGS
+
+LABEL org.label-schema.vendor="Red Hat" \
+    org.label-schema.name="$IMAGE_NAME_ARCH" \
+    org.label-schema.description="$IMAGE_DESCRIPTION" \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.vcs-url=$VCS_URL \
+    org.label-schema.license="Red Hat Advanced Cluster Management for Kubernetes EULA" \
+    org.label-schema.schema-version="1.0" \
+    name="$IMAGE_NAME" \
+    maintainer="$IMAGE_MAINTAINER" \
+    vendor="$IMAGE_VENDOR" \
+    version="$IMAGE_VERSION" \
+    release="$IMAGE_RELEASE" \
+    description="$IMAGE_DESCRIPTION" \
+    summary="$IMAGE_SUMMARY" \
+    io.k8s.display-name="$IMAGE_DISPLAY_NAME" \
+    io.k8s.description="$IMAGE_DESCRIPTION" \
+    io.openshift.tags="$IMAGE_OPENSHIFT_TAGS"
+
+ARG GF_UID="472"
+ARG GF_GID="472"
+
+ENV PATH=/usr/share/grafana/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+    GF_PATHS_CONFIG="/etc/grafana/grafana.ini" \
+    GF_PATHS_DATA="/var/lib/grafana" \
+    GF_PATHS_HOME="/usr/share/grafana" \
+    GF_PATHS_LOGS="/var/log/grafana" \
+    GF_PATHS_PLUGINS="/var/lib/grafana/plugins" \
+    GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
+
+WORKDIR $GF_PATHS_HOME
+
+COPY conf ./conf
+
+RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
+    groupadd --system -g $GF_GID grafana && \
+    useradd --system -u $GF_UID -g grafana grafana && \
+    mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
+             "$GF_PATHS_PROVISIONING/dashboards" \
+             "$GF_PATHS_PROVISIONING/notifiers" \
+             "$GF_PATHS_LOGS" \
+             "$GF_PATHS_PLUGINS" \
+             "$GF_PATHS_DATA" && \
+    cp "$GF_PATHS_HOME/conf/sample.ini" "$GF_PATHS_CONFIG" && \
+    cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/grafana/ldap.toml && \
+    chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
+    chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
+
+COPY --from=builder /usr/bin/grafana* ./bin/
+COPY public ./public
+COPY tools ./tools
+
+EXPOSE 3000
+
+COPY ./packaging/docker/run.sh /run.sh
+
+USER grafana
+ENTRYPOINT [ "/run.sh" ]
+
