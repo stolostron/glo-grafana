@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/azure-sql-edge:1.0.7
+FROM mcr.microsoft.com/azure-sql-edge:2.0.0
 WORKDIR /usr/setup
 COPY entrypoint.sh ./
 
