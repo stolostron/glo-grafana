@@ -1,4 +1,4 @@
-from  ubuntu:14.04.5
+from  ubuntu:24.04
 
 run apt-get -y update
 
