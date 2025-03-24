@@ -3,7 +3,7 @@
 ARG BASE_IMAGE=alpine:3.21.3
 ARG JS_IMAGE=node:22-alpine
 ARG JS_PLATFORM=linux/amd64
-ARG GO_IMAGE=golang:1.23.2-alpine
+ARG GO_IMAGE=golang:1.24.1-alpine
 
 ARG GO_SRC=go-builder
 ARG JS_SRC=js-builder
