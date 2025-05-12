@@ -30,7 +30,7 @@ RUN make build-go
 
 # Need to copy the generated binaries to a non-platform specific location to handle
 # s390x builds for example
-RUN cp $GOPATH/src/github.com/grafana/grafana/bin/linux-$(go env GOARCH)/grafana* /usr/bin/
+RUN cp ./bin/linux-$(go env GOARCH)/grafana* /usr/bin/
 
 # Final container
 FROM registry.access.redhat.com/ubi9/ubi:latest
