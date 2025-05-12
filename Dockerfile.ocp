@@ -23,6 +23,8 @@ COPY .bingo .bingo
 COPY conf conf
 COPY go.* ./
 
+ENV GOFLAGS="-mod=readonly"
+
 RUN go mod verify
 RUN make build-go 
 
