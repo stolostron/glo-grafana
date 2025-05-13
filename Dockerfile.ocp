@@ -35,11 +35,19 @@ RUN cp ./bin/linux-$(go env GOARCH)/grafana* /usr/bin/
 # Final container
 FROM registry.access.redhat.com/ubi9/ubi:latest
 
-LABEL io.k8s.display-name="Grafana" \
-      io.k8s.description="Grafana is an open-source, general purpose dashboard and graph composer" \
-      io.openshift.tags="openshift" \
-      summary="Grafana is an open-source, general purpose dashboard and graph composer" \
-      maintainer="Red Hat Advanced Cluster Management for Kubernetes <acm-component-maintainers@redhat.com>"
+# Red Hat annotations.
+LABEL com.redhat.component="multicluster-global-hub-grafana"
+
+# Bundle metadata
+LABEL name="multicluster-global-hub/multicluster-global-hub-grafana"
+LABEL version="release-1.5"
+LABEL summary="Grafana is an open-source, general purpose dashboard and graph composer"
+LABEL io.openshift.expose-services=""
+LABEL io.openshift.tags="data,images"
+LABEL io.k8s.display-name="Grafana"
+LABEL io.k8s.description="Grafana is an open-source, general purpose dashboard and graph composer"
+LABEL maintainer="['acm-component-maintainers@redhat.com']"
+LABEL description="Grafana is an open-source, general purpose dashboard and graph composer"
 
 ARG GF_UID="472"
 ARG GF_GID="472"
