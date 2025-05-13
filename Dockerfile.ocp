@@ -1,5 +1,5 @@
 # Golang build container
-FROM registry.ci.openshift.org/stolostron/builder:go1.23-linux AS builder
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.23 AS builder
 
 WORKDIR $GOPATH/src/github.com/grafana/grafana
 
