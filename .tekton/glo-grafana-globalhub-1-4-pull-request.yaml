@@ -30,7 +30,7 @@ spec:
     value:
     - linux/x86_64
   - name: dockerfile
-    value: Containerfile.konflux 
+    value: Containerfile.konflux
   - name: path-context
     value: .
   pipelineSpec:
@@ -590,7 +590,8 @@ spec:
       optional: true
     - name: netrc
       optional: true
-  taskRunTemplate: {}
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-glo-grafana-globalhub-1-4
   workspaces:
   - name: git-auth
     secret:
