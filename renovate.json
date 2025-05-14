@@ -3,5 +3,50 @@
   "baseBranches": ["release-1.5", "release-1.4", "release-1.3"],
   "addLabels": ["ok-to-test"],
   "schedule": ["every weekend"],
-  "timezone": "America/New_York"
+  "timezone": "America/New_York",
+  "gomod":{
+    "packageRules": [
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchDepTypes": [
+          "indirect"
+        ],
+        "matchUpdateTypes": [
+          "pin",
+          "pinDigest",
+          "digest",
+          "lockFileMaintenance",
+          "rollback",
+          "bump",
+          "replacement",
+          "patch",
+          "minor",
+          "major"
+        ],
+        "enabled": false
+      },
+      {
+        "matchManagers": [
+          "gomod"
+        ],
+        "matchDepTypes": [
+          "require"
+        ],
+        "matchUpdateTypes": [
+          "pin",
+          "pinDigest",
+          "digest",
+          "lockFileMaintenance",
+          "rollback",
+          "bump",
+          "replacement",
+          "patch",
+          "major"
+        ],
+        "enabled": false
+      }
+    ]
+  }
 }
