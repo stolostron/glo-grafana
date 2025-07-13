@@ -11,10 +11,10 @@ require (
 	github.com/stretchr/testify v1.9.0
 	go.opentelemetry.io/otel/trace v1.26.0
 	golang.org/x/mod v0.18.0
-	k8s.io/apimachinery v0.29.3
-	k8s.io/apiserver v0.29.2
-	k8s.io/client-go v0.29.3
-	k8s.io/component-base v0.29.2
+	k8s.io/apimachinery v0.33.2
+	k8s.io/apiserver v0.33.2
+	k8s.io/client-go v0.33.2
+	k8s.io/component-base v0.33.2
 	k8s.io/klog/v2 v2.120.1
 	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340
 )
