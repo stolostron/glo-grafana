@@ -22,7 +22,7 @@ spec:
   - name: image-expires-after
     value: 5d
   - name: output-image
-    value: quay.io/redhat-user-workloads/acm-multicluster-glo-tenant/release-globalhub-1-3/glo-grafana-globalhub-1-3:on-pr-{{revision}}
+    value: quay.io/redhat-user-workloads/acm-multicluster-glo-tenant/glo-grafana-globalhub-1-3:on-pr-{{revision}}
   - name: revision
     value: '{{revision}}'
   - name: build-platforms
