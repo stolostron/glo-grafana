@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG BASE_IMAGE=alpine:3.21.3
+ARG BASE_IMAGE=alpine:3.22.1
 ARG JS_IMAGE=node:22-alpine
 ARG JS_PLATFORM=linux/amd64
 ARG GO_IMAGE=golang:1.24.1-alpine
