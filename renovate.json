@@ -1,18 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "baseBranches": ["release-1.6", "release-1.5", "release-1.4"],
+  "baseBranchPatterns": ["release-1.6", "release-1.5", "release-1.4"],
   "addLabels": ["ok-to-test"],
   "schedule": ["every weekend"],
   "timezone": "America/New_York",
-  "gomod":{
+  "gomod": {
     "packageRules": [
       {
-        "matchManagers": [
-          "gomod"
-        ],
-        "matchDepTypes": [
-          "indirect"
-        ],
+        "matchManagers": ["gomod"],
+        "matchDepTypes": ["indirect"],
         "matchUpdateTypes": [
           "pin",
           "pinDigest",
@@ -28,12 +24,8 @@
         "enabled": false
       },
       {
-        "matchManagers": [
-          "gomod"
-        ],
-        "matchDepTypes": [
-          "require"
-        ],
+        "matchManagers": ["gomod"],
+        "matchDepTypes": ["require"],
         "matchUpdateTypes": [
           "pin",
           "pinDigest",
