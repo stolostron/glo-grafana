@@ -2885,7 +2885,7 @@ __metadata:
     "@grafana/e2e-selectors": "workspace:*"
     "@grafana/experimental": "npm:1.7.11"
     "@grafana/lezer-logql": "npm:0.2.4"
-    "@grafana/lezer-traceql": "npm:0.0.17"
+    "@grafana/lezer-traceql": "npm:0.0.25"
     "@grafana/monaco-logql": "npm:^0.0.7"
     "@grafana/o11y-ds-frontend": "workspace:*"
     "@grafana/plugin-configs": "npm:11.1.0"
@@ -3237,12 +3237,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grafana/lezer-traceql@npm:0.0.17":
-  version: 0.0.17
-  resolution: "@grafana/lezer-traceql@npm:0.0.17"
+"@grafana/lezer-traceql@npm:0.0.25":
+  version: 0.0.25
+  resolution: "@grafana/lezer-traceql@npm:0.0.25"
   peerDependencies:
-    "@lezer/lr": ^1.3.0
-  checksum: 10/f9b32989ab5bab1f6407b1c83c4fd3169d589cd83d2abe95bcf68dca1ce1c512b923a0087dd010f528a202f47d102ae6dec81385f6a506632f23ece1e471a3df
+    "@lezer/lr": ^1.4.2
+  checksum: 10/f33760b5d00b4b1ddd715be3e9797f51e96c15d45adf53e94112ae13caa0adf64c89c07804103d716f74ab7941d0c53ff1a97abe72948f4ecce1710d8388e121
   languageName: node
   linkType: hard
 
