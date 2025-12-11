@@ -54,6 +54,11 @@ spec:
     # Will mention the user in the slack message when the pipeline run failed; this is not required.
     # Please make sure replace the value with component owner's slack member id.
     value: "S09JCE3DF9N"
+  taskRunSpecs:
+    - pipelineTaskName: build-source-image
+      computeResources:
+        limits:
+          memory: 2Gi
   pipelineRef:
     resolver: git
     params:

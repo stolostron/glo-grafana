@@ -43,6 +43,11 @@ spec:
     value: "true"
   - name: prefetch-input
     value: '[ {"type": "gomod", "path": "."} ]'
+  taskRunSpecs:
+    - pipelineTaskName: build-source-image
+      computeResources:
+        limits:
+          memory: 2Gi
   pipelineRef:
     resolver: git
     params:
