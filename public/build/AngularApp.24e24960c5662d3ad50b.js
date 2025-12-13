@@ -1,7 +1,7 @@
-(self.webpackChunkgrafana=self.webpackChunkgrafana||[]).push([[8888],{54570:l=>{var a=`<div ng-transclude class="gf-form-query-content"></div>
+(self.webpackChunkgrafana=self.webpackChunkgrafana||[]).push([[8888],{70562:l=>{var a=`<div ng-transclude class="gf-form-query-content"></div>
 
-`,t=a,e="public/app/angular/panel/partials/query_editor_row.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},94512:l=>{var a=`<datasource-http-settings-next on-change="onChange" datasourceconfig="current" showaccessoptions="showAccessOption" defaulturl="suggestUrl" showforwardoauthidentityoption="showForwardOAuthIdentityOption" securesocksdsproxyenabled="secureSocksDSProxyEnabled">
-`,t=a,e="public/app/angular/partials/http_settings_next.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},16582:l=>{var a=`<div class="gf-form-group">
+`,t=a,e="public/app/angular/panel/partials/query_editor_row.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},31688:l=>{var a=`<datasource-http-settings-next on-change="onChange" datasourceconfig="current" showaccessoptions="showAccessOption" defaulturl="suggestUrl" showforwardoauthidentityoption="showForwardOAuthIdentityOption" securesocksdsproxyenabled="secureSocksDSProxyEnabled">
+`,t=a,e="public/app/angular/partials/http_settings_next.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},88830:l=>{var a=`<div class="gf-form-group">
   <div class="gf-form">
     <h6>TLS/SSL Auth Details</h6>
     <info-popover mode="header">TLS/SSL certificates are encrypted and stored in the Grafana database.</info-popover>
@@ -50,7 +50,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/angular/partials/tls_auth_settings.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},58064:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
+`,t=a,e="public/app/angular/partials/tls_auth_settings.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},69336:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
 
 <div class="page-container page-body">
 
@@ -62,7 +62,7 @@
 </div>
 
 <footer>
-`,t=a,e="public/app/features/admin/partials/admin_home.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},74966:l=>{var a=`<page-header model="navModel"></page-header>
+`,t=a,e="public/app/features/admin/partials/admin_home.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},80638:l=>{var a=`<page-header model="navModel"></page-header>
 
 <div class="page-container page-body">
   <h3 class="page-sub-heading">Edit Organization</h3>
@@ -108,7 +108,7 @@
 </div>
 
 <footer>
-`,t=a,e="public/app/features/admin/partials/edit_org.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},27836:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
+`,t=a,e="public/app/features/admin/partials/edit_org.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},75396:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
 
 <div class="page-container page-body">
 	<table class="filter-table form-inline">
@@ -162,7 +162,7 @@
 		</tbody>
 	</table>
 </div>
-`,t=a,e="public/app/features/admin/partials/stats.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},97408:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
+`,t=a,e="public/app/features/admin/partials/stats.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},63336:l=>{var a=`<page-header model="ctrl.navModel"></page-header>
 
 <div class="page-container page-body">
 
@@ -189,7 +189,7 @@
 
 </div>
 
-`,t=a,e="public/app/features/admin/partials/styleguide.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},73970:l=>{var a=`
+`,t=a,e="public/app/features/admin/partials/styleguide.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},18170:l=>{var a=`
 <div class="graph-annotation">
 	<div class="graph-annotation__header">
 		<div class="graph-annotation__user" bs-tooltip="'Created by {{ctrl.login}}'">
@@ -224,7 +224,7 @@
 		</div>
 	</form>
 </div>
-`,t=a,e="public/app/features/annotations/partials/event_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},83639:l=>{var a=`<div class="modal-body" ng-cloak>
+`,t=a,e="public/app/features/annotations/partials/event_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},21567:l=>{var a=`<div class="modal-body" ng-cloak>
   <div class="modal-header">
     <h2 class="modal-header-title">
       <icon name="'{{icon}}'" size="'lg'"></icon>
@@ -260,7 +260,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/partials/confirm_modal.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},66976:l=>{var a=`<div class="modal-header">
+`,t=a,e="public/app/partials/confirm_modal.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},67672:l=>{var a=`<div class="modal-header">
   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">\xD7</button>
   <h3>{{modal.title}}</h3>
 </div>
@@ -271,7 +271,7 @@
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-danger" ng-click="dismiss()">Close</button>
-</div>`,t=a,e="public/app/partials/modal.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},69216:l=>{var a=`<page-header model="navModel"></page-header>
+</div>`,t=a,e="public/app/partials/modal.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},8440:l=>{var a=`<page-header model="navModel"></page-header>
 
 <div class="page-container page-body">
 	<div class="signup">
@@ -329,7 +329,7 @@
 </div>
 
 <footer>
-`,t=a,e="public/app/partials/reset_password.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},39597:l=>{var a=`<page-header model="navModel"></page-header>
+`,t=a,e="public/app/partials/reset_password.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},23205:l=>{var a=`<page-header model="navModel"></page-header>
 
 <div class="page-container page-body">
 	<h3 class="page-sub-heading">Hello {{greeting}}.</h3>
@@ -365,7 +365,7 @@
 </div>
 
 <footer>
-`,t=a,e="public/app/partials/signup_invited.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},16324:l=>{var a=`<div class="editor-row">
+`,t=a,e="public/app/partials/signup_invited.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},58780:l=>{var a=`<div class="editor-row">
   <div class="gf-form-group" ng-repeat="yaxis in ctrl.panel.yaxes">
     <h5 class="section-heading" ng-show="$index === 0">Left Y</h5>
     <h5 class="section-heading" ng-show="$index === 1">Right Y</h5>
@@ -457,7 +457,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/axes_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},58261:l=>{var a=`<div class="gf-form-group">
+`,t=a,e="public/app/plugins/panel/graph/axes_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},99085:l=>{var a=`<div class="gf-form-group">
   <div class="grafana-info-box">
     <h5>Migration</h5>
     <p>
@@ -545,7 +545,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/tab_display.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},44766:l=>{var a=`<div class="editor-row">
+`,t=a,e="public/app/plugins/panel/graph/tab_display.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},15862:l=>{var a=`<div class="editor-row">
   <div class="section gf-form-group">
     <h5 class="section-heading">Options</h5>
     <gf-form-switch class="gf-form" label="Show" label-class="width-7" checked="ctrl.panel.legend.show" on-change="ctrl.render()" aria-label="gpl show legend">
@@ -598,7 +598,7 @@
     </gf-form-switch>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/tab_legend.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},98036:l=>{var a=`<div class="graph-series-override" ng-repeat="override in ctrl.panel.seriesOverrides" ng-controller="SeriesOverridesCtrl">
+`,t=a,e="public/app/plugins/panel/graph/tab_legend.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},72460:l=>{var a=`<div class="graph-series-override" ng-repeat="override in ctrl.panel.seriesOverrides" ng-controller="SeriesOverridesCtrl">
   <div class="gf-form">
     <label class="gf-form-label">Alias or regex</label>
     <input type="text" ng-model="override.alias" bs-typeahead="getSeriesNames" ng-blur="ctrl.render()" data-min-length="0" data-items="100" class="gf-form-input width-15" placeholder="For regex use /pattern/">
@@ -626,9 +626,9 @@
     <icon name="'plus'"></icon>&nbsp;Add series override
   </button>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/tab_series_overrides.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},64787:l=>{var a=`<graph-threshold-form panel-ctrl="ctrl"></graph-threshold-form>
-`,t=a,e="public/app/plugins/panel/graph/tab_thresholds.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},73584:l=>{var a=`<graph-time-region-form panel-ctrl="ctrl"></graph-time-region-form>
-`,t=a,e="public/app/plugins/panel/graph/tab_time_regions.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},63548:l=>{var a=`<div class="gf-form-group">
+`,t=a,e="public/app/plugins/panel/graph/tab_series_overrides.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},5323:l=>{var a=`<graph-threshold-form panel-ctrl="ctrl"></graph-threshold-form>
+`,t=a,e="public/app/plugins/panel/graph/tab_thresholds.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},97768:l=>{var a=`<graph-time-region-form panel-ctrl="ctrl"></graph-time-region-form>
+`,t=a,e="public/app/plugins/panel/graph/tab_time_regions.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},34852:l=>{var a=`<div class="gf-form-group">
   <p class="muted" ng-show="ctrl.disabled">
     Visual thresholds options <strong>disabled.</strong> Visit the Alert tab to update your thresholds.<br>
     To re-enable thresholds, the alert rule must be deleted from this panel.
@@ -696,7 +696,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/thresholds_form.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},1713:l=>{var a=`<div class="gf-form-group">
+`,t=a,e="public/app/plugins/panel/graph/thresholds_form.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},86617:l=>{var a=`<div class="gf-form-group">
   <div class="gf-form-inline" ng-repeat="timeRegion in ctrl.panel.timeRegions">
     <div class="gf-form">
       <label class="gf-form-label">T{{$index+1}}</label>
@@ -756,7 +756,7 @@
     </button>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/graph/time_regions_form.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},3073:l=>{var a=`<div class="editor-row">
+`,t=a,e="public/app/plugins/panel/graph/time_regions_form.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},97865:l=>{var a=`<div class="editor-row">
   <div class="section gf-form-group">
     <h5 class="section-heading">Y Axis</h5>
     <div class="gf-form">
@@ -844,7 +844,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/heatmap/partials/axes_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},61806:l=>{var a=`<div class="editor-row">
+`,t=a,e="public/app/plugins/panel/heatmap/partials/axes_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},91046:l=>{var a=`<div class="editor-row">
   <div class="section gf-form-group">
     <h5 class="section-heading">Colors</h5>
     <div class="gf-form">
@@ -933,7 +933,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/heatmap/partials/display_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},86832:l=>{var a=`<div class="edit-tab-content" ng-repeat="style in editor.panel.styles">
+`,t=a,e="public/app/plugins/panel/heatmap/partials/display_editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},35352:l=>{var a=`<div class="edit-tab-content" ng-repeat="style in editor.panel.styles">
   <div class="gf-form-group">
     <h5 class="section-heading">Options</h5>
     <div class="gf-form-inline">
@@ -1123,7 +1123,7 @@
 <button class="btn btn-inverse" ng-click="editor.addColumnStyle()">
   <icon name="'plus'"></icon>&nbsp;Add column style
 </button>
-`,t=a,e="public/app/plugins/panel/table-old/column_options.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},13578:l=>{var a=`<div class="gf-form-group">
+`,t=a,e="public/app/plugins/panel/table-old/column_options.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},12578:l=>{var a=`<div class="gf-form-group">
   <div class="grafana-info-box">
     <h5>Table migration</h5>
     <p>
@@ -1186,7 +1186,7 @@
     </div>
   </div>
 </div>
-`,t=a,e="public/app/plugins/panel/table-old/editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},58203:l=>{var a=`<div class="table-panel-container">
+`,t=a,e="public/app/plugins/panel/table-old/editor.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},5187:l=>{var a=`<div class="table-panel-container">
   <div class="table-panel-header-bg" ng-show="ctrl.table.rows.length"></div>
   <div class="table-panel-scroll" ng-show="ctrl.table.rows.length">
     <table class="table-panel-table">
@@ -1211,6 +1211,6 @@
   <span class="small"> No data to show <tip>Nothing returned by data query</tip> </span>
 </div>
 <div class="table-panel-footer"></div>
-`,t=a,e="public/app/plugins/panel/table-old/module.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},12631:(l,a,t)=>{var e={"./angular/panel/partials/query_editor_row.html":54570,"./angular/partials/http_settings_next.html":94512,"./angular/partials/tls_auth_settings.html":16582,"./features/admin/partials/admin_home.html":58064,"./features/admin/partials/edit_org.html":74966,"./features/admin/partials/stats.html":27836,"./features/admin/partials/styleguide.html":97408,"./features/annotations/partials/event_editor.html":73970,"./partials/confirm_modal.html":83639,"./partials/modal.html":66976,"./partials/reset_password.html":69216,"./partials/signup_invited.html":39597,"./plugins/panel/graph/axes_editor.html":16324,"./plugins/panel/graph/tab_display.html":58261,"./plugins/panel/graph/tab_legend.html":44766,"./plugins/panel/graph/tab_series_overrides.html":98036,"./plugins/panel/graph/tab_thresholds.html":64787,"./plugins/panel/graph/tab_time_regions.html":73584,"./plugins/panel/graph/thresholds_form.html":63548,"./plugins/panel/graph/time_regions_form.html":1713,"./plugins/panel/heatmap/partials/axes_editor.html":3073,"./plugins/panel/heatmap/partials/display_editor.html":61806,"./plugins/panel/table-old/column_options.html":86832,"./plugins/panel/table-old/editor.html":13578,"./plugins/panel/table-old/module.html":58203,"app/angular/panel/partials/query_editor_row.html":54570,"app/angular/partials/http_settings_next.html":94512,"app/angular/partials/tls_auth_settings.html":16582,"app/features/admin/partials/admin_home.html":58064,"app/features/admin/partials/edit_org.html":74966,"app/features/admin/partials/stats.html":27836,"app/features/admin/partials/styleguide.html":97408,"app/features/annotations/partials/event_editor.html":73970,"app/partials/confirm_modal.html":83639,"app/partials/modal.html":66976,"app/partials/reset_password.html":69216,"app/partials/signup_invited.html":39597,"app/plugins/panel/graph/axes_editor.html":16324,"app/plugins/panel/graph/tab_display.html":58261,"app/plugins/panel/graph/tab_legend.html":44766,"app/plugins/panel/graph/tab_series_overrides.html":98036,"app/plugins/panel/graph/tab_thresholds.html":64787,"app/plugins/panel/graph/tab_time_regions.html":73584,"app/plugins/panel/graph/thresholds_form.html":63548,"app/plugins/panel/graph/time_regions_form.html":1713,"app/plugins/panel/heatmap/partials/axes_editor.html":3073,"app/plugins/panel/heatmap/partials/display_editor.html":61806,"app/plugins/panel/table-old/column_options.html":86832,"app/plugins/panel/table-old/editor.html":13578,"app/plugins/panel/table-old/module.html":58203};function n(s){var r=o(s);return t(r)}function o(s){if(!t.o(e,s)){var r=new Error("Cannot find module '"+s+"'");throw r.code="MODULE_NOT_FOUND",r}return e[s]}n.keys=function(){return Object.keys(e)},n.resolve=o,l.exports=n,n.id=12631}}]);
+`,t=a,e="public/app/plugins/panel/table-old/module.html";window.angular.module("ng").run(["$templateCache",function(n){n.put(e,t)}]),l.exports=e},12631:(l,a,t)=>{var e={"./angular/panel/partials/query_editor_row.html":70562,"./angular/partials/http_settings_next.html":31688,"./angular/partials/tls_auth_settings.html":88830,"./features/admin/partials/admin_home.html":69336,"./features/admin/partials/edit_org.html":80638,"./features/admin/partials/stats.html":75396,"./features/admin/partials/styleguide.html":63336,"./features/annotations/partials/event_editor.html":18170,"./partials/confirm_modal.html":21567,"./partials/modal.html":67672,"./partials/reset_password.html":8440,"./partials/signup_invited.html":23205,"./plugins/panel/graph/axes_editor.html":58780,"./plugins/panel/graph/tab_display.html":99085,"./plugins/panel/graph/tab_legend.html":15862,"./plugins/panel/graph/tab_series_overrides.html":72460,"./plugins/panel/graph/tab_thresholds.html":5323,"./plugins/panel/graph/tab_time_regions.html":97768,"./plugins/panel/graph/thresholds_form.html":34852,"./plugins/panel/graph/time_regions_form.html":86617,"./plugins/panel/heatmap/partials/axes_editor.html":97865,"./plugins/panel/heatmap/partials/display_editor.html":91046,"./plugins/panel/table-old/column_options.html":35352,"./plugins/panel/table-old/editor.html":12578,"./plugins/panel/table-old/module.html":5187,"app/angular/panel/partials/query_editor_row.html":70562,"app/angular/partials/http_settings_next.html":31688,"app/angular/partials/tls_auth_settings.html":88830,"app/features/admin/partials/admin_home.html":69336,"app/features/admin/partials/edit_org.html":80638,"app/features/admin/partials/stats.html":75396,"app/features/admin/partials/styleguide.html":63336,"app/features/annotations/partials/event_editor.html":18170,"app/partials/confirm_modal.html":21567,"app/partials/modal.html":67672,"app/partials/reset_password.html":8440,"app/partials/signup_invited.html":23205,"app/plugins/panel/graph/axes_editor.html":58780,"app/plugins/panel/graph/tab_display.html":99085,"app/plugins/panel/graph/tab_legend.html":15862,"app/plugins/panel/graph/tab_series_overrides.html":72460,"app/plugins/panel/graph/tab_thresholds.html":5323,"app/plugins/panel/graph/tab_time_regions.html":97768,"app/plugins/panel/graph/thresholds_form.html":34852,"app/plugins/panel/graph/time_regions_form.html":86617,"app/plugins/panel/heatmap/partials/axes_editor.html":97865,"app/plugins/panel/heatmap/partials/display_editor.html":91046,"app/plugins/panel/table-old/column_options.html":35352,"app/plugins/panel/table-old/editor.html":12578,"app/plugins/panel/table-old/module.html":5187};function n(s){var r=o(s);return t(r)}function o(s){if(!t.o(e,s)){var r=new Error("Cannot find module '"+s+"'");throw r.code="MODULE_NOT_FOUND",r}return e[s]}n.keys=function(){return Object.keys(e)},n.resolve=o,l.exports=n,n.id=12631}}]);
 
-//# sourceMappingURL=AngularApp.4204389955f8d1dfd815.js.map
+//# sourceMappingURL=AngularApp.24e24960c5662d3ad50b.js.map
