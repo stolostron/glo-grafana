@@ -21,6 +21,22 @@ replace github.com/prometheus/prometheus => github.com/prometheus/prometheus v0.
 // Update when github.com/deepmap/oapi-codegen/v2 is updated to support later versions.
 replace github.com/getkin/kin-openapi => github.com/getkin/kin-openapi v0.122.0
 
+// this is required until a new version of k8s.io/component-base is released
+// with an update to prometheus/common v0.48.0
+replace k8s.io/component-base => k8s.io/component-base v0.0.0-20240417101527-62c04b35eff6
+
+// Replace k8s.io/apimachinery to resolve v0.0.0 dependency issue
+replace k8s.io/apimachinery => k8s.io/apimachinery v0.29.3
+
+// Replace k8s.io/client-go to resolve v0.0.0 dependency issue
+replace k8s.io/client-go => k8s.io/client-go v0.29.3
+
+// Replace k8s.io/api to resolve v0.0.0 dependency issue
+replace k8s.io/api => k8s.io/api v0.29.3
+
+// Replace k8s.io/apiserver to resolve v0.0.0 dependency issue
+replace k8s.io/apiserver => k8s.io/apiserver v0.29.2
+
 require (
 	buf.build/gen/go/parca-dev/parca/bufbuild/connect-go v1.4.1-20221222094228-8b1d3d0f62e6.1 // @grafana/observability-traces-and-profiling
 	buf.build/gen/go/parca-dev/parca/protocolbuffers/go v1.33.0-20240414232344-9ca06271cb73.1 // @grafana/observability-traces-and-profiling
@@ -295,7 +311,6 @@ require (
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect; @grafana/grafana-app-platform-squad
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/go-logr/zapr v1.3.0 // indirect
 	github.com/go-openapi/analysis v0.22.2 // indirect
 	github.com/go-openapi/errors v0.22.0 // indirect
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
