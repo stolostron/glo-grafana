@@ -1567,12 +1567,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.24.7, @babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.24.5, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:7.24.7, @babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.1, @babel/runtime@npm:^7.11.1, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.24.5, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
   version: 7.24.7
   resolution: "@babel/runtime@npm:7.24.7"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
   checksum: 10/7b77f566165dee62db3db0296e71d08cafda3f34e1b0dcefcd68427272e17c1704f4e4369bff76651b07b6e49d3ea5a0ce344818af9116e9292e4381e0918c76
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.26.9":
+  version: 7.28.6
+  resolution: "@babel/runtime@npm:7.28.6"
+  checksum: 10/fbcd439cb74d4a681958eb064c509829e3f46d8a4bfaaf441baa81bb6733d1e680bccc676c813883d7741bcaada1d0d04b15aa320ef280b5734e2192b50decf9
   languageName: node
   linkType: hard
 
@@ -8865,6 +8872,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/pako@npm:^2.0.3":
+  version: 2.0.4
+  resolution: "@types/pako@npm:2.0.4"
+  checksum: 10/9be5167f5cb45d405d92e8b320219e6d26f244880893425abb16b998cde0386185f048d60de609672f1e8654c44b77344e754138da3784460f4543fe8576fa62
+  languageName: node
+  linkType: hard
+
 "@types/papaparse@npm:5.3.14":
   version: 5.3.14
   resolution: "@types/papaparse@npm:5.3.14"
@@ -9267,7 +9281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/trusted-types@npm:*":
+"@types/trusted-types@npm:*, @types/trusted-types@npm:^2.0.7":
   version: 2.0.7
   resolution: "@types/trusted-types@npm:2.0.7"
   checksum: 10/8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
@@ -11477,15 +11491,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"btoa@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "btoa@npm:1.2.1"
-  bin:
-    btoa: bin/btoa.js
-  checksum: 10/29f2ca93837e10427184626bdfd5d00065dff28b604b822aa9849297dac8c8d6ad385cc96eed812ebf153d80c24a4556252afdbb97c7a712938baeaad7547705
-  languageName: node
-  linkType: hard
-
 "buffer-crc32@npm:~0.2.3":
   version: 0.2.13
   resolution: "buffer-crc32@npm:0.2.13"
@@ -11748,9 +11753,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"canvg@npm:^3.0.6":
-  version: 3.0.10
-  resolution: "canvg@npm:3.0.10"
+"canvg@npm:^3.0.11":
+  version: 3.0.11
+  resolution: "canvg@npm:3.0.11"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
     "@types/raf": "npm:^3.4.0"
@@ -11760,7 +11765,7 @@ __metadata:
     rgbcolor: "npm:^1.0.1"
     stackblur-canvas: "npm:^2.0.0"
     svg-pathdata: "npm:^6.0.3"
-  checksum: 10/b8b418483df010e38c6a63597425d5826206e8295467ca6db24a42dacc56b5960dfd484d16fdf3e144fff54777a91e551be227588b76cc9ca71fb0efd3afde0e
+  checksum: 10/2200a5f5e147a668d27205e27530d37433ee1ed55a619d192e11716c13295c133fcd7e0c7326b93201305d83e22e88f3d98acc05b43582f1d3ad63528e0b94ff
   languageName: node
   linkType: hard
 
@@ -14304,17 +14309,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:^2.2.0":
-  version: 2.5.5
-  resolution: "dompurify@npm:2.5.5"
-  checksum: 10/4429b9b22a0e67391c27b497b77d6417dd434b63e4d96de6470b6bc37faf2db8669a81aa05b012fbccb6c4ac694e7d8008204cf560b321cd23b97d79611cdc16
-  languageName: node
-  linkType: hard
-
 "dompurify@npm:^3.0.0":
   version: 3.1.5
   resolution: "dompurify@npm:3.1.5"
   checksum: 10/4ea935df48b49a0a76c66b6eee8522ca12783f2643119482b8329867f1e8adb34ff1d2dd56973927be9de5f01079948556907f22e882b06fa7b0c0ba281bf14a
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.2.4":
+  version: 3.3.1
+  resolution: "dompurify@npm:3.3.1"
+  dependencies:
+    "@types/trusted-types": "npm:^2.0.7"
+  dependenciesMeta:
+    "@types/trusted-types":
+      optional: true
+  checksum: 10/f71cca489e628591165d16e8cf4fa4f0d3e2ee48db4d73e9d2c5bedc6f915c92f9e9f101f8c4ba790bec0cdffe7f4e1747f5e31c69dc53ce7ae20a81ff6b0022
   languageName: node
   linkType: hard
 
@@ -15762,6 +15772,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-png@npm:^6.2.0":
+  version: 6.4.0
+  resolution: "fast-png@npm:6.4.0"
+  dependencies:
+    "@types/pako": "npm:^2.0.3"
+    iobuffer: "npm:^5.3.2"
+    pako: "npm:^2.1.0"
+  checksum: 10/b6eaf71f5f5e6e9e6b56ea9f60f214cbe1879e309d47eb7fc5fcf1ed85fb284cd4483ab128e2259389d4db8ef22e266b54853386b8362bae3babb0e4dc626347
+  languageName: node
+  linkType: hard
+
 "fast-safe-stringify@npm:^2.0.7":
   version: 2.1.1
   resolution: "fast-safe-stringify@npm:2.1.1"
@@ -15840,10 +15861,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fflate@npm:^0.4.8":
-  version: 0.4.8
-  resolution: "fflate@npm:0.4.8"
-  checksum: 10/c0c75029bcbefd0b47cede4ad2a3698f571e38d3d93dfbb96d744c655ec3bf5e31111044c2c01fa3965109874f5be8b5a6b3686b958392693689665cbabf3ece
+"fflate@npm:^0.8.1":
+  version: 0.8.2
+  resolution: "fflate@npm:0.8.2"
+  checksum: 10/2bd26ba6d235d428de793c6a0cd1aaa96a06269ebd4e21b46c8fd1bd136abc631acf27e188d47c3936db090bf3e1ede11d15ce9eae9bffdc4bfe1b9dc66ca9cb
   languageName: node
   linkType: hard
 
@@ -18293,6 +18314,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"iobuffer@npm:^5.3.2":
+  version: 5.4.0
+  resolution: "iobuffer@npm:5.4.0"
+  checksum: 10/7f7afe12ee94e34dcf129a5fbb38838f63d6502970f5aa4722c728d65b90ac828c660cd5ec5423bd2b4f348483ba8d6f3e3ad9a5908810bc0f4fae774b3f0e39
+  languageName: node
+  linkType: hard
+
 "ip-address@npm:^9.0.5":
   version: 9.0.5
   resolution: "ip-address@npm:9.0.5"
@@ -19962,17 +19990,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jspdf@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "jspdf@npm:2.5.1"
+"jspdf@npm:3.0.2":
+  version: 3.0.2
+  resolution: "jspdf@npm:3.0.2"
   dependencies:
-    "@babel/runtime": "npm:^7.14.0"
-    atob: "npm:^2.1.2"
-    btoa: "npm:^1.2.1"
-    canvg: "npm:^3.0.6"
+    "@babel/runtime": "npm:^7.26.9"
+    canvg: "npm:^3.0.11"
     core-js: "npm:^3.6.0"
-    dompurify: "npm:^2.2.0"
-    fflate: "npm:^0.4.8"
+    dompurify: "npm:^3.2.4"
+    fast-png: "npm:^6.2.0"
+    fflate: "npm:^0.8.1"
     html2canvas: "npm:^1.0.0-rc.5"
   dependenciesMeta:
     canvg:
@@ -19983,7 +20010,7 @@ __metadata:
       optional: true
     html2canvas:
       optional: true
-  checksum: 10/3a1efc6205c7fcf0e84697dc90277a8aee28274f0ea39c12af38d3302985c359acfe6ee9419ed1cfc7fbb7a59547e3d4cad8dedf6248fc4af7e2087d4a8bb448
+  checksum: 10/8d193eb3192931cf1f84a0b6324dad8566ea38e31b40cef20709819c97216036df3c2be45fbbaac06c4265f658bc0119f8f7e9e57359f498c5f6cb5abdaaf254
   languageName: node
   linkType: hard
 
@@ -23357,6 +23384,13 @@ __metadata:
   version: 2.0.4
   resolution: "pako@npm:2.0.4"
   checksum: 10/b1383742061dbbf2d6e5eb0bb5de827fa5cdd74fc18e157478632443f049a62e47c29b761fb5f1268e6f6979b5b8cff2864f63c2b8156d555065c39c43992505
+  languageName: node
+  linkType: hard
+
+"pako@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "pako@npm:2.1.0"
+  checksum: 10/38a04991d0ec4f4b92794a68b8c92bf7340692c5d980255c92148da96eb3e550df7a86a7128b5ac0c65ecddfe5ef3bbe9c6dab13e1bc315086e759b18f7c1401
   languageName: node
   linkType: hard
 
