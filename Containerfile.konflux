@@ -36,11 +36,12 @@ RUN cp ./bin/linux-$(go env GOARCH)/grafana* /usr/bin/
 FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
 
 # Red Hat annotations.
-LABEL com.redhat.component="multicluster-global-hub-grafana"
+LABEL com.redhat.component="multicluster-globalhub-grafana-rhel9"
+LABEL cpe="cpe:/a:redhat:multicluster_globalhub:1.7::el9"
 
 # Bundle metadata
-LABEL name="multicluster-global-hub/multicluster-global-hub-grafana"
-LABEL version="release-1.5"
+LABEL name="multicluster-globalhub/multicluster-globalhub-grafana-rhel9"
+LABEL version="release-1.7"
 LABEL summary="Grafana is an open-source, general purpose dashboard and graph composer"
 LABEL io.openshift.expose-services=""
 LABEL io.openshift.tags="data,images"
