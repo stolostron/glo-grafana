@@ -7,33 +7,35 @@ ARG COMMIT_SHA="5b85c4c2fcf5d32d4f68aaef345c53096359b2f1"
 ARG BUILD_BRANCH=""
 ARG GO_BUILD_TAGS="oss"
 ARG WIRE_TAGS="oss"
-ARG BINGO="true"
 
 COPY go.mod go.sum embed.go Makefile build.go package.json ./
 COPY kinds kinds
+COPY kindsv2 kindsv2
 COPY local local
 COPY packages/grafana-schema packages/grafana-schema/
 COPY public/app/plugins public/app/plugins/
 COPY public/api-merged.json public/api-merged.json
-COPY plugins-bundled plugins-bundled
 COPY pkg pkg/
 COPY scripts scripts/
 COPY cue.mod cue.mod/
-COPY .bingo .bingo
 COPY conf conf
 COPY go.* ./
+COPY apps apps
+COPY .citools .citools
 
-ENV GOFLAGS="-mod=readonly"
+# Apply custom patches
+COPY stolostron-patches stolostron-patches
+RUN git apply ./stolostron-patches/*
 
 RUN go mod verify
-RUN make build-go 
+RUN make build-go
 
 # Need to copy the generated binaries to a non-platform specific location to handle
 # s390x builds for example
-RUN cp ./bin/linux-$(go env GOARCH)/grafana* /usr/bin/
+RUN cp $GOPATH/src/github.com/grafana/grafana/bin/linux-$(go env GOARCH)/grafana* /usr/bin/
 
 # Final container
-FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
+FROM registry.access.redhat.com/ubi9/ubi:latest
 
 # Red Hat annotations.
 LABEL com.redhat.component="multicluster-globalhub-grafana-rhel9"
