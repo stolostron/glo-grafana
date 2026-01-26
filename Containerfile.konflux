@@ -23,10 +23,14 @@ COPY go.* ./
 COPY apps apps
 COPY .citools .citools
 
+# Apply custom patches
+COPY stolostron-patches stolostron-patches
+RUN git init && git apply ./stolostron-patches/*
+
 ENV GOFLAGS="-mod=readonly"
 
 RUN go mod verify
-RUN make build-go
+RUN go run build.go -build-tags=strictfipsruntime build
 
 # Need to copy the generated binaries to a non-platform specific location to handle
 # s390x builds for example
