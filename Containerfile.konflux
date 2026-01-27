@@ -1,34 +1,3 @@
-# JavaScript build stage
-# Reference: https://github.com/grafana/grafana/blob/main/Dockerfile
-FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS js-builder
-
-WORKDIR /tmp/grafana
-
-USER root
-
-# Install build dependencies
-RUN dnf install -y make gcc-c++ python3 && dnf clean all
-
-# Copy package files first for better layer caching
-COPY package.json project.json nx.json yarn.lock .yarnrc.yml ./
-COPY .yarn .yarn
-COPY packages packages
-COPY public public
-COPY LICENSE ./
-COPY conf/defaults.ini ./conf/defaults.ini
-
-ENV NODE_OPTIONS=--max_old_space_size=8000
-ENV NODE_ENV=production
-
-# Install dependencies and build frontend
-RUN corepack enable && yarn install --immutable
-
-COPY tsconfig.json eslint.config.js .editorconfig .browserslistrc .prettierrc.js ./
-COPY scripts scripts
-COPY emails emails
-
-RUN yarn build
-
 # Golang build container
 FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.25 AS builder
 
@@ -115,8 +84,7 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
     chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
 
 COPY --from=builder /usr/bin/grafana* ./bin/
-# Use built frontend from js-builder instead of source code
-COPY --from=js-builder /tmp/grafana/public ./public
+COPY public ./public
 COPY tools ./tools
 
 EXPOSE 3000
