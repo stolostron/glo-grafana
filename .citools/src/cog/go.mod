@@ -1,6 +1,6 @@
 module cog
 
-go 1.24.5
+go 1.25.3
 
 tool github.com/grafana/cog/cmd/cli
 
