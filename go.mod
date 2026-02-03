@@ -1,6 +1,6 @@
 module github.com/grafana/grafana
 
-go 1.25.3
+go 1.25.5
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
 replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
