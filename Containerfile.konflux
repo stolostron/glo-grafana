@@ -31,7 +31,7 @@ RUN go run build.go -build-tags=strictfipsruntime build
 RUN cp $GOPATH/src/github.com/grafana/grafana/bin/linux-$(go env GOARCH)/grafana* /usr/bin/
 
 # Final container
-FROM registry.access.redhat.com/ubi9/ubi:latest
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest 
 
 # Red Hat annotations.
 LABEL com.redhat.component="multicluster-globalhub-grafana"
