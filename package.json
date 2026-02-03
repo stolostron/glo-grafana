@@ -338,7 +338,7 @@
     "monaco-editor": "0.34.1",
     "moveable": "0.53.0",
     "nanoid": "^5.0.4",
-    "node-forge": "^1.3.1",
+    "node-forge": "^1.3.2",
     "ol": "7.4.0",
     "ol-ext": "4.0.18",
     "pluralize": "^8.0.0",
@@ -401,6 +401,7 @@
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
   },
   "resolutions": {
+    "qs": "^6.14.1",
     "underscore": "1.13.6",
     "@types/slate": "0.47.11",
     "ngtemplate-loader/loader-utils": "^2.0.0",
@@ -413,7 +414,6 @@
     "history@4.10.1": "patch:history@npm%3A4.10.1#./.yarn/patches/history-npm-4.10.1-ee217563ae.patch",
     "history@^4.9.0": "patch:history@npm%3A4.10.1#./.yarn/patches/history-npm-4.10.1-ee217563ae.patch",
     "redux": "^5.0.0",
-    "@storybook/blocks@npm:8.1.6": "patch:@storybook/blocks@npm%3A8.1.6#~/.yarn/patches/@storybook-blocks-npm-8.1.6-892f57a6d7.patch",
     "react-grid-layout": "patch:react-grid-layout@npm%3A1.4.4#~/.yarn/patches/react-grid-layout-npm-1.4.4-4024c5395b.patch"
   },
   "workspaces": {
