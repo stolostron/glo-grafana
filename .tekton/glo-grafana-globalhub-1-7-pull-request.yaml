@@ -56,7 +56,7 @@ spec:
       - name: revision
         value: main
       - name: pathInRepo
-        value: pipelines/common.yaml
+        value: pipelines/common-base.yaml
   taskRunTemplate:
     serviceAccountName: build-pipeline-glo-grafana-globalhub-1-7
   workspaces:
