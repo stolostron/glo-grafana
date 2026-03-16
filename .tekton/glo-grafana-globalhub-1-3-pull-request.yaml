@@ -41,6 +41,11 @@ spec:
     value: "true"
   - name: prefetch-input
     value: '[ {"type": "gomod", "path": "."} ]'
+  taskRunSpecs:
+    - pipelineTaskName: build-source-image
+      computeResources:
+        limits:
+          memory: 4Gi
   pipelineRef:
     resolver: git
     params:
@@ -49,7 +54,7 @@ spec:
       - name: revision
         value: main
       - name: pathInRepo
-        value: pipelines/common.yaml
+        value: pipelines/common-base.yaml
   taskRunTemplate:
     serviceAccountName: build-pipeline-glo-grafana-globalhub-1-3
   workspaces:
