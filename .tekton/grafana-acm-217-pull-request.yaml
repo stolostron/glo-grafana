@@ -2,13 +2,14 @@ apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
   annotations:
-    build.appstudio.openshift.io/repo: https://github.com/stolostron/grafana?rev={{revision}}
+    build.appstudio.openshift.io/repo: https://github.com/stolostron/glo-grafana?rev={{revision}}
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
     build.appstudio.redhat.com/pull_request_number: '{{pull_request_number}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/cancel-in-progress: "true"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch
+<<<<<<<< HEAD:.tekton/grafana-acm-217-pull-request.yaml
       == "release-2.17"
   creationTimestamp: null
   labels:
@@ -17,6 +18,16 @@ metadata:
     pipelines.appstudio.openshift.io/type: build
   name: grafana-acm-217-on-pull-request
   namespace: crt-redhat-acm-tenant
+========
+      == "release-1.7"
+  creationTimestamp: null
+  labels:
+    appstudio.openshift.io/application: release-globalhub-1-7
+    appstudio.openshift.io/component: glo-grafana-globalhub-1-7
+    pipelines.appstudio.openshift.io/type: build
+  name: glo-grafana-globalhub-1-7-on-pull-request
+  namespace: acm-multicluster-glo-tenant
+>>>>>>>> 8b094630b9 (Apply Global Hub Konflux config and CVE fixes to release-1.7 (#190)):.tekton/glo-grafana-globalhub-1-7-pull-request.yaml
 spec:
   params:
   - name: git-url
@@ -24,27 +35,34 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
+<<<<<<<< HEAD:.tekton/grafana-acm-217-pull-request.yaml
     value: quay.io/redhat-user-workloads/crt-redhat-acm-tenant/grafana-acm-217:on-pr-{{revision}}
+========
+    value: quay.io/redhat-user-workloads/acm-multicluster-glo-tenant/glo-grafana-globalhub-1-7:on-pr-{{revision}}
+>>>>>>>> 8b094630b9 (Apply Global Hub Konflux config and CVE fixes to release-1.7 (#190)):.tekton/glo-grafana-globalhub-1-7-pull-request.yaml
   - name: image-expires-after
     value: 5d
   - name: build-platforms
     value:
     - linux/x86_64
+    - linux/ppc64le
+    - linux/s390x
+    - linux/arm64
   - name: dockerfile
-    value: Containerfile.operator
+    value: Containerfile.konflux
   - name: path-context
     value: .
-  - name: hermetic
-    value: true
-  - name: prefetch-input
-    value: '{"type": "gomod", "path": "."}'
   - name: build-source-image
     value: "true"
+  - name: hermetic
+    value: "true"
+  - name: prefetch-input
+    value: '[ {"type": "gomod", "path": "."}, {"type": "gomod", "path": "pkg/codegen"}, {"type": "gomod", "path": "pkg/plugins/codegen"} ]'
   taskRunSpecs:
     - pipelineTaskName: build-source-image
       computeResources:
         limits:
-          memory: 4Gi
+          memory: 2Gi
   pipelineRef:
     resolver: git
     params:
@@ -55,7 +73,11 @@ spec:
       - name: pathInRepo
         value: pipelines/common.yaml
   taskRunTemplate:
+<<<<<<<< HEAD:.tekton/grafana-acm-217-pull-request.yaml
     serviceAccountName: build-pipeline-grafana-acm-217
+========
+    serviceAccountName: build-pipeline-glo-grafana-globalhub-1-7
+>>>>>>>> 8b094630b9 (Apply Global Hub Konflux config and CVE fixes to release-1.7 (#190)):.tekton/glo-grafana-globalhub-1-7-pull-request.yaml
   workspaces:
   - name: git-auth
     secret:

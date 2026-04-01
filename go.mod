@@ -2,6 +2,9 @@ module github.com/grafana/grafana
 
 go 1.25.7
 
+// Override containerd to fix CVE-2024-25621 (local privilege escalation)
+replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
+
 // Direct requirements -- every entry needs an owner
 require (
 	buf.build/gen/go/parca-dev/parca/connectrpc/go v1.18.1-20250703125925-3f0fcf4bff96.1 // @grafana/observability-traces-and-profiling
