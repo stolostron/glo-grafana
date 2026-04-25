@@ -4615,25 +4615,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@msagl/drawing@npm:^1.1.19":
-  version: 1.1.19
-  resolution: "@msagl/drawing@npm:1.1.19"
+"@msagl/core@npm:^1.1.24":
+  version: 1.1.24
+  resolution: "@msagl/core@npm:1.1.24"
   dependencies:
-    "@msagl/core": "npm:^1.1.19"
-  checksum: 10/b8963ab6f8dd7943a10d950abe11030996e12cd74503c6d704678dce54c1fd0f5ee1570cc893027e24150e475294d09a4ae4ac3be8f9e9f8d7382d7b7c5303a9
+    queue-typescript: "npm:^1.0.1"
+    reliable-random: "npm:^0.0.1"
+    stack-typescript: "npm:^1.0.4"
+    typescript-string-operations: "npm:^1.4.1"
+  checksum: 10/1a80801c7f6f4775c9af4b0b25dc7de4216b56aefb95ed10394e1e87c549a882c71aee9061a6e2f3074025113aef9691f06a0ccc06f3da65c296442a1a1bbbed
+  languageName: node
+  linkType: hard
+
+"@msagl/drawing@npm:^1.1.24":
+  version: 1.1.24
+  resolution: "@msagl/drawing@npm:1.1.24"
+  dependencies:
+    "@msagl/core": "npm:^1.1.24"
+  checksum: 10/b49e50cf9e581e3c56cf747bd34c16e8028768fb799283ae19985c423aed3789460c88f33e0b8d363cf5fe9aa1d99d5b36cf77ebe5c279b2c113f8ff11151317
   languageName: node
   linkType: hard
 
 "@msagl/parser@npm:^1.1.19":
-  version: 1.1.19
-  resolution: "@msagl/parser@npm:1.1.19"
+  version: 1.1.24
+  resolution: "@msagl/parser@npm:1.1.24"
   dependencies:
-    "@msagl/core": "npm:^1.1.19"
-    "@msagl/drawing": "npm:^1.1.19"
+    "@msagl/core": "npm:^1.1.24"
+    "@msagl/drawing": "npm:^1.1.24"
     "@types/parse-color": "npm:^1.0.1"
     dotparser: "npm:^1.1.1"
     parse-color: "npm:^1.0.0"
-  checksum: 10/349dcd57a3365628699b45172359363b86a1b27f8300b5b7fde97ba65eb512191a7433b72908a544fbbdc1d91bcaa9ca498faef345078367529820a47af38609
+  checksum: 10/6c310901805ed570c44ec7209b164856484586b31e8e17991924c87da1f4e5aefad1d564e426e1de5a8b1127b63af15ce30e9c0f30ad76523f80942f81e69217
   languageName: node
   linkType: hard
 
