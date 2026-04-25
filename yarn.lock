@@ -4603,15 +4603,14 @@ __metadata:
   linkType: hard
 
 "@msagl/core@npm:^1.1.19":
-  version: 1.1.19
-  resolution: "@msagl/core@npm:1.1.19"
+  version: 1.1.24
+  resolution: "@msagl/core@npm:1.1.24"
   dependencies:
-    linked-list-typed: "npm:^1.52.0"
     queue-typescript: "npm:^1.0.1"
     reliable-random: "npm:^0.0.1"
     stack-typescript: "npm:^1.0.4"
     typescript-string-operations: "npm:^1.4.1"
-  checksum: 10/33536bb2ea00215010078faab2211af8be7bcab9e6067f035bed043ae21196bce98364ed554b97552b4cb674ae6c7c65e7f426a4f8cff7b4353c6d23968f1688
+  checksum: 10/1a80801c7f6f4775c9af4b0b25dc7de4216b56aefb95ed10394e1e87c549a882c71aee9061a6e2f3074025113aef9691f06a0ccc06f3da65c296442a1a1bbbed
   languageName: node
   linkType: hard
 
@@ -13700,13 +13699,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"data-structure-typed@npm:^1.52.0":
-  version: 1.52.0
-  resolution: "data-structure-typed@npm:1.52.0"
-  checksum: 10/9adddcbd0aae44311e866ac093c353fe7f092c19216152329261ea85b5e5e33413ec0605d4766c2ed2939d0b5d1a41576f8c0d21c5c6fe407a7bbdd9b2b2f159
-  languageName: node
-  linkType: hard
-
 "data-urls@npm:^3.0.2":
   version: 3.0.2
   resolution: "data-urls@npm:3.0.2"
@@ -20365,15 +20357,6 @@ __metadata:
   version: 2.0.3
   resolution: "lines-and-columns@npm:2.0.3"
   checksum: 10/b5bb0d6ee2f82ae834ceddc9251af2060c30db476673e9c817c34c00bed58e0c5d90a6866b64afe7bdcb2c5eb1b418a5b1ee631d2592dc8ff381540901fa4da6
-  languageName: node
-  linkType: hard
-
-"linked-list-typed@npm:^1.52.0":
-  version: 1.52.0
-  resolution: "linked-list-typed@npm:1.52.0"
-  dependencies:
-    data-structure-typed: "npm:^1.52.0"
-  checksum: 10/8d378c1691f0fa6b3c045784510bc1bfea2cb4d9f51decccc321e39680e031352580423c84aa0b862bbea829db53a046a3f7752b82a83020c640d47c2b433994
   languageName: node
   linkType: hard
 
