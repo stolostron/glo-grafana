@@ -23,6 +23,7 @@ func ProvideHealthService(server EntityStoreServer) (grpc_health_v1.HealthServer
 }
 
 type healthServer struct {
+	grpc_health_v1.UnimplementedHealthServer
 	entityServer EntityStoreServer
 }
 
