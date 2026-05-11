@@ -24,6 +24,7 @@ COPY conf conf
 COPY go.* ./
 
 ENV GOFLAGS="-mod=readonly"
+ENV GONOSUMDB="*"
 
 RUN go mod verify
 RUN make build-go
