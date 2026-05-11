@@ -28,6 +28,7 @@ COPY stolostron-patches stolostron-patches
 RUN git init && git apply ./stolostron-patches/*
 
 ENV GOFLAGS="-mod=readonly"
+ENV GONOSUMDB="*"
 
 RUN go mod verify
 RUN go run build.go -build-tags=strictfipsruntime build
