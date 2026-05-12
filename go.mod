@@ -1,6 +1,6 @@
 module github.com/grafana/grafana
 
-go 1.25.7
+go 1.25.9
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
 replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
@@ -207,7 +207,7 @@ require (
 	golang.org/x/oauth2 v0.30.0 // @grafana/identity-access-team
 	golang.org/x/sync v0.16.0 // @grafana/alerting-backend
 	golang.org/x/text v0.28.0 // @grafana/grafana-backend-group
-	golang.org/x/time v0.11.0 // @grafana/grafana-backend-group
+	golang.org/x/time v0.12.0 // @grafana/grafana-backend-group
 	golang.org/x/tools v0.36.0 // indirect; @grafana/grafana-as-code
 	gonum.org/v1/gonum v0.16.0 // @grafana/oss-big-tent
 	google.golang.org/api v0.235.0 // @grafana/grafana-backend-group
@@ -315,7 +315,7 @@ require (
 	github.com/alecthomas/units v0.0.0-20240927000941-0f3dac36c52b // indirect
 	github.com/alicebob/gopher-json v0.0.0-20230218143504-906a9b012302 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
-	github.com/apache/thrift v0.21.0 // indirect
+	github.com/apache/thrift v0.23.0 // indirect
 	github.com/apapsch/go-jsonmerge/v2 v2.0.0 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
