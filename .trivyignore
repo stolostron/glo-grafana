@@ -1,1 +1,49 @@
 # See https://aquasecurity.github.io/trivy/v0.48/docs/configuration/filtering/#trivyignore
+
+# The following CVEs appear in workspace sub-module go.mod files (apps/*, pkg/*) but are
+# FALSE POSITIVES. This repo uses Go workspace mode (go.work). When building, Go's Minimum
+# Version Selection picks the MAXIMUM version across all workspace modules — so the patched
+# versions in the root go.mod (v1.43.0 for otel, v1.80.0 for grpc, v3.0.5 for go-jose/v3,
+# v5.9.2 for pgx, v0.311.3 for prometheus, v1.1.2 for buger/jsonparser) take precedence
+# over the older versions listed in sub-module go.mod files. The compiled binary is safe.
+# Reference: https://go.dev/ref/mod#workspaces
+
+# go.opentelemetry.io/otel v1.37.0 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v1.43.0 — workspace resolves to v1.43.0
+CVE-2026-29181
+CVE-2026-24051
+CVE-2026-39883
+
+# google.golang.org/grpc v1.74.2 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v1.80.0 — workspace resolves to v1.80.0
+CVE-2026-33186
+
+# github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v3.0.5 — workspace resolves to v3.0.5
+CVE-2026-34986
+
+# github.com/jackc/pgx/v5 v5.7.5 in apps/*/go.mod
+# Root go.mod has v5.9.2 — workspace resolves to v5.9.2
+CVE-2026-33815
+CVE-2026-33816
+
+# github.com/prometheus/prometheus v0.303.1 in apps/*/go.mod or pkg/*/go.mod
+# Root go.mod has a higher version — workspace resolves upward
+CVE-2026-42151
+CVE-2026-42154
+
+# github.com/buger/jsonparser v1.1.1 in apps/*/go.mod or pkg/*/go.mod
+# Root go.mod has v1.1.2 — workspace resolves to v1.1.2
+CVE-2026-32285
+
+# github.com/grafana/tempo (pseudo-version v1.5.1-*) — CVE-2026-21728, CVE-2026-28377
+# The fix requires upgrading to github.com/grafana/tempo/v2 (major module path change).
+# This is a CODE MIGRATION, not a simple bump: all import paths in pkg/tsdb/tempo/*.go
+# must be changed from "github.com/grafana/tempo/..." to "github.com/grafana/tempo/v2/...".
+# Additionally, both CVEs are in the Tempo SERVER (DoS via large queries, S3 key disclosure);
+# Grafana uses tempo only as a CLIENT via protobuf bindings (pkg/tempopb) — the vulnerable
+# server code paths are not in the execute path for Grafana.
+# Tracked separately for a dedicated migration PR.
+CVE-2026-21728
+CVE-2026-28377
+
