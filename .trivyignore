@@ -35,3 +35,15 @@ CVE-2026-42154
 # github.com/buger/jsonparser v1.1.1 in apps/*/go.mod or pkg/*/go.mod
 # Root go.mod has v1.1.2 — workspace resolves to v1.1.2
 CVE-2026-32285
+
+# github.com/grafana/tempo (pseudo-version v1.5.1-*) — CVE-2026-21728, CVE-2026-28377
+# The fix requires upgrading to github.com/grafana/tempo/v2 (major module path change).
+# This is a CODE MIGRATION, not a simple bump: all import paths in pkg/tsdb/tempo/*.go
+# must be changed from "github.com/grafana/tempo/..." to "github.com/grafana/tempo/v2/...".
+# Additionally, both CVEs are in the Tempo SERVER (DoS via large queries, S3 key disclosure);
+# Grafana uses tempo only as a CLIENT via protobuf bindings (pkg/tempopb) — the vulnerable
+# server code paths are not in the execute path for Grafana.
+# Tracked separately for a dedicated migration PR.
+CVE-2026-21728
+CVE-2026-28377
+
