@@ -47,3 +47,18 @@ CVE-2026-32285
 CVE-2026-21728
 CVE-2026-28377
 
+# github.com/openfga/openfga v1.8.13 — CVE-2026-40293, CVE-2026-41131
+# NOT FIXABLE via dependency bump on release-1.7 due to a k8s major version incompatibility:
+#   openfga v1.14.0+ (the first fix for CVE-2026-40293) requires k8s.io/api v0.35.x,
+#   but the Grafana codebase uses k8s.io/apiserver v0.33.3 which is built against
+#   sigs.k8s.io/structured-merge-diff/v4. k8s v0.35.x switched to v6, and the two
+#   type systems are incompatible — mixing them causes a compile error in pkg/aggregator,
+#   pkg/apiserver, and grafana-app-sdk. Fixing this requires a full k8s v0.33 → v0.35
+#   migration with source code changes (out of scope for a security patch PR).
+# CVE-2026-41131 only affects openfga v1.14.0 specifically; since v1.14.x cannot be used,
+#   this CVE is also not applicable.
+# Workaround: disable the openfga playground (--playground-enabled=false).
+# Tracked in ACM-33102 as CANNOT_FIX / Requires k8s migration.
+CVE-2026-40293
+CVE-2026-41131
+
