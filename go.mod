@@ -199,9 +199,9 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlplog/otlploggrpc v0.15.0 // indirect; @grafana/grafana-operator-experience-squad
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.43.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.43.0 // @grafana/grafana-backend-group
-	go.opentelemetry.io/otel/log v0.15.0 // indirect; @grafana/grafana-operator-experience-squad
+	go.opentelemetry.io/otel/log v0.19.0 // indirect; @grafana/grafana-operator-experience-squad
 	go.opentelemetry.io/otel/sdk v1.43.0 // @grafana/grafana-backend-group
-	go.opentelemetry.io/otel/sdk/log v0.15.0 // indirect; @grafana/grafana-operator-experience-squad
+	go.opentelemetry.io/otel/sdk/log v0.19.0 // indirect; @grafana/grafana-operator-experience-squad
 	go.opentelemetry.io/otel/trace v1.43.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/proto/otlp v1.10.0 // indirect; @grafana/grafana-operator-experience-squad
 	go.uber.org/atomic v1.11.0 // @grafana/alerting-backend
