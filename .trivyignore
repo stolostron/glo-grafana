@@ -1,1 +1,71 @@
 # See https://aquasecurity.github.io/trivy/v0.48/docs/configuration/filtering/#trivyignore
+
+# The following CVEs appear in workspace sub-module go.mod files (apps/*, pkg/*) but are
+# FALSE POSITIVES. This repo uses Go workspace mode (go.work). When building, Go's Minimum
+# Version Selection picks the MAXIMUM version across all workspace modules — so the patched
+# versions in the root go.mod (v1.43.0 for otel, v1.80.0 for grpc, v3.0.5 for go-jose/v3,
+# v5.9.2 for pgx, v0.311.3 for prometheus, v1.1.2 for buger/jsonparser) take precedence
+# over the older versions listed in sub-module go.mod files. The compiled binary is safe.
+# Reference: https://go.dev/ref/mod#workspaces
+
+# go.opentelemetry.io/otel v1.37.0 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v1.43.0 — workspace resolves to v1.43.0
+CVE-2026-29181
+CVE-2026-24051
+CVE-2026-39883
+
+# google.golang.org/grpc v1.74.2 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v1.80.0 — workspace resolves to v1.80.0
+CVE-2026-33186
+
+# github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v3.0.5 — workspace resolves to v3.0.5
+CVE-2026-34986
+
+# github.com/jackc/pgx/v5 v5.7.5 in apps/*/go.mod
+# Root go.mod has v5.9.2 — workspace resolves to v5.9.2
+CVE-2026-33815
+CVE-2026-33816
+
+# github.com/prometheus/prometheus v0.303.1 in apps/*/go.mod or pkg/*/go.mod
+# Root go.mod has a higher version — workspace resolves upward
+CVE-2026-42151
+CVE-2026-42154
+
+# github.com/buger/jsonparser v1.1.1 in apps/*/go.mod or pkg/*/go.mod
+# Root go.mod has v1.1.2 — workspace resolves to v1.1.2
+CVE-2026-32285
+
+# github.com/docker/docker v28.5.2+incompatible in go.mod and pkg/plugins/go.mod
+# CVE-2026-34040: AuthZ plugin bypass via oversized request bodies (affects Docker daemon).
+# Grafana does NOT run a Docker daemon or AuthZ plugins — it uses docker only as an indirect
+# client-side dependency. The fix version (v29.3.1) does NOT exist as a Go module
+# (pkg.go.dev shows "no known fixed" for github.com/docker/docker). Cannot upgrade.
+CVE-2026-34040
+
+# github.com/grafana/tempo (pseudo-version v1.5.1-*) — CVE-2026-21728, CVE-2026-28377
+# The fix requires upgrading to github.com/grafana/tempo/v2 (major module path change).
+# This is a CODE MIGRATION, not a simple bump: all import paths in pkg/tsdb/tempo/*.go
+# must be changed from "github.com/grafana/tempo/..." to "github.com/grafana/tempo/v2/...".
+# Additionally, both CVEs are in the Tempo SERVER (DoS via large queries, S3 key disclosure);
+# Grafana uses tempo only as a CLIENT via protobuf bindings (pkg/tempopb) — the vulnerable
+# server code paths are not in the execute path for Grafana.
+# Tracked separately for a dedicated migration PR.
+CVE-2026-21728
+CVE-2026-28377
+
+# github.com/openfga/openfga v1.8.13 — CVE-2026-40293, CVE-2026-41131
+# NOT FIXABLE via dependency bump on release-1.7 due to a k8s major version incompatibility:
+#   openfga v1.14.0+ (the first fix for CVE-2026-40293) requires k8s.io/api v0.35.x,
+#   but the Grafana codebase uses k8s.io/apiserver v0.33.3 which is built against
+#   sigs.k8s.io/structured-merge-diff/v4. k8s v0.35.x switched to v6, and the two
+#   type systems are incompatible — mixing them causes a compile error in pkg/aggregator,
+#   pkg/apiserver, and grafana-app-sdk. Fixing this requires a full k8s v0.33 → v0.35
+#   migration with source code changes (out of scope for a security patch PR).
+# CVE-2026-41131 only affects openfga v1.14.0 specifically; since v1.14.x cannot be used,
+#   this CVE is also not applicable.
+# Workaround: disable the openfga playground (--playground-enabled=false).
+# Tracked in ACM-33102 as CANNOT_FIX / Requires k8s migration.
+CVE-2026-40293
+CVE-2026-41131
+
