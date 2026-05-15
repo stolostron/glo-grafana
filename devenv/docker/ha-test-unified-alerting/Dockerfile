@@ -1,4 +1,4 @@
-FROM golang:1.24
+FROM golang:1.25
 
 ADD webhook-listener.go /go/src/webhook/webhook-listener.go
 
