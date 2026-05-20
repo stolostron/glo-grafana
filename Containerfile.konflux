@@ -31,7 +31,12 @@ ENV GOFLAGS="-mod=readonly"
 ENV GONOSUMDB="*"
 
 RUN go mod verify
-RUN go run build.go -cgo-enabled -build-tags=strictfipsruntime build
+# FIPS compliance requires the binary to dynamically link against OpenSSL (libssl.so.3 / libcrypto.so.3).
+# CGO_ENABLED=1 alone (via -cgo-enabled) only enables CGO but does not activate OpenSSL linkage.
+# GOEXPERIMENT=openssl forces the Red Hat FIPS-patched Go toolchain to redirect all crypto calls
+# through OpenSSL via CGO, producing a dynamically-linked binary that passes fbc-fips-check-oci-ta.
+# Without this, the binary built with CGO_ENABLED=1 still only links libc/libresolv and fails the scan.
+RUN GOEXPERIMENT=openssl go run build.go -cgo-enabled -build-tags=strictfipsruntime build
 
 # Need to copy the generated binaries to a non-platform specific location to handle
 # s390x builds for example
