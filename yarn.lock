@@ -3186,7 +3186,7 @@ __metadata:
     "@grafana/data": "npm:11.1.0"
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
     "@grafana/ui": "npm:11.1.0"
-    "@leeoniya/ufuzzy": "npm:1.0.14"
+    "@leeoniya/ufuzzy": "npm:1.0.19"
     "@rollup/plugin-node-resolve": "npm:15.2.3"
     "@testing-library/dom": "npm:10.0.0"
     "@testing-library/jest-dom": "npm:^6.1.2"
@@ -3346,7 +3346,7 @@ __metadata:
     "@grafana/schema": "npm:11.1.0"
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
     "@grafana/ui": "npm:11.1.0"
-    "@leeoniya/ufuzzy": "npm:1.0.14"
+    "@leeoniya/ufuzzy": "npm:1.0.19"
     "@lezer/common": "npm:1.2.1"
     "@lezer/highlight": "npm:1.2.0"
     "@lezer/lr": "npm:1.4.0"
@@ -3626,7 +3626,7 @@ __metadata:
     "@grafana/faro-web-sdk": "npm:^1.3.6"
     "@grafana/schema": "npm:11.1.0"
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
-    "@leeoniya/ufuzzy": "npm:1.0.14"
+    "@leeoniya/ufuzzy": "npm:1.0.19"
     "@monaco-editor/react": "npm:4.6.0"
     "@popperjs/core": "npm:2.11.8"
     "@react-aria/dialog": "npm:3.5.14"
@@ -4266,7 +4266,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@leeoniya/ufuzzy@npm:1.0.14, @leeoniya/ufuzzy@npm:^1.0.14":
+"@leeoniya/ufuzzy@npm:1.0.19":
+  version: 1.0.19
+  resolution: "@leeoniya/ufuzzy@npm:1.0.19"
+  checksum: 10/097153dbdc1eb36939513e275e63f573d11f06adfbc885d80b90090996ecdb77fc7c643d53a22f4cee968f4d435e62cc2284d020161193fb6875b3bd73566ffc
+  languageName: node
+  linkType: hard
+
+"@leeoniya/ufuzzy@npm:^1.0.14":
   version: 1.0.14
   resolution: "@leeoniya/ufuzzy@npm:1.0.14"
   checksum: 10/852b580a8eaaf92e2d448f5b720e3c53e4bea22187bf5e8459256677c47183321b47b8384982e15751f42da7e77a216fd86c80e6185677d8270adeab4a4fb771
@@ -17008,7 +17015,7 @@ __metadata:
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
     "@grafana/ui": "workspace:*"
     "@kusto/monaco-kusto": "npm:^10.0.0"
-    "@leeoniya/ufuzzy": "npm:1.0.14"
+    "@leeoniya/ufuzzy": "npm:1.0.19"
     "@lezer/common": "npm:1.2.1"
     "@lezer/highlight": "npm:1.2.0"
     "@lezer/lr": "npm:1.3.3"
