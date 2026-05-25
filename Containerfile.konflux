@@ -1,0 +1,102 @@
+# Golang build container
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.25 AS builder
+
+WORKDIR $GOPATH/src/github.com/grafana/grafana
+
+ARG COMMIT_SHA="5b85c4c2fcf5d32d4f68aaef345c53096359b2f1"
+ARG BUILD_BRANCH=""
+ARG GO_BUILD_TAGS="oss"
+ARG WIRE_TAGS="oss"
+
+COPY go.mod go.sum embed.go Makefile build.go package.json ./
+COPY kinds kinds
+COPY kindsv2 kindsv2
+COPY local local
+COPY packages/grafana-schema packages/grafana-schema/
+COPY public/app/plugins public/app/plugins/
+COPY public/api-merged.json public/api-merged.json
+COPY pkg pkg/
+COPY scripts scripts/
+COPY cue.mod cue.mod/
+COPY conf conf
+COPY go.* ./
+COPY apps apps
+COPY .citools .citools
+
+# Apply custom patches
+COPY stolostron-patches stolostron-patches
+RUN git init && git apply ./stolostron-patches/*
+
+ENV GOFLAGS="-mod=readonly"
+ENV GONOSUMDB="*"
+
+RUN go mod verify
+# FIPS compliance: CGO_ENABLED=1 is required by fbc-fips-check-oci-ta which scans Go binaries
+# for the CGO_ENABLED build flag in their build metadata. The -cgo-enabled flag is passed to
+# build.go, which sets CGO_ENABLED=1 via os.Setenv before invoking go build. Without this,
+# build.go explicitly sets CGO_ENABLED=0 regardless of the environment, causing the FIPS scan
+# to fail with "go binary is not CGO_ENABLED". GOEXPERIMENT=openssl was attempted but is not
+# supported by Go 1.25 in this build environment.
+RUN go run build.go -cgo-enabled -build-tags=strictfipsruntime build
+
+# Need to copy the generated binaries to a non-platform specific location to handle
+# s390x builds for example
+RUN cp ./bin/linux-$(go env GOARCH)/grafana* /usr/bin/
+
+# Final container
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest
+
+# Red Hat annotations.
+LABEL com.redhat.component="multicluster-globalhub-grafana-rhel9"
+LABEL cpe="cpe:/a:redhat:multicluster_globalhub:5.0::el9"
+
+# Bundle metadata
+LABEL name="multicluster-globalhub/multicluster-globalhub-grafana-rhel9"
+LABEL version="release-5.0"
+LABEL summary="Grafana is an open-source, general purpose dashboard and graph composer"
+LABEL io.openshift.expose-services=""
+LABEL io.openshift.tags="data,images"
+LABEL io.k8s.display-name="Grafana"
+LABEL io.k8s.description="Grafana is an open-source, general purpose dashboard and graph composer"
+LABEL maintainer="['acm-component-maintainers@redhat.com']"
+LABEL description="Grafana is an open-source, general purpose dashboard and graph composer"
+
+ARG GF_UID="472"
+ARG GF_GID="472"
+
+ENV PATH=/usr/share/grafana/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+    GF_PATHS_CONFIG="/etc/grafana/grafana.ini" \
+    GF_PATHS_DATA="/var/lib/grafana" \
+    GF_PATHS_HOME="/usr/share/grafana" \
+    GF_PATHS_LOGS="/var/log/grafana" \
+    GF_PATHS_PLUGINS="/var/lib/grafana/plugins" \
+    GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
+
+WORKDIR $GF_PATHS_HOME
+
+COPY conf ./conf
+
+RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
+    groupadd --system -g $GF_GID grafana && \
+    useradd --system -u $GF_UID -g grafana grafana && \
+    mkdir -p "$GF_PATHS_PROVISIONING/datasources" \
+             "$GF_PATHS_PROVISIONING/dashboards" \
+             "$GF_PATHS_PROVISIONING/notifiers" \
+             "$GF_PATHS_LOGS" \
+             "$GF_PATHS_PLUGINS" \
+             "$GF_PATHS_DATA" && \
+    cp "$GF_PATHS_HOME/conf/sample.ini" "$GF_PATHS_CONFIG" && \
+    cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/grafana/ldap.toml && \
+    chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
+    chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
+
+COPY --from=builder /usr/bin/grafana* ./bin/
+COPY public ./public
+COPY tools ./tools
+
+EXPOSE 3000
+
+COPY ./packaging/docker/run.sh /run.sh
+
+USER grafana
+ENTRYPOINT [ "/run.sh" ]
