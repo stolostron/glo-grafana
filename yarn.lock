@@ -3668,7 +3668,7 @@ __metadata:
     "@types/prismjs": "npm:1.26.4"
     "@types/react": "npm:18.3.3"
     "@types/react-beautiful-dnd": "npm:13.1.8"
-    "@types/react-color": "npm:3.0.12"
+    "@types/react-color": "npm:3.0.13"
     "@types/react-dom": "npm:18.2.25"
     "@types/react-highlight-words": "npm:0.20.0"
     "@types/react-router-dom": "npm:5.3.3"
@@ -9019,13 +9019,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-color@npm:3.0.12":
-  version: 3.0.12
-  resolution: "@types/react-color@npm:3.0.12"
+"@types/react-color@npm:3.0.13":
+  version: 3.0.13
+  resolution: "@types/react-color@npm:3.0.13"
   dependencies:
-    "@types/react": "npm:*"
     "@types/reactcss": "npm:*"
-  checksum: 10/d8ed71d297d026faded787588720ee5e158edfa45ee23c5e517d8bb1441ccaa25f8a0c88069fd63829f7263bbbdc78a7ae2df5957061847a2d2c6351c46c13dd
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10/2e1500c915d4ae3916935993320e77c13d687bca8833525d011024e355c1ccfc6c4091fb4563ae1f92c591494c3a9fa3acb1e58a60a5d967ded87600f94e5d8b
   languageName: node
   linkType: hard
 
