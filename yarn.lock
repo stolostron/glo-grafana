@@ -9039,12 +9039,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-grid-layout@npm:1.3.5":
-  version: 1.3.5
-  resolution: "@types/react-grid-layout@npm:1.3.5"
+"@types/react-grid-layout@npm:1.3.6":
+  version: 1.3.6
+  resolution: "@types/react-grid-layout@npm:1.3.6"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 10/21599054dfa977ed8445b1ab3198a842531cb36bd620564c3f8a469688cbea051149eb644a99b2f8f6d02f8d9909a6145668f385781b5647601e9663de216946
+  checksum: 10/80b9cd6ab14f5cd32a62451544cbbeff32d6c8c3fefd6e04f974429a0b1b0d2aded1f4767ae4ce9cd4caa395e514531f5e5d6a3c3e93dba4906a907f8d77ee21
   languageName: node
   linkType: hard
 
@@ -17130,7 +17130,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-beautiful-dnd": "npm:13.1.8"
     "@types/react-dom": "npm:18.2.25"
-    "@types/react-grid-layout": "npm:1.3.5"
+    "@types/react-grid-layout": "npm:1.3.6"
     "@types/react-highlight-words": "npm:0.20.0"
     "@types/react-resizable": "npm:3.0.7"
     "@types/react-router": "npm:5.1.20"
