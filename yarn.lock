@@ -4600,19 +4600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@msagl/core@npm:^1.1.19":
-  version: 1.1.24
-  resolution: "@msagl/core@npm:1.1.24"
-  dependencies:
-    queue-typescript: "npm:^1.0.1"
-    reliable-random: "npm:^0.0.1"
-    stack-typescript: "npm:^1.0.4"
-    typescript-string-operations: "npm:^1.4.1"
-  checksum: 10/1a80801c7f6f4775c9af4b0b25dc7de4216b56aefb95ed10394e1e87c549a882c71aee9061a6e2f3074025113aef9691f06a0ccc06f3da65c296442a1a1bbbed
-  languageName: node
-  linkType: hard
-
-"@msagl/core@npm:^1.1.24":
+"@msagl/core@npm:^1.1.19, @msagl/core@npm:^1.1.24":
   version: 1.1.24
   resolution: "@msagl/core@npm:1.1.24"
   dependencies:
@@ -8065,10 +8053,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chance@npm:1.1.6, @types/chance@npm:^1.1.3":
+"@types/chance@npm:1.1.6":
   version: 1.1.6
   resolution: "@types/chance@npm:1.1.6"
   checksum: 10/f4366f1b3144d143af3e6f0fad2ed1db7b9bdfa7d82d40944e9619d57fe7e6b60e8c1452f47a8ededa6b2188932879518628ecd9aac81c40384ded39c26338ba
+  languageName: node
+  linkType: hard
+
+"@types/chance@npm:^1.1.3":
+  version: 1.1.8
+  resolution: "@types/chance@npm:1.1.8"
+  checksum: 10/04bb486a00a5e74d71342a11db9f5a109c8286e9ee0b4f5a0f06ad62b9cdc4ae9f020b2898fdec2ea6e7105b048d165dc78afd8280f931850a24351959d5b3b7
   languageName: node
   linkType: hard
 
@@ -11927,10 +11922,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chance@npm:1.1.11, chance@npm:^1.0.10":
+"chance@npm:1.1.11":
   version: 1.1.11
   resolution: "chance@npm:1.1.11"
   checksum: 10/d76cc76dbcb837f051e6080d94be8bdcd07559d52077854f614c7081062fee10d4c3b508f6ae4b70303dac000422ea35160b01de165fcd176a01f67ea4b2cef5
+  languageName: node
+  linkType: hard
+
+"chance@npm:^1.0.10":
+  version: 1.1.13
+  resolution: "chance@npm:1.1.13"
+  checksum: 10/968e31ce9b8ce554c8a84fb66d85f6d06a33517bf21355ab760e347a0aaaece0652a23c791406826d4efe619b1aa4e7b66fb42acbd07859ba36ec2498a167b8c
   languageName: node
   linkType: hard
 
