@@ -2590,7 +2590,7 @@ __metadata:
     "@testing-library/dom": "npm:10.0.0"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/prismjs": "npm:1.26.4"
@@ -2632,7 +2632,7 @@ __metadata:
     "@grafana/ui": "npm:11.1.0"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.3"
@@ -2663,7 +2663,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.4.2"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/prismjs": "npm:1.26.4"
@@ -2706,7 +2706,7 @@ __metadata:
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
     "@types/d3-random": "npm:^3.0.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.3"
@@ -2747,7 +2747,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.4.2"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/logfmt": "npm:^1.2.3"
     "@types/node": "npm:20.14.2"
@@ -2787,7 +2787,7 @@ __metadata:
     "@grafana/ui": "npm:11.1.0"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.3"
@@ -2853,7 +2853,7 @@ __metadata:
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
     "@types/debounce-promise": "npm:3.1.9"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/prismjs": "npm:1.26.4"
@@ -2893,8 +2893,8 @@ __metadata:
     "@grafana/e2e-selectors": "workspace:*"
     "@grafana/experimental": "npm:1.7.11"
     "@grafana/lezer-logql": "npm:0.2.4"
-    "@grafana/lezer-traceql": "npm:0.0.17"
-    "@grafana/monaco-logql": "npm:^0.0.7"
+    "@grafana/lezer-traceql": "npm:0.0.25"
+    "@grafana/monaco-logql": "npm:^0.0.8"
     "@grafana/o11y-ds-frontend": "workspace:*"
     "@grafana/plugin-configs": "npm:11.1.0"
     "@grafana/runtime": "workspace:*"
@@ -2909,7 +2909,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.4.2"
     "@testing-library/react": "npm:15.0.2"
     "@testing-library/user-event": "npm:14.5.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/prismjs": "npm:1.26.4"
@@ -2958,7 +2958,7 @@ __metadata:
     "@grafana/ui": "workspace:*"
     "@testing-library/jest-dom": "npm:6.4.2"
     "@testing-library/react": "npm:15.0.2"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.3"
@@ -3245,21 +3245,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grafana/lezer-traceql@npm:0.0.17":
-  version: 0.0.17
-  resolution: "@grafana/lezer-traceql@npm:0.0.17"
+"@grafana/lezer-traceql@npm:0.0.25":
+  version: 0.0.25
+  resolution: "@grafana/lezer-traceql@npm:0.0.25"
   peerDependencies:
-    "@lezer/lr": ^1.3.0
-  checksum: 10/f9b32989ab5bab1f6407b1c83c4fd3169d589cd83d2abe95bcf68dca1ce1c512b923a0087dd010f528a202f47d102ae6dec81385f6a506632f23ece1e471a3df
+    "@lezer/lr": ^1.4.2
+  checksum: 10/f33760b5d00b4b1ddd715be3e9797f51e96c15d45adf53e94112ae13caa0adf64c89c07804103d716f74ab7941d0c53ff1a97abe72948f4ecce1710d8388e121
   languageName: node
   linkType: hard
 
-"@grafana/monaco-logql@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "@grafana/monaco-logql@npm:0.0.7"
+"@grafana/monaco-logql@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "@grafana/monaco-logql@npm:0.0.8"
   peerDependencies:
     monaco-editor: ^0.32.1
-  checksum: 10/a900e24912476997f30349e6ee24041c0cffebf6706d8b9203eb952f12c768fc0fd6be8d7abe86d02019a0d8f26b83d15ffd0fb09d97047307e2ba5b4ba43a1b
+  checksum: 10/30443df2bab511e5b385cb8cd5b8ae54b09f794cd3e2b1ad9cdcd58c46d3384b90d3d738c36e63702c17d914d58ad765c93d89d1398e050fa7c9ab68d940386d
   languageName: node
   linkType: hard
 
@@ -3364,7 +3364,7 @@ __metadata:
     "@types/d3": "npm:7.4.3"
     "@types/debounce-promise": "npm:3.1.9"
     "@types/eslint": "npm:8.56.12"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/jquery": "npm:3.5.34"
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
@@ -3461,7 +3461,7 @@ __metadata:
     "@testing-library/user-event": "npm:14.5.2"
     "@types/angular": "npm:1.8.9"
     "@types/history": "npm:4.7.11"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/lodash": "npm:4.17.24"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.2.25"
@@ -3660,7 +3660,7 @@ __metadata:
     "@types/d3": "npm:7.4.3"
     "@types/hoist-non-react-statics": "npm:3.3.7"
     "@types/is-hotkey": "npm:0.1.10"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/jquery": "npm:3.5.34"
     "@types/lodash": "npm:4.17.24"
     "@types/mock-raf": "npm:1.0.6"
@@ -3674,7 +3674,7 @@ __metadata:
     "@types/react-router-dom": "npm:5.3.3"
     "@types/react-table": "npm:7.7.20"
     "@types/react-test-renderer": "npm:18.3.1"
-    "@types/react-transition-group": "npm:4.4.10"
+    "@types/react-transition-group": "npm:4.4.12"
     "@types/react-window": "npm:1.8.8"
     "@types/slate": "npm:0.47.11"
     "@types/slate-plain-serializer": "npm:0.7.5"
@@ -8724,13 +8724,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:29.5.12, @types/jest@npm:^29.5.4":
-  version: 29.5.12
-  resolution: "@types/jest@npm:29.5.12"
+"@types/jest@npm:*, @types/jest@npm:29.5.14, @types/jest@npm:^29.5.4":
+  version: 29.5.14
+  resolution: "@types/jest@npm:29.5.14"
   dependencies:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
-  checksum: 10/312e8dcf92cdd5a5847d6426f0940829bca6fe6b5a917248f3d7f7ef5d85c9ce78ef05e47d2bbabc40d41a930e0e36db2d443d2610a9e3db9062da2d5c904211
+  checksum: 10/59ec7a9c4688aae8ee529316c43853468b6034f453d08a2e1064b281af9c81234cec986be796288f1bbb29efe943bc950e70c8fa8faae1e460d50e3cf9760f9b
   languageName: node
   linkType: hard
 
@@ -9117,12 +9117,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-transition-group@npm:4.4.10, @types/react-transition-group@npm:^4.4.0":
-  version: 4.4.10
-  resolution: "@types/react-transition-group@npm:4.4.10"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10/b429f3bd54d9aea6c0395943ce2dda6b76fb458e902365bd91fd99bf72064fb5d59e2b74e78d10f2871908501d350da63e230d81bda2b616c967cab8dc51bd16
+"@types/react-transition-group@npm:4.4.12, @types/react-transition-group@npm:^4.4.0":
+  version: 4.4.12
+  resolution: "@types/react-transition-group@npm:4.4.12"
+  peerDependencies:
+    "@types/react": "*"
+  checksum: 10/ea14bc84f529a3887f9954b753843820ac8a3c49fcdfec7840657ecc6a8800aad98afdbe4b973eb96c7252286bde38476fcf64b1c09527354a9a9366e516d9a2
   languageName: node
   linkType: hard
 
@@ -17075,7 +17075,7 @@ __metadata:
     "@grafana/flamegraph": "workspace:*"
     "@grafana/google-sdk": "npm:0.1.2"
     "@grafana/lezer-logql": "npm:0.2.4"
-    "@grafana/monaco-logql": "npm:^0.0.7"
+    "@grafana/monaco-logql": "npm:^0.0.8"
     "@grafana/o11y-ds-frontend": "workspace:*"
     "@grafana/plugin-e2e": "npm:1.3.2"
     "@grafana/prometheus": "workspace:*"
@@ -17141,7 +17141,7 @@ __metadata:
     "@types/google.analytics": "npm:^0.0.46"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/history": "npm:4.7.11"
-    "@types/jest": "npm:29.5.12"
+    "@types/jest": "npm:29.5.14"
     "@types/jquery": "npm:3.5.34"
     "@types/js-yaml": "npm:^4.0.5"
     "@types/jsurl": "npm:^1.2.28"
@@ -17163,7 +17163,7 @@ __metadata:
     "@types/react-router-dom": "npm:5.3.3"
     "@types/react-table": "npm:7.7.20"
     "@types/react-test-renderer": "npm:18.3.1"
-    "@types/react-transition-group": "npm:4.4.10"
+    "@types/react-transition-group": "npm:4.4.12"
     "@types/react-virtualized-auto-sizer": "npm:1.0.4"
     "@types/react-window": "npm:1.8.8"
     "@types/react-window-infinite-loader": "npm:^1"
