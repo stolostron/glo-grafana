@@ -67,27 +67,27 @@ Read `.claude/user.local.md` at the start of any task that needs an assignee, em
 
 Fetch and apply the relevant skill when the task matches its domain.
 
-| Skill | When to use |
-|---|---|
-| [start-work](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/start-work/SKILL.md) | Begin work on a Jira ticket — creates sub-task, transitions status |
-| [finish-work](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/finish-work/SKILL.md) | Commit, push, open PR, update Jira |
-| [pr-review](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/pr-review/SKILL.md) | Review a GitHub PR with worktree isolation and inline comments |
-| [pr-fix](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/pr-fix/SKILL.md) | Fix blocked PRs: merge conflicts, CI failures, review comments |
-| [jira-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/jira-specialist/SKILL.md) | Triage, search, link, or transition Jira issues |
-| [bug-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/bug-specialist/SKILL.md) | Create a well-structured bug report with reproduction steps |
-| [story-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/story-specialist/SKILL.md) | Create a user story with acceptance criteria |
-| [spike-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/spike-specialist/SKILL.md) | Time-boxed research and PoC tickets |
+| Skill                                                                                                                         | When to use                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [start-work](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/start-work/SKILL.md)             | Begin work on a Jira ticket — creates sub-task, transitions status |
+| [finish-work](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/finish-work/SKILL.md)           | Commit, push, open PR, update Jira                                 |
+| [pr-review](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/pr-review/SKILL.md)               | Review a GitHub PR with worktree isolation and inline comments     |
+| [pr-fix](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/sdlc/pr-fix/SKILL.md)                     | Fix blocked PRs: merge conflicts, CI failures, review comments     |
+| [jira-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/jira-specialist/SKILL.md)   | Triage, search, link, or transition Jira issues                    |
+| [bug-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/bug-specialist/SKILL.md)     | Create a well-structured bug report with reproduction steps        |
+| [story-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/story-specialist/SKILL.md) | Create a user story with acceptance criteria                       |
+| [spike-specialist](https://raw.githubusercontent.com/OpenShift-Fleet/agentic-sdlc/main/skills/jira/spike-specialist/SKILL.md) | Time-boxed research and PoC tickets                                |
 
 ---
 
 ## Key Dependencies
 
-| Dependency | Version | Purpose |
-|---|---|---|
-| Go | 1.25.7 | Backend toolchain (see Makefile) |
-| Node / Yarn | (see package.json) | Frontend build |
-| UBI 9 minimal | latest | Runtime base image |
-| openshift-golang-builder | rhel_9_1.25 | Konflux build stage |
+| Dependency               | Version            | Purpose                          |
+| ------------------------ | ------------------ | -------------------------------- |
+| Go                       | 1.25.7             | Backend toolchain (see Makefile) |
+| Node / Yarn              | (see package.json) | Frontend build                   |
+| UBI 9 minimal            | latest             | Runtime base image               |
+| openshift-golang-builder | rhel_9_1.25        | Konflux build stage              |
 
 ---
 
@@ -95,13 +95,13 @@ Fetch and apply the relevant skill when the task matches its domain.
 
 Standard Grafana path variables (set in `Containerfile.konflux`):
 
-| Variable | Default | Purpose |
-|---|---|---|
-| `GF_PATHS_CONFIG` | `/etc/grafana/grafana.ini` | Main config file |
-| `GF_PATHS_DATA` | `/var/lib/grafana` | Data directory |
-| `GF_PATHS_HOME` | `/usr/share/grafana` | Install root |
-| `GF_PATHS_LOGS` | `/var/log/grafana` | Log directory |
-| `GF_PATHS_PLUGINS` | `/var/lib/grafana/plugins` | Plugin directory |
+| Variable                | Default                     | Purpose              |
+| ----------------------- | --------------------------- | -------------------- |
+| `GF_PATHS_CONFIG`       | `/etc/grafana/grafana.ini`  | Main config file     |
+| `GF_PATHS_DATA`         | `/var/lib/grafana`          | Data directory       |
+| `GF_PATHS_HOME`         | `/usr/share/grafana`        | Install root         |
+| `GF_PATHS_LOGS`         | `/var/log/grafana`          | Log directory        |
+| `GF_PATHS_PLUGINS`      | `/var/lib/grafana/plugins`  | Plugin directory     |
 | `GF_PATHS_PROVISIONING` | `/etc/grafana/provisioning` | Provisioning configs |
 
 Container runs as user `grafana` (UID/GID 472). Exposes port **3000**.
