@@ -2,6 +2,8 @@
 
 AI assistant context for **glo-grafana** — the Red Hat fork of Grafana used by Multicluster Global Hub for observability dashboards backed by the global hub PostgreSQL database.
 
+Onboarded per [Fleet Engineering Agentic SDLC — repo onboarding](https://github.com/OpenShift-Fleet/agentic-sdlc/blob/main/practices/repo-onboarding.md). Day-to-day workflow: [ai-dev-workflow.md](https://github.com/OpenShift-Fleet/agentic-sdlc/blob/main/practices/ai-dev-workflow.md).
+
 ---
 
 ## Build, Test, and Lint Commands
@@ -59,13 +61,13 @@ Upstream Grafana docs remain in [README.md](README.md) and [docs/](docs/).
 
 ## Personal Config
 
-Read `.claude/user.local.md` at the start of any task that needs an assignee, email, or project key. If the file does not exist, fall back to Claude memory (`user-config`), then placeholders.
+Read `.claude/user.local.md` at the start of any task that needs an assignee, email, or project key. If the file does not exist, fall back to Claude memory (`user-config`), then placeholders. Run `make personalize` in [OpenShift-Fleet/agentic-sdlc](https://github.com/OpenShift-Fleet/agentic-sdlc) to generate it.
 
 ---
 
 ## Fleet Engineering Skills
 
-Fetch and apply the relevant skill when the task matches its domain.
+Use the Fleet plugin in Claude Code (`make install-claude` in agentic-sdlc) when available. In Cursor or other agents without the plugin, fetch and apply the relevant skill URL when the task matches its domain.
 
 | Skill                                                                                                                         | When to use                                                        |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
