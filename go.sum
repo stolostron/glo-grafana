@@ -2271,6 +2271,8 @@ github.com/golang-jwt/jwt/v4 v4.4.1/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w
 github.com/golang-jwt/jwt/v4 v4.4.2/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
 github.com/golang-jwt/jwt/v4 v4.5.0 h1:7cYmW1XlMY7h7ii7UhUyChSgS5wUJEnm9uZVTGqOWzg=
 github.com/golang-jwt/jwt/v4 v4.5.0/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
+github.com/golang-jwt/jwt/v4 v4.5.1 h1:JdqV9zKUdtaa9gdPlywC3aeoEsR681PlKC+4F5gQgeo=
+github.com/golang-jwt/jwt/v4 v4.5.1/go.mod h1:m21LjoU+eqJr34lmDMbreY2eSTRJ1cv77w39/MY0Ch0=
 github.com/golang-jwt/jwt/v5 v5.0.0/go.mod h1:pqrtFR0X4osieyHYxtmOUWsAWrfe1Q5UVIyoH402zdk=
 github.com/golang-jwt/jwt/v5 v5.2.1 h1:OuVbFODueb089Lh128TAcimifWaLhJwVflnrgM17wHk=
 github.com/golang-jwt/jwt/v5 v5.2.1/go.mod h1:pqrtFR0X4osieyHYxtmOUWsAWrfe1Q5UVIyoH402zdk=
@@ -2537,8 +2539,8 @@ github.com/grafana/pyroscope/api v0.3.0/go.mod h1:JggA80ToAAUACYGfwL49XoFk5aN5ec
 github.com/grafana/regexp v0.0.0-20221122212121-6b5c0a4cb7fd/go.mod h1:M5qHK+eWfAv8VR/265dIuEpL3fNfeC21tXXp9itM24A=
 github.com/grafana/regexp v0.0.0-20221123153739-15dc172cd2db h1:7aN5cccjIqCLTzedH7MZzRZt5/lsAHch6Z3L2ZGn5FA=
 github.com/grafana/regexp v0.0.0-20221123153739-15dc172cd2db/go.mod h1:M5qHK+eWfAv8VR/265dIuEpL3fNfeC21tXXp9itM24A=
-github.com/grafana/saml v0.4.15-0.20240523142256-cc370b98af7c h1:SWmG1QLZ36Ay0htq4Wt3dzlNIhWvQ3GUf7mk19dR8nI=
-github.com/grafana/saml v0.4.15-0.20240523142256-cc370b98af7c/go.mod h1:S4+611dxnKt8z/ulbvaJzcgSHsuhjVc1QHNTcr1R7Fw=
+github.com/grafana/saml v0.4.15-0.20250126153442-d9987cff355c h1:X5XjYJTX9f7DHbjiy0Owlct1w5PNt8r1tpUTM8dQzZ0=
+github.com/grafana/saml v0.4.15-0.20250126153442-d9987cff355c/go.mod h1:Sa7KQmdK4OI3YIs7whYl2Mr/P7U/+Ndds1WyHyb1Uos=
 github.com/grafana/sqlds/v3 v3.2.0 h1:WXuYEaFfiCvgm8kK2ixx44/zAEjFzCylA2+RF3GBqZA=
 github.com/grafana/sqlds/v3 v3.2.0/go.mod h1:kH0WuHUR3j0Q7IEymbm2JiaPckUhRCbqjV9ajaBAnmM=
 github.com/grafana/tempo v1.5.1-0.20230524121406-1dc1bfe7085b h1:mDlkqgTEJuK7vjPG44f3ZMtId5AAYLWHvBVbiGqIOOQ=
