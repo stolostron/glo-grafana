@@ -485,7 +485,7 @@ require (
 )
 
 // Use fork of crewjam/saml with fixes for some issues until changes get merged into upstream
-replace github.com/crewjam/saml => github.com/grafana/saml v0.4.15-0.20250126153442-d9987cff355c
+replace github.com/crewjam/saml => github.com/grafana/saml c91c4e045805
 
 // replace github.com/google/cel-go => github.com/google/cel-go v0.16.1
 
