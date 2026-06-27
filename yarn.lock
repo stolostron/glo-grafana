@@ -3730,7 +3730,7 @@ __metadata:
     react-highlight-words: "npm:0.20.0"
     react-hook-form: "npm:^7.49.2"
     react-i18next: "npm:^14.0.0"
-    react-inlinesvg: "npm:3.0.2"
+    react-inlinesvg: "npm:3.0.3"
     react-loading-skeleton: "npm:3.4.0"
     react-router-dom: "npm:5.3.3"
     react-select: "npm:5.8.0"
@@ -17393,7 +17393,7 @@ __metadata:
     react-highlight-words: "npm:0.20.0"
     react-hook-form: "npm:^7.49.2"
     react-i18next: "npm:^14.0.0"
-    react-inlinesvg: "npm:3.0.2"
+    react-inlinesvg: "npm:3.0.3"
     react-loading-skeleton: "npm:3.4.0"
     react-moveable: "npm:0.56.0"
     react-redux: "npm:9.1.2"
@@ -25526,15 +25526,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-inlinesvg@npm:3.0.2":
-  version: 3.0.2
-  resolution: "react-inlinesvg@npm:3.0.2"
+"react-inlinesvg@npm:3.0.3":
+  version: 3.0.3
+  resolution: "react-inlinesvg@npm:3.0.3"
   dependencies:
     exenv: "npm:^1.2.2"
     react-from-dom: "npm:^0.6.2"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 10/740fa33c7a09012bb96509f9003dc26e4e412eed2fc861ca40bfee9a3dddcf7c4d86fd20f824d4c017e44526aa9d747d6c9543ef3f2215bc0ace72754e025316
+  checksum: 10/e2b6ec1c0ce04e8d6d8e22e3173234486a65ad7e2ed5e3ae7d69d856e77f1cb3349946f109fa8fe4bf8dd175ad8c252f979d8f00c3eabf9b4b3c8b7e053ea50e
   languageName: node
   linkType: hard
 
