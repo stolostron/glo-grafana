@@ -1,5 +1,5 @@
 # Golang build container
-FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.25 AS builder
+FROM brew.registry.redhat.io/rh-osbs/openshift-golang-builder:rhel_9_1.26 AS builder
 
 WORKDIR $GOPATH/src/github.com/grafana/grafana
 
@@ -36,7 +36,7 @@ RUN go mod verify
 # build.go, which sets CGO_ENABLED=1 via os.Setenv before invoking go build. Without this,
 # build.go explicitly sets CGO_ENABLED=0 regardless of the environment, causing the FIPS scan
 # to fail with "go binary is not CGO_ENABLED". GOEXPERIMENT=openssl was attempted but is not
-# supported by Go 1.25 in this build environment.
+# supported by Go 1.26 in this build environment.
 RUN go run build.go -cgo-enabled -build-tags=strictfipsruntime build
 
 # Need to copy the generated binaries to a non-platform specific location to handle
