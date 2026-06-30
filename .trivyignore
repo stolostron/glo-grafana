@@ -4,7 +4,7 @@
 # FALSE POSITIVES. This repo uses Go workspace mode (go.work). When building, Go's Minimum
 # Version Selection picks the MAXIMUM version across all workspace modules — so the patched
 # versions in the root go.mod (v1.43.0 for otel, v1.80.0 for grpc, v3.0.5 for go-jose/v3,
-# v5.9.2 for pgx, v0.311.3 for prometheus, v1.1.2 for buger/jsonparser) take precedence
+# v5.9.2 for pgx, v0.311.3 for prometheus, v1.1.2 for buger/jsonparser, v0.52.0 for x/crypto) take precedence
 # over the older versions listed in sub-module go.mod files. The compiled binary is safe.
 # Reference: https://go.dev/ref/mod#workspaces
 
