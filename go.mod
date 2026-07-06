@@ -8,7 +8,7 @@ go 1.26.3
 replace github.com/docker/docker => github.com/moby/moby v23.0.4+incompatible
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
-replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
+replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.33
 
 // contains openapi encoder fixes. remove ASAP
 replace cuelang.org/go => github.com/grafana/cue v0.0.0-20230926092038-971951014e3f // @grafana/grafana-as-code
@@ -390,7 +390,7 @@ require (
 	github.com/mithrandie/go-file/v2 v2.1.0 // indirect
 	github.com/mithrandie/go-text v1.6.0 // indirect
 	github.com/mithrandie/ternary v1.1.1 // indirect
-	github.com/moby/spdystream v0.2.0 // indirect
+	github.com/moby/spdystream v0.5.1 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/mpvl/unique v0.0.0-20150818121801-cbe035fff7de // indirect
 	github.com/mschoch/smat v0.2.0 // indirect
