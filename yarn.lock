@@ -23661,9 +23661,9 @@ __metadata:
   linkType: hard
 
 "micro-memoize@npm:^4.1.2":
-  version: 4.1.2
-  resolution: "micro-memoize@npm:4.1.2"
-  checksum: 10/027e90c3147c97c07224440ea50ede27eb7d888149e4925820397b466d16efc525f5ec3981e4cadec3258a8d36dfd5e7e7c8e660879fbe2e47106785be9bc570
+  version: 4.2.0
+  resolution: "micro-memoize@npm:4.2.0"
+  checksum: 10/260e27a5c15809f7dc435a89a424d93e49ccca62b743fa96ee72f254264df58c95edacbd847a2899a6d7f8ad0daef188548a8b12add5ccff83e88869a50a762c
   languageName: node
   linkType: hard
 
