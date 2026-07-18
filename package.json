@@ -204,7 +204,7 @@
     "node-notifier": "10.0.1",
     "nx": "19.2.0",
     "postcss": "8.4.38",
-    "postcss-loader": "8.1.1",
+    "postcss-loader": "8.2.1",
     "postcss-reporter": "7.1.0",
     "postcss-scss": "4.0.9",
     "prettier": "3.3.1",
