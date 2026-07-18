@@ -82,7 +82,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.3, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.22.5, @babel/code-frame@npm:^7.24.2, @babel/code-frame@npm:^7.24.7":
+"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.3, @babel/code-frame@npm:^7.10.4, @babel/code-frame@npm:^7.12.13, @babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.22.5, @babel/code-frame@npm:^7.24.7":
   version: 7.24.7
   resolution: "@babel/code-frame@npm:7.24.7"
   dependencies:
@@ -92,7 +92,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.29.7":
+"@babel/code-frame@npm:^7.29.0, @babel/code-frame@npm:^7.29.7":
   version: 7.29.7
   resolution: "@babel/code-frame@npm:7.29.7"
   dependencies:
@@ -5528,7 +5528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.5.0":
+"@jridgewell/sourcemap-codec@npm:^1.5.0, @jridgewell/sourcemap-codec@npm:^1.5.5":
   version: 1.5.5
   resolution: "@jridgewell/sourcemap-codec@npm:1.5.5"
   checksum: 10/5d9d207b462c11e322d71911e55e21a4e2772f71ffe8d6f1221b8eb5ae6774458c1d242f897fb0814e8714ca9a6b498abfa74dfe4f434493342902b1a48b33a5
@@ -23164,12 +23164,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.30.10, magic-string@npm:^0.30.2, magic-string@npm:^0.30.5":
+"magic-string@npm:^0.30.2, magic-string@npm:^0.30.5":
   version: 0.30.10
   resolution: "magic-string@npm:0.30.10"
   dependencies:
     "@jridgewell/sourcemap-codec": "npm:^1.4.15"
   checksum: 10/9f8bf6363a14c98a9d9f32ef833b194702a5c98fb931b05ac511b76f0b06fd30ed92beda6ca3261d2d52d21e39e891ef1136fbd032023f6cbb02d0b7d5767201
+  languageName: node
+  linkType: hard
+
+"magic-string@npm:^0.30.21":
+  version: 0.30.21
+  resolution: "magic-string@npm:0.30.21"
+  dependencies:
+    "@jridgewell/sourcemap-codec": "npm:^1.5.5"
+  checksum: 10/57d5691f41ed40d962d8bd300148114f53db67fadbff336207db10a99f2bdf4a1be9cac3a68ee85dba575912ee1d4402e4396408196ec2d3afd043b076156221
   languageName: node
   linkType: hard
 
@@ -29274,18 +29283,21 @@ __metadata:
   linkType: hard
 
 "rollup-plugin-dts@npm:^6.1.0":
-  version: 6.1.1
-  resolution: "rollup-plugin-dts@npm:6.1.1"
+  version: 6.4.1
+  resolution: "rollup-plugin-dts@npm:6.4.1"
   dependencies:
-    "@babel/code-frame": "npm:^7.24.2"
-    magic-string: "npm:^0.30.10"
+    "@babel/code-frame": "npm:^7.29.0"
+    "@jridgewell/remapping": "npm:^2.3.5"
+    "@jridgewell/sourcemap-codec": "npm:^1.5.5"
+    convert-source-map: "npm:^2.0.0"
+    magic-string: "npm:^0.30.21"
   peerDependencies:
     rollup: ^3.29.4 || ^4
-    typescript: ^4.5 || ^5.0
+    typescript: ^4.5 || ^5.0 || ^6.0
   dependenciesMeta:
     "@babel/code-frame":
       optional: true
-  checksum: 10/8a66833a5af32f77d9bbc746339097d4af2382e5160f7629d85dcecb4efad12cbfebd37c79147fa688f073c333d71f53135e08a225a3fc3e9a3b3f92c46b2381
+  checksum: 10/a18685fde4c59339cacb47e084ff589b39fc680d186b496b83197370295002f748066e3c9c62ced2eca1af0bca77d3096bb24905c40c0478a6d845d63531293d
   languageName: node
   linkType: hard
 
