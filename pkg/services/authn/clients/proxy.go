@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"hash/fnv"
 	"net"
-	"path"
 	"strconv"
 	"strings"
 	"time"
