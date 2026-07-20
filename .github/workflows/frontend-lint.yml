@@ -198,7 +198,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    if: github.event_name == 'pull_request' && needs.detect-changes.outputs.changed == 'true'
+    if: github.repository == 'grafana/grafana' && github.event_name == 'pull_request' && needs.detect-changes.outputs.changed == 'true'
     name: Check circular dependencies
     runs-on: ubuntu-latest
     steps:
