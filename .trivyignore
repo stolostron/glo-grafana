@@ -3,7 +3,7 @@
 # The following CVEs appear in workspace sub-module go.mod files (apps/*, pkg/*) but are
 # FALSE POSITIVES. This repo uses Go workspace mode (go.work). When building, Go's Minimum
 # Version Selection picks the MAXIMUM version across all workspace modules — so the patched
-# versions in the root go.mod (v1.43.0 for otel, v1.80.0 for grpc, v3.0.5 for go-jose/v3,
+# versions in the root go.mod (v1.43.0 for otel, v1.82.1 for grpc, v3.0.5 for go-jose/v3,
 # v5.9.2 for pgx, v0.311.3 for prometheus, v1.1.2 for buger/jsonparser, v0.55.0 for x/net,
 # v0.52.0 for x/crypto) take precedence
 # over the older versions listed in sub-module go.mod files. The compiled binary is safe.
@@ -15,9 +15,10 @@ CVE-2026-29181
 CVE-2026-24051
 CVE-2026-39883
 
-# google.golang.org/grpc v1.74.2 in apps/*/go.mod and pkg/*/go.mod
-# Root go.mod has v1.80.0 — workspace resolves to v1.80.0
+# google.golang.org/grpc v1.74.2-v1.80.0 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v1.82.1 — workspace resolves to v1.82.1
 CVE-2026-33186
+GHSA-hrxh-6v49-42gf
 
 # github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
 # Root go.mod has v3.0.5 — workspace resolves to v3.0.5
