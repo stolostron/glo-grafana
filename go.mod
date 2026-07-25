@@ -159,7 +159,7 @@ require (
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // @grafana/grafana-operator-experience-squad
 	github.com/olekukonko/tablewriter v0.0.5 // @grafana/grafana-backend-group
 	github.com/patrickmn/go-cache v2.1.0+incompatible // @grafana/alerting-backend
-	github.com/prometheus/alertmanager v0.27.0 // @grafana/alerting-backend
+	github.com/prometheus/alertmanager v0.33.1 // @grafana/alerting-backend
 	github.com/prometheus/client_golang v1.19.0 // @grafana/alerting-backend
 	github.com/prometheus/client_model v0.6.1 // @grafana/grafana-backend-group
 	github.com/prometheus/common v0.53.0 // @grafana/alerting-backend
