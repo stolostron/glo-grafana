@@ -19,6 +19,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adobe/css-tools@npm:^4.4.0":
+  version: 4.5.0
+  resolution: "@adobe/css-tools@npm:4.5.0"
+  checksum: 10/a332050614f7e08928aba518ac65534621672590bdfc2079886e9ead90da78c7fe2498152c5083318e93ee909260ec13854c21ac77c24053f7d30c5d2d2adcc1
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -3881,7 +3888,7 @@ __metadata:
     "@types/prismjs": "npm:1.26.4"
     "@types/react": "npm:18.3.31"
     "@types/react-dom": "npm:18.3.7"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     fast-deep-equal: "npm:^3.1.3"
     i18next: "npm:^23.0.0"
     immer: "npm:10.1.1"
@@ -3921,7 +3928,7 @@ __metadata:
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.31"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     lodash: "npm:4.17.21"
     react: "npm:18.3.1"
     rxjs: "npm:7.8.1"
@@ -3954,7 +3961,7 @@ __metadata:
     "@types/prismjs": "npm:1.26.4"
     "@types/react": "npm:18.3.31"
     "@types/react-dom": "npm:18.3.7"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     css-loader: "npm:7.1.4"
     fast-deep-equal: "npm:^3.1.3"
     jest: "npm:29.7.0"
@@ -3996,7 +4003,7 @@ __metadata:
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.31"
     "@types/react-dom": "npm:18.3.7"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     "@types/uuid": "npm:9.0.8"
     d3-random: "npm:^3.0.1"
     lodash: "npm:4.17.21"
@@ -4076,7 +4083,7 @@ __metadata:
     "@types/lodash": "npm:4.17.24"
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.31"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     lodash: "npm:4.17.21"
     react: "npm:18.3.1"
     rxjs: "npm:7.8.1"
@@ -4145,7 +4152,7 @@ __metadata:
     "@types/react": "npm:18.3.31"
     "@types/react-dom": "npm:18.3.7"
     "@types/react-test-renderer": "npm:18.3.1"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     debounce-promise: "npm:3.1.2"
     fast-deep-equal: "npm:^3.1.3"
     i18next: "npm:^23.0.0"
@@ -4579,7 +4586,7 @@ __metadata:
     "@types/node": "npm:20.14.2"
     "@types/react": "npm:18.3.31"
     "@types/systemjs": "npm:6.15.4"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     jest: "npm:^29.6.4"
     react: "npm:18.3.1"
     react-select: "npm:5.8.0"
@@ -4673,7 +4680,7 @@ __metadata:
     "@types/react-highlight-words": "npm:0.20.0"
     "@types/react-window": "npm:1.8.8"
     "@types/semver": "npm:7.5.8"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     "@types/uuid": "npm:9.0.8"
     "@typescript-eslint/eslint-plugin": "npm:6.21.0"
     "@typescript-eslint/parser": "npm:6.21.0"
@@ -4881,7 +4888,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.7"
     "@types/react-virtualized-auto-sizer": "npm:1.0.4"
     "@types/systemjs": "npm:6.15.4"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     "@types/uuid": "npm:9.0.8"
     immutable: "npm:4.3.6"
     jest: "npm:^29.6.4"
@@ -4976,7 +4983,7 @@ __metadata:
     "@types/slate": "npm:0.47.11"
     "@types/slate-plain-serializer": "npm:0.7.5"
     "@types/slate-react": "npm:0.22.9"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     "@types/tinycolor2": "npm:1.4.6"
     "@types/uuid": "npm:9.0.8"
     ansicolor: "npm:1.1.100"
@@ -9199,6 +9206,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/jest-dom@npm:*":
+  version: 7.0.0
+  resolution: "@testing-library/jest-dom@npm:7.0.0"
+  dependencies:
+    "@adobe/css-tools": "npm:^4.4.0"
+    aria-query: "npm:^5.0.0"
+    css.escape: "npm:^1.5.1"
+    dom-accessibility-api: "npm:^0.6.3"
+    picocolors: "npm:^1.1.1"
+    redent: "npm:^3.0.0"
+  peerDependencies:
+    "@testing-library/dom": ">=10 <11"
+  checksum: 10/ec6d50550d7ec87f60a19f1719d87e2d73a050fed4938f13d846d30639f85bd903e5aff2eaecbb1a9e67f3c71c98148b46edd4f77b15ca17c91f655f9c54f92b
+  languageName: node
+  linkType: hard
+
 "@testing-library/jest-dom@npm:6.4.2, @testing-library/jest-dom@npm:^6.1.2":
   version: 6.4.2
   resolution: "@testing-library/jest-dom@npm:6.4.2"
@@ -10123,7 +10146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:29.5.14, @types/jest@npm:^29.5.4":
+"@types/jest@npm:29.5.14, @types/jest@npm:^29.5.4":
   version: 29.5.14
   resolution: "@types/jest@npm:29.5.14"
   dependencies:
@@ -10735,12 +10758,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/testing-library__jest-dom@npm:5.14.9":
-  version: 5.14.9
-  resolution: "@types/testing-library__jest-dom@npm:5.14.9"
+"@types/testing-library__jest-dom@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@types/testing-library__jest-dom@npm:6.0.0"
   dependencies:
-    "@types/jest": "npm:*"
-  checksum: 10/e257de95a4a9385cc09ae4ca3396d23ad4b5cfb8e021a1ca3454c424c34636075f6fe151b2f881f79bf9d497aa04fbfae62449b135f293e8d2d614fa899898a8
+    "@testing-library/jest-dom": "npm:*"
+  checksum: 10/1b4db1aa3c4225524203b4d1c3b36c7129e9d1e0547e46d2e5283c3ece226a3c16f5f20387cc71b33ab0eecd99d0cf91111bb327e8adb240388d99fb94af7a4d
   languageName: node
   linkType: hard
 
@@ -19282,7 +19305,7 @@ __metadata:
     "@types/slate-plain-serializer": "npm:0.7.5"
     "@types/slate-react": "npm:0.22.9"
     "@types/systemjs": "npm:6.15.4"
-    "@types/testing-library__jest-dom": "npm:5.14.9"
+    "@types/testing-library__jest-dom": "npm:6.0.0"
     "@types/tinycolor2": "npm:1.4.6"
     "@types/uuid": "npm:9.0.8"
     "@types/webpack-assets-manifest": "npm:^5"
