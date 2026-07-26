@@ -15557,7 +15557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.4.0, debug@npm:^4.4.3":
+"debug@npm:^4.4.3":
   version: 4.4.3
   resolution: "debug@npm:4.4.3"
   dependencies:
@@ -16720,16 +16720,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-plugin-browserslist@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "esbuild-plugin-browserslist@npm:0.16.0"
+"esbuild-plugin-browserslist@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "esbuild-plugin-browserslist@npm:4.0.0"
   dependencies:
-    debug: "npm:^4.4.0"
-    zod: "npm:^3.24.1"
+    debug: "npm:^4.4.3"
+    zod: "npm:^4.4.3"
   peerDependencies:
-    browserslist: ^4.21.8
-    esbuild: ~0.25.0
-  checksum: 10/9f3986901521627270a74500a77a3ddf3599016729de6ebe04e675230188a0e5dd3f5c6a5a1ab781a0b9cb54952df0edb066a3a5737166ef8e8d9db4a2eb44ab
+    browserslist: ^4.28.2
+    esbuild: ~0.28.0
+  checksum: 10/30c4570da005b0c285855c26a4c63e72287857c439bf4ff577126f9f08734b791aed317166bb185ad3c2fdd54f54b7b37b10a38a4831fba6a254bf35d5da4b16
   languageName: node
   linkType: hard
 
@@ -19330,7 +19330,7 @@ __metadata:
     diff: "npm:^5.1.0"
     esbuild: "npm:0.28.1"
     esbuild-loader: "npm:4.5.0"
-    esbuild-plugin-browserslist: "npm:^0.16.0"
+    esbuild-plugin-browserslist: "npm:^4.0.0"
     eslint: "npm:8.57.0"
     eslint-config-prettier: "npm:9.1.2"
     eslint-plugin-import: "npm:^2.26.0"
@@ -34024,10 +34024,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.24.1":
-  version: 3.25.76
-  resolution: "zod@npm:3.25.76"
-  checksum: 10/f0c963ec40cd96858451d1690404d603d36507c1fc9682f2dae59ab38b578687d542708a7fdbf645f77926f78c9ed558f57c3d3aa226c285f798df0c4da16995
+"zod@npm:^4.4.3":
+  version: 4.4.3
+  resolution: "zod@npm:4.4.3"
+  checksum: 10/804b9a42aa8f35f2b3c5a8dff906291cb749115f83ee2afe3576d70b5b5c53c965365c7f4967690647a9c54af9838ff232a85ff9577a0a36c44b68bc6cdefe36
   languageName: node
   linkType: hard
 
