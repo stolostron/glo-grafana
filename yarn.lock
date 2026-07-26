@@ -4790,7 +4790,7 @@ __metadata:
     "@babel/core": "npm:7.29.7"
     "@grafana/tsconfig": "npm:^1.3.0-rc1"
     "@rollup/plugin-node-resolve": "npm:^15.2.3"
-    "@rollup/plugin-typescript": "npm:^11.1.6"
+    "@rollup/plugin-typescript": "npm:^12.0.0"
     "@svgr/babel-plugin-remove-jsx-attribute": "npm:^8.0.0"
     "@svgr/cli": "npm:^8.1.0"
     "@svgr/core": "npm:8.1.0"
@@ -7563,9 +7563,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:^11.1.6":
-  version: 11.1.6
-  resolution: "@rollup/plugin-typescript@npm:11.1.6"
+"@rollup/plugin-typescript@npm:^12.0.0":
+  version: 12.3.0
+  resolution: "@rollup/plugin-typescript@npm:12.3.0"
   dependencies:
     "@rollup/pluginutils": "npm:^5.1.0"
     resolve: "npm:^1.22.1"
@@ -7578,7 +7578,7 @@ __metadata:
       optional: true
     tslib:
       optional: true
-  checksum: 10/4ae4d6cfc929393171288df2f18b5eb837fa53d8689118d9661b3064567341f6f6cf8389af55f1d5f015e3682abf30a64ab609fdf75ecb5a84224505e407eb69
+  checksum: 10/b9c14df24d1c5f09408e498bbc8a7b2394f0e3030abcd796f364a2c18135207f2002b3975f86ce57affb7270a26f91fba66268f11a7b5fc149872072d9c3e432
   languageName: node
   linkType: hard
 
