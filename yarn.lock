@@ -4362,14 +4362,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/e2e-selectors@npm:^12.1.0-240060":
-  version: 12.4.5
-  resolution: "@grafana/e2e-selectors@npm:12.4.5"
+"@grafana/e2e-selectors@npm:13.1.0-25644485979":
+  version: 13.1.0-25644485979
+  resolution: "@grafana/e2e-selectors@npm:13.1.0-25644485979"
   dependencies:
     semver: "npm:^7.7.0"
     tslib: "npm:2.8.1"
-    typescript: "npm:5.9.2"
-  checksum: 10/ee5094a069362ce94a82308d2b2ed24a9845f37a24e536114a610cb0e84a3b4f358c5d23b51bf9d818f46198ad137c49d24d76a2ef5a541c0eb104d1d204821d
+    typescript: "npm:6.0.2"
+  checksum: 10/17007ee903550f01a86b5342c98dfa1c3ceb648158fb417d5320db702dbbee02e6a16b095016cd6f8ae538c3c8a9f249bc5ed0e9f331f8d9403e1d018e88d80e
   languageName: node
   linkType: hard
 
@@ -4615,17 +4615,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/plugin-e2e@npm:1.19.9":
-  version: 1.19.9
-  resolution: "@grafana/plugin-e2e@npm:1.19.9"
+"@grafana/plugin-e2e@npm:3.10.0":
+  version: 3.10.0
+  resolution: "@grafana/plugin-e2e@npm:3.10.0"
   dependencies:
-    "@grafana/e2e-selectors": "npm:^12.1.0-240060"
-    semver: "npm:^7.5.4"
-    uuid: "npm:^11.0.2"
+    "@grafana/e2e-selectors": "npm:13.1.0-25644485979"
     yaml: "npm:^2.3.4"
   peerDependencies:
+    "@axe-core/playwright": ^4.11.1
     "@playwright/test": ^1.52.0
-  checksum: 10/059fe08c013dce92e73a7e49c7f13b89a14f76aa1b355f2e7ee32860dcc157585b28bceed7173362e5f971ffbcf966338e5c913cdf99e7941a384500f29d4d3b
+  peerDependenciesMeta:
+    "@axe-core/playwright":
+      optional: true
+  checksum: 10/a175d02b1b7a169db74262a7d2499746cf0a6ad954a81c47aa28aeca29760a087159a53df84d59794f464ce8f50e7f0814c80676cf508fddf71951a364af94ee
   languageName: node
   linkType: hard
 
@@ -19186,7 +19188,7 @@ __metadata:
     "@grafana/lezer-logql": "npm:0.2.4"
     "@grafana/monaco-logql": "npm:^0.0.9"
     "@grafana/o11y-ds-frontend": "workspace:*"
-    "@grafana/plugin-e2e": "npm:1.19.9"
+    "@grafana/plugin-e2e": "npm:3.10.0"
     "@grafana/prometheus": "workspace:*"
     "@grafana/runtime": "workspace:*"
     "@grafana/saga-icons": "workspace:*"
@@ -32376,13 +32378,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.9.2":
-  version: 5.9.2
-  resolution: "typescript@npm:5.9.2"
+"typescript@npm:6.0.2":
+  version: 6.0.2
+  resolution: "typescript@npm:6.0.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/cc2fe6c822819de5d453fa25aa9f32096bf70dde215d481faa1ad84a283dfb264e33988ed8f6d36bc803dd0b16dbe943efa311a798ef76d5b3892a05dfbfd628
+  checksum: 10/b9fc2fcee7ee8e5ca6f5138181964550531e18e2d20ecb71b802d4d495881e3444e0ef94cbb6e84eb2ba41e913f6feae3ca33cc722b32e6e6dfadb32d23b80e6
   languageName: node
   linkType: hard
 
@@ -32406,13 +32408,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>":
-  version: 5.9.2
-  resolution: "typescript@patch:typescript@npm%3A5.9.2#optional!builtin<compat/typescript>::version=5.9.2&hash=b45daf"
+"typescript@patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>":
+  version: 6.0.2
+  resolution: "typescript@patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=b45daf"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/a8606016982f2f46ed085e9b4b84d8a5251b42ff0560c995c20f3c3ab9543e37c1015d92ab2f1cc7b2af2b499d12bac57e11789da271fb3225af8ec0b24e5b64
+  checksum: 10/222180c32d7fedee4817c087045358b2c75e7694c3a4001f49c47b3e13e25e9436715bc30b41958150dc41dad87a25601822bbab3d8ea1ada9cac81ffd069acd
   languageName: node
   linkType: hard
 
@@ -32861,15 +32863,6 @@ __metadata:
   bin:
     uuid: dist/bin/uuid
   checksum: 10/9d0b6adb72b736e36f2b1b53da0d559125ba3e39d913b6072f6f033e0c87835b414f0836b45bcfaf2bdf698f92297fea1c3cc19b0b258bc182c9c43cc0fab9f2
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^11.0.2":
-  version: 11.1.1
-  resolution: "uuid@npm:11.1.1"
-  bin:
-    uuid: dist/esm/bin/uuid
-  checksum: 10/16411d3dc12a08d6691616c09a75e66a7f900ba1beef6628a76fe0602f82fae2ee537b564d0b7bc95c24f58d059ca9b58c75a1e806118efb50e17822ff00ddd2
   languageName: node
   linkType: hard
 
