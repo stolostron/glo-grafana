@@ -202,7 +202,7 @@ require (
 	golang.org/x/text v0.37.0 // @grafana/grafana-backend-group
 	golang.org/x/time v0.12.0 // @grafana/grafana-backend-group
 	golang.org/x/tools v0.44.0 // @grafana/grafana-as-code
-	gonum.org/v1/gonum v0.16.0 // @grafana/observability-metrics
+	gonum.org/v1/gonum v0.17.0 // @grafana/observability-metrics
 	google.golang.org/api v0.176.0 // @grafana/grafana-backend-group
 	google.golang.org/grpc v1.79.3 // @grafana/plugins-platform-backend
 	google.golang.org/protobuf v1.36.10 // @grafana/plugins-platform-backend
