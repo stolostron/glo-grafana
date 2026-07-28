@@ -17,6 +17,11 @@ CVE-2026-39883
 # google.golang.org/grpc v1.74.2 in apps/*/go.mod and pkg/*/go.mod
 # Root go.mod has v1.80.0 — workspace resolves to v1.80.0
 CVE-2026-33186
+GHSA-hrxh-6v49-42gf
+
+# github.com/getkin/kin-openapi v0.133.0 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v0.133.0 — workspace resolves to v0.133.0
+GHSA-r277-6w6q-xmqw
 
 # github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
 # Root go.mod has v3.0.5 — workspace resolves to v3.0.5
