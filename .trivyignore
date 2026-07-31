@@ -20,6 +20,10 @@ CVE-2026-39883
 CVE-2026-33186
 GHSA-hrxh-6v49-42gf
 
+# github.com/getkin/kin-openapi v0.133.0 in apps/*/go.mod and pkg/*/go.mod
+# Root go.mod has v0.133.0 — workspace resolves to v0.133.0
+GHSA-r277-6w6q-xmqw
+
 # github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
 # Root go.mod has v3.0.5 — workspace resolves to v3.0.5
 CVE-2026-34986
@@ -58,6 +62,10 @@ CVE-2026-39831
 CVE-2026-39832
 CVE-2026-39835
 CVE-2026-42508
+
+# golang.org/x/text v0.31.0-v0.37.0 in apps/*/go.mod, pkg/*/go.mod, and .citools/*
+# Root go.mod has v0.37.0 — workspace resolves to v0.37.0
+CVE-2026-56852
 CVE-2026-46595
 CVE-2026-46597
 
@@ -93,6 +101,3 @@ CVE-2026-28377
 # Tracked in ACM-33102 as CANNOT_FIX / Requires k8s migration.
 CVE-2026-40293
 CVE-2026-41131
-
-
-GHSA-r277-6w6q-xmqw
