@@ -10,7 +10,7 @@ require (
 	github.com/prometheus/client_golang v1.19.0
 	github.com/stretchr/testify v1.9.0
 	go.opentelemetry.io/otel/trace v1.26.0
-	golang.org/x/mod v0.18.0
+	golang.org/x/mod v0.38.0
 	k8s.io/apimachinery v0.29.3
 	k8s.io/apiserver v0.29.2
 	k8s.io/client-go v0.29.3
