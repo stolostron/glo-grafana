@@ -11,6 +11,6 @@
     "grunt-contrib-watch": "1.1.0",
     "grunt-text-replace": "0.4.0",
     "load-grunt-config": "3.0.2",
-    "mjml": "^4.13.0"
+    "mjml": "^5.0.0"
   }
 }
