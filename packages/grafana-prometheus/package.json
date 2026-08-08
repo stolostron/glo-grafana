@@ -45,7 +45,7 @@
     "@grafana/schema": "11.1.0",
     "@grafana/ui": "11.1.0",
     "@leeoniya/ufuzzy": "1.0.19",
-    "@lezer/common": "1.2.1",
+    "@lezer/common": "1.5.2",
     "@lezer/highlight": "1.2.0",
     "@lezer/lr": "1.4.0",
     "@prometheus-io/lezer-promql": "0.52.1",
