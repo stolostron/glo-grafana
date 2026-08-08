@@ -50,7 +50,7 @@
     "@types/react-dom": "18.2.25",
     "esbuild": "0.28.1",
     "prettier": "3.3.1",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-dom": "18.2.0",
     "rimraf": "5.0.10",
     "rollup": "2.79.1",
