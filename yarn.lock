@@ -4129,7 +4129,7 @@ __metadata:
     "@grafana/data": "npm:11.1.0"
     "@grafana/e2e-selectors": "npm:11.1.0"
     "@grafana/experimental": "npm:1.7.11"
-    "@grafana/google-sdk": "npm:0.1.2"
+    "@grafana/google-sdk": "npm:0.6.1"
     "@grafana/plugin-configs": "npm:11.1.0"
     "@grafana/runtime": "npm:11.1.0"
     "@grafana/schema": "npm:11.1.0"
@@ -4520,15 +4520,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/google-sdk@npm:0.1.2":
-  version: 0.1.2
-  resolution: "@grafana/google-sdk@npm:0.1.2"
+"@grafana/google-sdk@npm:0.6.1":
+  version: 0.6.1
+  resolution: "@grafana/google-sdk@npm:0.6.1"
   peerDependencies:
-    "@grafana/data": 9.4.1
-    "@grafana/ui": 9.4.1
-    react: 17.0.2
-    react-dom: 17.0.2
-  checksum: 10/98cb06a971f151e9504ab2b6640edb41fced12ecc6e033df5069937f82ab10a682f63314f713f79a8870975fb42c3cd74f23a605b58d961e632aa6cd35adf44b
+    "@grafana/data": ">=11.6.0"
+    "@grafana/ui": ">=11.6.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10/9a56da1b91a064efa1381a0a4e3cfa97c8988eb77b92fe27ff0a88bb010f8259bff8b5d8266e27c18830ca7e8115e3183c1b76c7369300b345b984288d810eba
   languageName: node
   linkType: hard
 
@@ -19182,7 +19182,7 @@ __metadata:
     "@grafana/faro-core": "npm:^1.3.6"
     "@grafana/faro-web-sdk": "npm:^1.3.6"
     "@grafana/flamegraph": "workspace:*"
-    "@grafana/google-sdk": "npm:0.1.2"
+    "@grafana/google-sdk": "npm:0.6.1"
     "@grafana/lezer-logql": "npm:0.2.4"
     "@grafana/monaco-logql": "npm:^0.0.9"
     "@grafana/o11y-ds-frontend": "workspace:*"
