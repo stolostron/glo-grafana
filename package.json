@@ -243,7 +243,7 @@
     "@fingerprintjs/fingerprintjs": "^3.4.2",
     "@floating-ui/react": "0.26.16",
     "@glideapps/glide-data-grid": "^6.0.0",
-    "@grafana/aws-sdk": "0.3.3",
+    "@grafana/aws-sdk": "0.12.1",
     "@grafana/azure-sdk": "0.0.3",
     "@grafana/data": "workspace:*",
     "@grafana/e2e-selectors": "workspace:*",
