@@ -4705,7 +4705,7 @@ __metadata:
     marked-mangle: "npm:1.1.7"
     moment: "npm:2.30.1"
     moment-timezone: "npm:0.5.45"
-    monaco-promql: "npm:1.7.4"
+    monaco-promql: "npm:1.9.0"
     pluralize: "npm:8.0.0"
     prettier: "npm:3.3.1"
     prismjs: "npm:1.29.0"
@@ -6817,6 +6817,33 @@ __metadata:
   version: 2.11.8
   resolution: "@popperjs/core@npm:2.11.8"
   checksum: 10/ddd16090cde777aaf102940f05d0274602079a95ad9805bd20bc55dcc7c3a2ba1b99dd5c73e5cc2753c3d31250ca52a67d58059459d7d27debb983a9f552936c
+  languageName: node
+  linkType: hard
+
+"@prometheus-io/codemirror-promql@npm:0.311.3":
+  version: 0.311.3
+  resolution: "@prometheus-io/codemirror-promql@npm:0.311.3"
+  dependencies:
+    "@prometheus-io/lezer-promql": "npm:0.311.3"
+    lru-cache: "npm:^11.2.7"
+  peerDependencies:
+    "@codemirror/autocomplete": ^6.4.0
+    "@codemirror/language": ^6.3.0
+    "@codemirror/lint": ^6.0.0
+    "@codemirror/state": ^6.1.1
+    "@codemirror/view": ^6.4.0
+    "@lezer/common": ^1.0.1
+  checksum: 10/b2ebb0f938ac0f13f31c96a21fb38f531547de07f15284de414b88b2402b6a10c95c73b11d837010601d26ca065dbf79a433d413dd83e514e431ed2f43997719
+  languageName: node
+  linkType: hard
+
+"@prometheus-io/lezer-promql@npm:0.311.3":
+  version: 0.311.3
+  resolution: "@prometheus-io/lezer-promql@npm:0.311.3"
+  peerDependencies:
+    "@lezer/highlight": ^1.1.2
+    "@lezer/lr": ^1.2.3
+  checksum: 10/bcaf3d0f182cb862a7c101e46703a11b0eb589771342ddc9e7ebfe9941b3be91b413632a83ebc2dead6701dbe8458f69ae00ae9ba3ef98431425f976bdc97ce7
   languageName: node
   linkType: hard
 
@@ -23107,6 +23134,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lru-cache@npm:^11.2.7":
+  version: 11.5.2
+  resolution: "lru-cache@npm:11.5.2"
+  checksum: 10/122789c66605ddf29df58ff279e9e2c9499499d0b80b895ec524496f14bcde045d1582e3e38008f3457226d98067556719573b352119d6be8bdb1f8849f85681
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^5.1.1":
   version: 5.1.1
   resolution: "lru-cache@npm:5.1.1"
@@ -24428,10 +24462,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"monaco-promql@npm:1.7.4":
-  version: 1.7.4
-  resolution: "monaco-promql@npm:1.7.4"
-  checksum: 10/5bafbc3c1f00da27fd637ebc5ff106e96951ebf688b99b8ad7c447fee1d3298c3873369914c599aec836fa019ea3b8b93ce3b02157d0666d394b06b8a55e728c
+"monaco-promql@npm:1.9.0":
+  version: 1.9.0
+  resolution: "monaco-promql@npm:1.9.0"
+  dependencies:
+    "@prometheus-io/codemirror-promql": "npm:0.311.3"
+  checksum: 10/6595d8453e85dd88f0477738b9394ff96c47e70a05b489cbad90810bc513e2b5af80c6870324ad045d029a9abbafc86bf1a4a913dde2d87afb175476d4645504
   languageName: node
   linkType: hard
 
