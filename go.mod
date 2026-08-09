@@ -192,7 +192,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.39.0 // @grafana/grafana-backend-group
 	go.uber.org/atomic v1.11.0 // @grafana/alerting-backend
 	go.uber.org/goleak v1.3.0 // @grafana/grafana-search-and-storage
-	gocloud.dev v0.25.0 // @grafana/grafana-app-platform-squad
+	gocloud.dev v0.46.0 // @grafana/grafana-app-platform-squad
 	golang.org/x/crypto v0.51.0 // @grafana/grafana-backend-group
 	golang.org/x/exp v0.0.0-20240416160154-fe59bbe5cc7f // @grafana/alerting-backend
 	golang.org/x/mod v0.35.0 // @grafana/grafana-backend-group
