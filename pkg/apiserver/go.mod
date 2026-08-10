@@ -9,7 +9,7 @@ require (
 	github.com/grafana/grafana/pkg/apimachinery v0.0.0-20240409140820-518d3341d58f
 	github.com/prometheus/client_golang v1.19.0
 	github.com/stretchr/testify v1.9.0
-	go.opentelemetry.io/otel/trace v1.26.0
+	go.opentelemetry.io/otel/trace v1.45.0
 	golang.org/x/mod v0.18.0
 	k8s.io/apimachinery v0.29.3
 	k8s.io/apiserver v0.29.2
