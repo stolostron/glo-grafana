@@ -5,7 +5,7 @@ go 1.26.4
 // Override docker/docker to avoid:
 // go: github.com/drone-runners/drone-runner-docker@v1.8.2 requires
 // github.com/docker/docker@v0.0.0-00010101000000-000000000000: invalid version: unknown revision 000000000000
-replace github.com/docker/docker => github.com/moby/moby v23.0.4+incompatible
+replace github.com/docker/docker => github.com/moby/moby v29.3.1+incompatible
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
 replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
@@ -440,9 +440,9 @@ require (
 	github.com/yuin/gopher-lua v1.1.0 // indirect
 	github.com/zclconf/go-cty v1.13.0 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
-	go.etcd.io/etcd/api/v3 v3.5.10 // indirect
-	go.etcd.io/etcd/client/pkg/v3 v3.5.10 // indirect
-	go.etcd.io/etcd/client/v3 v3.5.10 // indirect
+	go.etcd.io/etcd/api/v3 v3.5.33 // indirect
+	go.etcd.io/etcd/client/pkg/v3 v3.5.33 // indirect
+	go.etcd.io/etcd/client/v3 v3.5.33 // indirect
 	go.mongodb.org/mongo-driver v1.14.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.51.0 // indirect
