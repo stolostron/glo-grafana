@@ -19,9 +19,12 @@ CVE-2026-39883
 CVE-2026-33186
 GHSA-hrxh-6v49-42gf
 
-# github.com/getkin/kin-openapi v0.133.0 in apps/*/go.mod and pkg/*/go.mod
-# Root go.mod has v0.133.0 — workspace resolves to v0.133.0
+# github.com/getkin/kin-openapi v0.132.0 in apps/*, pkg/*, .citools go.mod files
+# Root go.mod has v0.142.0 — workspace resolves to v0.142.0
+# (CVE-2026-76905 fixed in 0.141.0; CVE-2026-77354 fixed in 0.142.0)
 GHSA-r277-6w6q-xmqw
+CVE-2026-76905
+CVE-2026-77354
 
 # github.com/go-jose/go-jose/v3 v3.0.4 in apps/*/go.mod and pkg/*/go.mod
 # Root go.mod has v3.0.5 — workspace resolves to v3.0.5
