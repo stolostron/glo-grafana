@@ -61,7 +61,7 @@ require (
 	github.com/fatih/color v1.18.0 // @grafana/grafana-backend-group
 	github.com/fullstorydev/grpchan v1.1.1 // @grafana/grafana-backend-group
 	github.com/gchaincl/sqlhooks v1.3.0 // @grafana/grafana-search-and-storage
-	github.com/getkin/kin-openapi v0.142.0 // @grafana/grafana-app-platform-squad
+	github.com/getkin/kin-openapi v0.144.0 // @grafana/grafana-app-platform-squad
 	github.com/go-jose/go-jose/v3 v3.0.5 // @grafana/identity-access-team
 	github.com/go-jose/go-jose/v4 v4.1.4 // indirect; @grafana/identity-access-team
 	github.com/go-kit/log v0.2.1 //  @grafana/grafana-backend-group

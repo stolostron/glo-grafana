@@ -20,8 +20,9 @@ CVE-2026-33186
 GHSA-hrxh-6v49-42gf
 
 # github.com/getkin/kin-openapi v0.132.0 in apps/*, pkg/*, .citools go.mod files
-# Root go.mod has v0.142.0 — workspace resolves to v0.142.0
-# (CVE-2026-76905 fixed in 0.141.0; CVE-2026-77354 fixed in 0.142.0)
+# Root go.mod has v0.144.0 — workspace resolves to v0.144.0
+# (CVE-2026-76905 fixed in 0.141.0; CVE-2026-77354 fixed in 0.142.0;
+#  GHSA-r277-6w6q-xmqw / GHSA-jpcw-4wr7-c3vq fixed in 0.144.0)
 GHSA-r277-6w6q-xmqw
 CVE-2026-76905
 CVE-2026-77354
