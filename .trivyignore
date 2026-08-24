@@ -19,10 +19,14 @@ CVE-2026-39883
 CVE-2026-33186
 GHSA-hrxh-6v49-42gf
 
-# github.com/getkin/kin-openapi v0.132.0 in apps/*, pkg/*, .citools go.mod files
-# Root go.mod has v0.144.0 — workspace resolves to v0.144.0
-# (CVE-2026-76905 fixed in 0.141.0; CVE-2026-77354 fixed in 0.142.0;
-#  GHSA-r277-6w6q-xmqw / GHSA-jpcw-4wr7-c3vq fixed in 0.144.0)
+# github.com/getkin/kin-openapi v0.132.0 in root, apps/*, pkg/*, .citools go.mod files
+# CANNOT bump to v0.141+ on this z-stream: grafana/cog v0.0.37 OpenAPI codegen
+# (kinds/gen.go → make gen-cue) fails against the MappingRef / Schema.Value API
+# change (cog internal/openapi/generator.go:305, utils.go:64,75). First GHSA
+# patch is v0.144.0, which is the same breaking line. Track a cog upgrade
+# separately if these need a real bump.
+# GHSA-r277-6w6q-xmqw / GHSA-jpcw-4wr7-c3vq: patched in v0.144.0
+# CVE-2026-76905: patched in v0.141.0; CVE-2026-77354: patched in v0.142.0
 GHSA-r277-6w6q-xmqw
 CVE-2026-76905
 CVE-2026-77354
