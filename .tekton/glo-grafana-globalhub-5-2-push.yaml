@@ -9,13 +9,13 @@ metadata:
     pipelinesascode.tekton.dev/cancel-in-progress: "false"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
-      == "release-5.1"
+      == "release-5.2"
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: release-globalhub-5-1
-    appstudio.openshift.io/component: glo-grafana-globalhub-5-1
+    appstudio.openshift.io/application: release-globalhub-5-2
+    appstudio.openshift.io/component: glo-grafana-globalhub-5-2
     pipelines.appstudio.openshift.io/type: build
-  name: glo-grafana-globalhub-5-1-on-push
+  name: glo-grafana-globalhub-5-2-on-push
   namespace: acm-multicluster-glo-tenant
 spec:
   params:
@@ -24,7 +24,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/acm-multicluster-glo-tenant/glo-grafana-globalhub-5-1:{{revision}}
+    value: quay.io/redhat-user-workloads/acm-multicluster-glo-tenant/glo-grafana-globalhub-5-2:{{revision}}
   - name: build-platforms
     value:
     - linux/x86_64
@@ -44,7 +44,7 @@ spec:
   - name: send-slack-notification
     value: "true"
   - name: konflux-application-name
-    value: "release-globalhub-5-1"
+    value: "release-globalhub-5-2"
   - name: slack-webhook-url-secret-name
     # See details: https://konflux.pages.redhat.com/docs/users/patterns/slack-notifications.html
     value: "slack-notify-webhook"
@@ -69,7 +69,7 @@ spec:
       - name: pathInRepo
         value: pipelines/common-base.yaml
   taskRunTemplate:
-    serviceAccountName: build-pipeline-glo-grafana-globalhub-5-1
+    serviceAccountName: build-pipeline-glo-grafana-globalhub-5-2
   workspaces:
   - name: git-auth
     secret:
