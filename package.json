@@ -74,7 +74,7 @@
     "@betterer/cli": "5.4.0",
     "@betterer/eslint": "5.4.0",
     "@cypress/webpack-preprocessor": "6.0.4",
-    "@emotion/eslint-plugin": "11.11.0",
+    "@emotion/eslint-plugin": "11.12.0",
     "@grafana/eslint-config": "7.0.0",
     "@grafana/eslint-plugin": "link:./packages/grafana-eslint-rules",
     "@grafana/plugin-e2e": "1.19.9",
@@ -238,8 +238,8 @@
     "yargs": "^17.5.1"
   },
   "dependencies": {
-    "@emotion/css": "11.11.2",
-    "@emotion/react": "11.11.4",
+    "@emotion/css": "11.13.5",
+    "@emotion/react": "11.14.0",
     "@fingerprintjs/fingerprintjs": "^3.4.2",
     "@floating-ui/react": "0.26.16",
     "@glideapps/glide-data-grid": "^6.0.0",
