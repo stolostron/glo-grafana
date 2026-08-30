@@ -13,7 +13,7 @@ go 1.26.4
 replace github.com/docker/docker => github.com/moby/moby v23.0.18+incompatible
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
-replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.33
+replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.34
 
 // contains openapi encoder fixes. remove ASAP
 replace cuelang.org/go => github.com/grafana/cue v0.0.0-20230926092038-971951014e3f // @grafana/grafana-as-code
