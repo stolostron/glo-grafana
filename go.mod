@@ -28,19 +28,19 @@ replace github.com/getkin/kin-openapi => github.com/getkin/kin-openapi v0.122.0
 
 // this is required until a new version of k8s.io/component-base is released
 // with an update to prometheus/common v0.48.0
-replace k8s.io/component-base => k8s.io/component-base v0.0.0-20240417101527-62c04b35eff6
+replace k8s.io/component-base => k8s.io/component-base v0.37.0
 
 // Replace k8s.io/apimachinery to resolve v0.0.0 dependency issue
-replace k8s.io/apimachinery => k8s.io/apimachinery v0.29.3
+replace k8s.io/apimachinery => k8s.io/apimachinery v0.37.0
 
 // Replace k8s.io/client-go to resolve v0.0.0 dependency issue
-replace k8s.io/client-go => k8s.io/client-go v0.29.3
+replace k8s.io/client-go => k8s.io/client-go v0.37.0
 
 // Replace k8s.io/api to resolve v0.0.0 dependency issue
-replace k8s.io/api => k8s.io/api v0.29.3
+replace k8s.io/api => k8s.io/api v0.37.0
 
 // Replace k8s.io/apiserver to resolve v0.0.0 dependency issue
-replace k8s.io/apiserver => k8s.io/apiserver v0.29.2
+replace k8s.io/apiserver => k8s.io/apiserver v0.37.0
 
 require (
 	buf.build/gen/go/parca-dev/parca/bufbuild/connect-go v1.4.1-20221222094228-8b1d3d0f62e6.1 // @grafana/observability-traces-and-profiling
@@ -214,14 +214,14 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // @grafana/alerting-backend
 	gopkg.in/mail.v2 v2.3.1 // @grafana/grafana-backend-group
 	gopkg.in/yaml.v3 v3.0.1 // @grafana/alerting-backend
-	k8s.io/api v0.29.3 // @grafana/grafana-app-platform-squad
-	k8s.io/apimachinery v0.29.3 // @grafana/grafana-app-platform-squad
-	k8s.io/apiserver v0.29.2 // @grafana/grafana-app-platform-squad
-	k8s.io/client-go v0.29.3 // @grafana/grafana-app-platform-squad
-	k8s.io/code-generator v0.29.1 // @grafana/grafana-app-platform-squad
-	k8s.io/component-base v0.29.2 // @grafana/grafana-app-platform-squad
+	k8s.io/api v0.37.0 // @grafana/grafana-app-platform-squad
+	k8s.io/apimachinery v0.37.0 // @grafana/grafana-app-platform-squad
+	k8s.io/apiserver v0.37.0 // @grafana/grafana-app-platform-squad
+	k8s.io/client-go v0.37.0 // @grafana/grafana-app-platform-squad
+	k8s.io/code-generator v0.37.0 // @grafana/grafana-app-platform-squad
+	k8s.io/component-base v0.37.0 // @grafana/grafana-app-platform-squad
 	k8s.io/klog/v2 v2.120.1 // @grafana/grafana-app-platform-squad
-	k8s.io/kube-aggregator v0.29.0 // @grafana/grafana-app-platform-squad
+	k8s.io/kube-aggregator v0.37.0 // @grafana/grafana-app-platform-squad
 	k8s.io/kube-openapi v0.0.0-20240228011516-70dd3763d340 // @grafana/grafana-app-platform-squad
 	k8s.io/utils v0.0.0-20230726121419-3b25d923346b // @grafana/partner-datasources
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // @grafana-app-platform-squad
