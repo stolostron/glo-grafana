@@ -43,7 +43,7 @@ replace k8s.io/api => k8s.io/api v0.29.3
 replace k8s.io/apiserver => k8s.io/apiserver v0.29.2
 
 require (
-	buf.build/gen/go/parca-dev/parca/bufbuild/connect-go v1.4.1-20221222094228-8b1d3d0f62e6.1 // @grafana/observability-traces-and-profiling
+	buf.build/gen/go/parca-dev/parca/bufbuild/connect-go v1.10.0-20260523035409-ca8a9e862107.2 // @grafana/observability-traces-and-profiling
 	buf.build/gen/go/parca-dev/parca/protocolbuffers/go v1.33.0-20240414232344-9ca06271cb73.1 // @grafana/observability-traces-and-profiling
 	cloud.google.com/go/kms v1.15.7 // @grafana/grafana-backend-group
 	cloud.google.com/go/storage v1.38.0 // @grafana/grafana-backend-group
