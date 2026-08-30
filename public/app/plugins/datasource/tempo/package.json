@@ -46,7 +46,7 @@
     "@testing-library/user-event": "14.5.2",
     "@types/jest": "29.5.14",
     "@types/lodash": "4.17.24",
-    "@types/node": "20.14.2",
+    "@types/node": "20.19.43",
     "@types/prismjs": "1.26.4",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
