@@ -4973,7 +4973,7 @@ __metadata:
     "@types/react-test-renderer": "npm:18.3.1"
     "@types/react-transition-group": "npm:4.4.12"
     "@types/react-window": "npm:1.8.8"
-    "@types/slate": "npm:0.47.11"
+    "@types/slate": "npm:0.47.16"
     "@types/slate-plain-serializer": "npm:0.7.5"
     "@types/slate-react": "npm:0.22.9"
     "@types/testing-library__jest-dom": "npm:5.14.9"
@@ -5039,7 +5039,7 @@ __metadata:
     rollup-plugin-svg-import: "npm:1.6.0"
     rxjs: "npm:7.8.1"
     sass-loader: "npm:14.2.1"
-    slate: "npm:0.47.9"
+    slate: "npm:0.126.2"
     slate-plain-serializer: "npm:0.7.13"
     slate-react: "npm:0.22.10"
     storybook: "npm:^8.1.6"
@@ -10681,13 +10681,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/slate@npm:0.47.11":
-  version: 0.47.11
-  resolution: "@types/slate@npm:0.47.11"
+"@types/slate@npm:0.47.16":
+  version: 0.47.16
+  resolution: "@types/slate@npm:0.47.16"
   dependencies:
     "@types/react": "npm:*"
     immutable: "npm:^3.8.2"
-  checksum: 10/ef7b9edd0a96a4730b1933369363e6bd44193b5b26e9cccbcebf63be3ff59a2ca1466f5ee49a7d1a79ea8293c6df1e0ea10d5dfd600899c17d5cc1963574fb02
+  checksum: 10/22b2f6029248b75d2ceedf41d27e941626142e3d014af6fd7ea914bae3af0f89d949298c5596162634ba276276d29cc8eb9ccdc4628d487092d5c058939ba35e
   languageName: node
   linkType: hard
 
@@ -15905,15 +15905,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"direction@npm:^0.1.5":
-  version: 0.1.5
-  resolution: "direction@npm:0.1.5"
-  bin:
-    direction: cli.js
-  checksum: 10/bf7d6ceca38f1cd4ffd33777207d0d64fe6075a2dee9c2b6c99b18ec9550fe20526a65baf1e0c1c9e683af6f4be27f84d55f753fc0c50df56dbd5551814b70c8
-  languageName: node
-  linkType: hard
-
 "djb2a@npm:^1.2.0":
   version: 1.2.0
   resolution: "djb2a@npm:1.2.0"
@@ -17498,15 +17489,6 @@ __metadata:
   dependencies:
     estraverse: "npm:^5.2.0"
   checksum: 10/44ffcd89e714ea6b30143e7f119b104fc4d75e77ee913f34d59076b40ef2d21967f84e019f84e1fd0465b42cdbf725db449f232b5e47f29df29ed76194db8e16
-  languageName: node
-  linkType: hard
-
-"esrever@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "esrever@npm:0.2.0"
-  bin:
-    esrever: bin/esrever
-  checksum: 10/be83b1d878930bab3227881b96b1b02b534ad48f8761fd1f41c521cfe1804be16b2af0ac9312eb78d1fd80a96f7336e0ef3e8f5d571d86f631e3be4b5e2dec5b
   languageName: node
   linkType: hard
 
@@ -19278,7 +19260,7 @@ __metadata:
     "@types/react-window-infinite-loader": "npm:^1"
     "@types/redux-mock-store": "npm:1.5.0"
     "@types/semver": "npm:7.5.8"
-    "@types/slate": "npm:0.47.11"
+    "@types/slate": "npm:0.47.16"
     "@types/slate-plain-serializer": "npm:0.7.5"
     "@types/slate-react": "npm:0.22.9"
     "@types/systemjs": "npm:6.15.4"
@@ -19454,7 +19436,7 @@ __metadata:
     sass-loader: "npm:14.2.1"
     selecto: "npm:1.26.3"
     semver: "npm:7.6.2"
-    slate: "npm:0.47.9"
+    slate: "npm:0.126.2"
     slate-plain-serializer: "npm:0.7.13"
     slate-react: "npm:0.22.10"
     style-loader: "npm:4.0.0"
@@ -23025,7 +23007,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4, lodash@npm:^4.1.1, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
+"lodash@npm:4.17.21, lodash@npm:^4, lodash@npm:^4.1.1, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 10/c08619c038846ea6ac754abd6dd29d2568aa705feb69339e836dfa8d8b09abbb2f859371e86863eda41848221f9af43714491467b5b0299122431e202bb0c532
@@ -30182,21 +30164,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slate@npm:0.47.9":
-  version: 0.47.9
-  resolution: "slate@npm:0.47.9"
-  dependencies:
-    debug: "npm:^3.1.0"
-    direction: "npm:^0.1.5"
-    esrever: "npm:^0.2.0"
-    is-plain-object: "npm:^2.0.4"
-    lodash: "npm:^4.17.4"
-    tiny-invariant: "npm:^1.0.1"
-    tiny-warning: "npm:^0.0.3"
-    type-of: "npm:^2.0.1"
-  peerDependencies:
-    immutable: ">=3.8.1 || >4.0.0-rc"
-  checksum: 10/d1c66218d8c562f2ee17d9c79a7b985423855e4529252ebdf85f570ad46783f7a133c0ee274fb2fda1a7164571fd49d8bfd5fda0e0d89dbb49d3510b2b385c45
+"slate@npm:0.126.2":
+  version: 0.126.2
+  resolution: "slate@npm:0.126.2"
+  checksum: 10/f46fd49ba9335b735fed58ffbd0eed2eaa213e78343f69997f7019f8b4f45e53aca6f1622ceaee5deb0037f4315dbf082c922c01beb625a605886037176a2359
   languageName: node
   linkType: hard
 
@@ -32227,13 +32198,6 @@ __metadata:
     media-typer: "npm:0.3.0"
     mime-types: "npm:~2.1.24"
   checksum: 10/0bd9eeae5efd27d98fd63519f999908c009e148039d8e7179a074f105362d4fcc214c38b24f6cda79c87e563cbd12083a4691381ed28559220d4a10c2047bed4
-  languageName: node
-  linkType: hard
-
-"type-of@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "type-of@npm:2.0.1"
-  checksum: 10/5da0273c61ae3eaeb4cb2580a823d2a5d593b572f994b92c2bebf124dc25b6a6cc9d55a2a7e709bae3b392c6b71ef62a93030c53417e859b0f9db942586ff2cd
   languageName: node
   linkType: hard
 
