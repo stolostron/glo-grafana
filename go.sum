@@ -1974,10 +1974,10 @@ github.com/docker/go-units v0.5.0 h1:69rxXcBk27SvSaaxTtLh/8llcHD8vYHT7WSdRZ/jvr4
 github.com/docker/go-units v0.5.0/go.mod h1:fgPhTUdO+D/Jk86RDLlptpiXQzgHJF7gydDDbaIK4Dk=
 github.com/docker/libtrust v0.0.0-20150114040149-fa567046d9b1/go.mod h1:cyGadeNEkKy96OOhEzfZl+yxihPEzKnqJwvfuSUqbZE=
 github.com/docopt/docopt-go v0.0.0-20180111231733-ee0de3bc6815/go.mod h1:WwZ+bS3ebgob9U8Nd0kOddGdZWjyMGR8Wziv+TBNwSE=
-github.com/drone-runners/drone-runner-docker v1.8.2 h1:F7+39FSyzEUqLXYMvTdTGBhCS79ODDIhw3DQeF5GYT8=
-github.com/drone-runners/drone-runner-docker v1.8.2/go.mod h1:JR3pZeVZKKpkbTajiq0YtAx9WutkODdVKZGNR83kEwE=
-github.com/drone/drone-cli v1.6.1 h1:Beh0opEGR5XYezOyOmiqWzTMBGHkGDrh2tIG1cY/5GY=
-github.com/drone/drone-cli v1.6.1/go.mod h1://HC780Gua3Nhob/I2VPL3nTqmleEE/HIhGhTcJb2ds=
+github.com/drone-runners/drone-runner-docker v1.8.3 h1:uUnC45C1JMSLW+9uy6RoKG5ugzeXWN89pygs9BMLObY=
+github.com/drone-runners/drone-runner-docker v1.8.3/go.mod h1:JR3pZeVZKKpkbTajiq0YtAx9WutkODdVKZGNR83kEwE=
+github.com/drone/drone-cli v1.9.0 h1:XU8MmqXDU2TSaLSIiPjngCvsiHRKln7AjGodE66m5lQ=
+github.com/drone/drone-cli v1.9.0/go.mod h1:+7ssoFJ/8oMftdGvFYEG0L36POg9kDyZllZgZQlYdV0=
 github.com/drone/drone-go v1.7.1 h1:ZX+3Rs8YHUSUQ5mkuMLmm1zr1ttiiE2YGNxF3AnyDKw=
 github.com/drone/drone-go v1.7.1/go.mod h1:fxCf9jAnXDZV1yDr0ckTuWd1intvcQwfJmTRpTZ1mXg=
 github.com/drone/envsubst v1.0.2/go.mod h1:bkZbnc/2vh1M12Ecn7EYScpI4YGYU0etwLJICOWi8Z0=
