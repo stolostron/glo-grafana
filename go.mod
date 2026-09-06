@@ -69,7 +69,7 @@ require (
 	github.com/beevik/etree v1.6.0 // @grafana/grafana-backend-group
 	github.com/benbjohnson/clock v1.3.5 // @grafana/alerting-backend
 	github.com/blang/semver/v4 v4.0.0 // @grafana/grafana-release-guild
-	github.com/blugelabs/bluge v0.1.9 // @grafana/grafana-backend-group
+	github.com/blugelabs/bluge v0.2.2 // @grafana/grafana-backend-group
 	github.com/blugelabs/bluge_segment_api v0.2.0 // @grafana/grafana-backend-group
 	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b // @grafana/grafana-backend-group
 	github.com/bufbuild/connect-go v1.10.0 // @grafana/observability-traces-and-profiling
@@ -484,6 +484,7 @@ require (
 )
 
 require (
+	github.com/blugelabs/ice/v2 v2.0.1 // indirect
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	golang.org/x/telemetry v0.0.0-20260625142307-59b4966ccb57 // indirect
