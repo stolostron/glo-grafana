@@ -276,7 +276,7 @@
     "@opentelemetry/exporter-collector": "0.25.0",
     "@opentelemetry/semantic-conventions": "1.41.1",
     "@popperjs/core": "2.11.8",
-    "@prometheus-io/lezer-promql": "^0.52.0",
+    "@prometheus-io/lezer-promql": "^0.313.0",
     "@react-aria/dialog": "3.5.14",
     "@react-aria/focus": "3.17.1",
     "@react-aria/overlays": "3.22.1",
