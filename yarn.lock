@@ -5851,6 +5851,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@locker/near-membrane-shared@npm:0.19.1":
+  version: 0.19.1
+  resolution: "@locker/near-membrane-shared@npm:0.19.1"
+  checksum: 10/775994ec7850119c6dce17312dabdba3b86db79fae0649419b9218203f14efe8ee76c1b79060ee1c586a984e552abac026804e57e5b038778628ef28dabab34e
+  languageName: node
+  linkType: hard
+
 "@manypkg/find-root@npm:^2.2.2":
   version: 2.2.3
   resolution: "@manypkg/find-root@npm:2.2.3"
@@ -19201,7 +19208,7 @@ __metadata:
     "@lezer/highlight": "npm:1.2.0"
     "@lezer/lr": "npm:1.3.3"
     "@locker/near-membrane-dom": "npm:0.13.6"
-    "@locker/near-membrane-shared": "npm:0.13.6"
+    "@locker/near-membrane-shared": "npm:0.19.1"
     "@locker/near-membrane-shared-dom": "npm:0.13.6"
     "@manypkg/get-packages": "npm:^2.2.0"
     "@msagl/core": "npm:^1.1.19"
