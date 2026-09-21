@@ -209,7 +209,7 @@ require (
 	golang.org/x/tools v0.47.0 // @grafana/grafana-as-code
 	gonum.org/v1/gonum v0.17.0 // @grafana/observability-metrics
 	google.golang.org/api v0.176.0 // @grafana/grafana-backend-group
-	google.golang.org/grpc v1.82.1 // @grafana/plugins-platform-backend
+	google.golang.org/grpc v1.82.2 // @grafana/plugins-platform-backend
 	google.golang.org/protobuf v1.36.11 // @grafana/plugins-platform-backend
 	gopkg.in/ini.v1 v1.67.0 // @grafana/alerting-backend
 	gopkg.in/mail.v2 v2.3.1 // @grafana/grafana-backend-group
