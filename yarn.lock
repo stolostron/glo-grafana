@@ -4648,7 +4648,7 @@ __metadata:
     "@lezer/common": "npm:1.2.1"
     "@lezer/highlight": "npm:1.2.0"
     "@lezer/lr": "npm:1.4.0"
-    "@prometheus-io/lezer-promql": "npm:0.52.1"
+    "@prometheus-io/lezer-promql": "npm:0.314.0"
     "@reduxjs/toolkit": "npm:2.2.5"
     "@rollup/plugin-image": "npm:3.0.3"
     "@rollup/plugin-node-resolve": "npm:15.3.1"
@@ -6820,13 +6820,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prometheus-io/lezer-promql@npm:0.52.1, @prometheus-io/lezer-promql@npm:^0.52.0":
-  version: 0.52.1
-  resolution: "@prometheus-io/lezer-promql@npm:0.52.1"
+"@prometheus-io/lezer-promql@npm:0.314.0, @prometheus-io/lezer-promql@npm:^0.314.0":
+  version: 0.314.0
+  resolution: "@prometheus-io/lezer-promql@npm:0.314.0"
   peerDependencies:
     "@lezer/highlight": ^1.1.2
     "@lezer/lr": ^1.2.3
-  checksum: 10/531164b8ddedbe0e0ba9304ea918f5cb0bb9c14f5e68c835fa02d3dbbe37c90daa8344a54666ba32aea6db8dfc0720cbc5b5ea50e1ed1126e987fcea7394b595
+  checksum: 10/0be5a654b7d5810bdd636280098cc2405f77aa7a5b5e6cdfd970522cc596f086fa85bf4ee3b40c2708e5ece1108566dc45432450563bcb47ce9494734987204f
   languageName: node
   linkType: hard
 
@@ -19212,7 +19212,7 @@ __metadata:
     "@playwright/test": "npm:1.44.1"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:0.6.2"
     "@popperjs/core": "npm:2.11.8"
-    "@prometheus-io/lezer-promql": "npm:^0.52.0"
+    "@prometheus-io/lezer-promql": "npm:^0.314.0"
     "@react-aria/dialog": "npm:3.5.14"
     "@react-aria/focus": "npm:3.17.1"
     "@react-aria/overlays": "npm:3.22.1"
