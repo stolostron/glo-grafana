@@ -355,6 +355,10 @@ func TestExtractFilesSymlinkEscape(t *testing.T) {
 		require.Empty(t, path)
 		require.ErrorContains(t, err, "pointing outside plugin directory is not allowed")
 
+		contents, err := os.ReadFile(filepath.Join(root, "victim.txt")) // nolint:gosec
+		require.NoError(t, err)
+		require.Equal(t, "OUTSIDE", string(contents))
+
 		_, err = os.Stat(filepath.Join(pluginsDir, pluginID))
 		require.True(t, os.IsNotExist(err), "the rejected archive left a partial install behind")
 	})
