@@ -37,6 +37,8 @@ RUN cp $GOPATH/src/github.com/grafana/grafana/bin/linux-$(go env GOARCH)/grafana
 # Final container
 FROM registry.access.redhat.com/ubi9/ubi:latest
 
+RUN update-crypto-policies --set DEFAULT:PQ
+
 LABEL io.k8s.display-name="Grafana" \
       io.k8s.description="Grafana is an open-source, general purpose dashboard and graph composer" \
       io.openshift.tags="openshift" \
