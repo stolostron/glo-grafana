@@ -61,6 +61,14 @@ func (s *SnapshotLegacyStore) Delete(ctx context.Context, name string, deleteVal
 		return nil, false, err
 	}
 
+	ns, err := request.NamespaceInfoFrom(ctx, true)
+	if err != nil {
+		return nil, false, err
+	}
+	if snap.OrgID != ns.OrgID {
+		return nil, false, s.ResourceInfo.NewNotFound(name)
+	}
+
 	// Delete the external one first
 	if snap.ExternalDeleteURL != "" {
 		err := dashboardsnapshots.DeleteExternalDashboardSnapshot(snap.ExternalDeleteURL)
