@@ -165,7 +165,7 @@
     "core-js": "3.49.0",
     "css-loader": "7.1.4",
     "csstype": "3.2.3",
-    "esbuild": "0.28.1",
+    "esbuild": "0.28.2",
     "expose-loader": "5.0.1",
     "mock-raf": "1.0.1",
     "process": "^0.11.10",
