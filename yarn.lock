@@ -4995,7 +4995,7 @@ __metadata:
     i18next: "npm:^23.0.0"
     i18next-browser-languagedetector: "npm:^7.0.2"
     immutable: "npm:4.3.6"
-    is-hotkey: "npm:0.2.0"
+    is-hotkey: "npm:0.2.1"
     jquery: "npm:3.7.1"
     lodash: "npm:4.17.21"
     micro-memoize: "npm:^4.1.2"
@@ -20902,10 +20902,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-hotkey@npm:0.2.0":
-  version: 0.2.0
-  resolution: "is-hotkey@npm:0.2.0"
-  checksum: 10/d3d42026e70ea796fb9af8345e511de4b90eed55765eb67db8695f83e60bac8566ace16b191c08c7f6fab36c9318133a9f1c19eb9e5f8ce528d8a433e4b41190
+"is-hotkey@npm:0.2.1":
+  version: 0.2.1
+  resolution: "is-hotkey@npm:0.2.1"
+  checksum: 10/90f3445f7d6df7f1fc04ad5f826634855c8f306ee98b31724264e3528be9f83e90a42a8d4090690e9f7044ba9eb29fb697d13255a57e77d8d56c7e4d67ff02de
   languageName: node
   linkType: hard
 
