@@ -4309,7 +4309,7 @@ __metadata:
     "@types/react-dom": "npm:18.2.25"
     "@types/string-hash": "npm:1.1.3"
     "@types/tinycolor2": "npm:1.4.6"
-    d3-interpolate: "npm:3.0.1"
+    d3-interpolate: "npm:3.0.2"
     date-fns: "npm:3.6.0"
     dompurify: "npm:^3.0.0"
     esbuild: "npm:0.28.1"
@@ -15192,6 +15192,15 @@ __metadata:
   dependencies:
     d3-color: "npm:1 - 3"
   checksum: 10/988d66497ef5c190cf64f8c80cd66e1e9a58c4d1f8932d776a8e3ae59330291795d5a342f5a97602782ccbef21a5df73bc7faf1f0dc46a5145ba6243a82a0f0e
+  languageName: node
+  linkType: hard
+
+"d3-interpolate@npm:3.0.2":
+  version: 3.0.2
+  resolution: "d3-interpolate@npm:3.0.2"
+  dependencies:
+    d3-color: "npm:1 - 3"
+  checksum: 10/5b0a1001b02ba6fcdc63a2d7af53569ff77b218de738a9f665abd4abfb6c63a6c67d26b527c32d478fc3c0c594e96864aac868d8e09238afac9a5acd80f0b310
   languageName: node
   linkType: hard
 
