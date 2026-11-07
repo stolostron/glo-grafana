@@ -304,7 +304,7 @@
     "common-tags": "1.8.2",
     "d3": "7.9.0",
     "d3-force": "3.0.0",
-    "d3-scale-chromatic": "3.1.0",
+    "d3-scale-chromatic": "3.1.1",
     "dangerously-set-html-content": "1.1.0",
     "date-fns": "3.6.0",
     "debounce-promise": "3.1.2",
