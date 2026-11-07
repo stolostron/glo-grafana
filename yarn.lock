@@ -15224,9 +15224,9 @@ __metadata:
   linkType: hard
 
 "d3-random@npm:3, d3-random@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "d3-random@npm:3.0.1"
-  checksum: 10/9f41d6ca3a1826cea8d88392917b5039504337d442a4d1357c870fa3031701e60209a2689a6ddae7df8fca824383d038c957eb545bc49a7428c71aaf3b11f56f
+  version: 3.0.2
+  resolution: "d3-random@npm:3.0.2"
+  checksum: 10/f23aa53c72dc29fe2d58f8b9b4e340ef3f50bb86e8c8a4d54c2973fa5a7e40f372486a975879ade9a22eb1e5a053bb3ef7b7859762c9001f81576702c8394068
   languageName: node
   linkType: hard
 
