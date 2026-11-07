@@ -15152,7 +15152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"d3-force@npm:3, d3-force@npm:3.0.0":
+"d3-force@npm:3":
   version: 3.0.0
   resolution: "d3-force@npm:3.0.0"
   dependencies:
@@ -15160,6 +15160,17 @@ __metadata:
     d3-quadtree: "npm:1 - 3"
     d3-timer: "npm:1 - 3"
   checksum: 10/85945f8d444d78567009518f0ab54c0f0c8873eb8eb9a2ff0ab667b0f81b419e101a411415d4a2c752547ec7143f89675e8c33b8f111e55e5579a04cb7f4591c
+  languageName: node
+  linkType: hard
+
+"d3-force@npm:3.0.1":
+  version: 3.0.1
+  resolution: "d3-force@npm:3.0.1"
+  dependencies:
+    d3-dispatch: "npm:1 - 3"
+    d3-quadtree: "npm:1 - 3"
+    d3-timer: "npm:1 - 3"
+  checksum: 10/b65ab681b632b26a241741956092bd061982abef0d4e790ec62b4d8b94b51ce8697931748c83e55b16946ac67b5ac554d7c96f2fd7d768f4b394a04888a402fc
   languageName: node
   linkType: hard
 
@@ -19322,7 +19333,7 @@ __metadata:
     cypress: "npm:13.17.0"
     cypress-file-upload: "npm:5.0.8"
     d3: "npm:7.9.0"
-    d3-force: "npm:3.0.0"
+    d3-force: "npm:3.0.1"
     d3-scale-chromatic: "npm:3.1.0"
     dangerously-set-html-content: "npm:1.1.0"
     date-fns: "npm:3.6.0"
