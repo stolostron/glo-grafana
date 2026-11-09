@@ -19397,7 +19397,7 @@ __metadata:
     node-notifier: "npm:10.0.1"
     nx: "npm:19.2.0"
     ol: "npm:7.4.0"
-    ol-ext: "npm:4.0.18"
+    ol-ext: "npm:4.0.39"
     pluralize: "npm:^8.0.0"
     postcss: "npm:8.4.38"
     postcss-loader: "npm:8.1.1"
@@ -25452,12 +25452,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ol-ext@npm:4.0.18":
-  version: 4.0.18
-  resolution: "ol-ext@npm:4.0.18"
+"ol-ext@npm:4.0.39":
+  version: 4.0.39
+  resolution: "ol-ext@npm:4.0.39"
   peerDependencies:
     ol: ">= 5.3.0"
-  checksum: 10/31338d4ead7fe313d99e0b311d8a83005239c2c4da11b5651b0e1fc6f16f0887414b40e41967e9920abaa1e33df8a1bf5d47563ba4ffd62ba47a8096bed67edf
+  checksum: 10/29b3f39803edfc1261227742630a0818ccee7cc178611b2bc27e65f6256d943c5608e92d039f9e62c43902dd7af223ee36646732498829db9da2c191afabe20f
   languageName: node
   linkType: hard
 
