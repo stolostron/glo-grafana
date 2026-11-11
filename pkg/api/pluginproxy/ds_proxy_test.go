@@ -1015,6 +1015,50 @@ func Test_PathCheck(t *testing.T) {
 	require.Equal(t, routes[1], proxy.matchedRoute)
 }
 
+func TestDataSourceProxy_validateRequest_blocksWritesOnUnmatchedRoutes(t *testing.T) {
+	// Regression test for CVE-2026-9703: unmatched proxy routes (the case for core
+	// datasource plugins that declare no routes, such as Loki) must not forward
+	// write requests, otherwise a Viewer can mutate Loki alerting rules through
+	// /api/datasources/proxy/uid/<uid>/loki/api/v1/rules.
+	tests := []struct {
+		name      string
+		dsType    string
+		method    string
+		path      string
+		expectErr bool
+	}{
+		{name: "loki GET is allowed", dsType: datasources.DS_LOKI, method: http.MethodGet, path: "loki/api/v1/rules"},
+		{name: "loki POST is blocked", dsType: datasources.DS_LOKI, method: http.MethodPost, path: "loki/api/v1/rules", expectErr: true},
+		{name: "loki PUT is blocked", dsType: datasources.DS_LOKI, method: http.MethodPut, path: "loki/api/v1/rules/1", expectErr: true},
+		{name: "loki DELETE is blocked", dsType: datasources.DS_LOKI, method: http.MethodDelete, path: "loki/api/v1/rules/1", expectErr: true},
+		{name: "prometheus POST is blocked", dsType: datasources.DS_PROMETHEUS, method: http.MethodPost, path: "api/v1/admin/tsdb/delete_series", expectErr: true},
+		{name: "other datasource POST is untouched", dsType: "postgres", method: http.MethodPost, path: "api/v1/query"},
+	}
+
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			req, err := http.NewRequest(tc.method, "http://localhost/"+tc.path, nil)
+			require.NoError(t, err)
+			ctx := &contextmodel.ReqContext{
+				Context:      &web.Context{Req: req},
+				SignedInUser: &user.SignedInUser{OrgRole: org.RoleViewer},
+			}
+			ds := &datasources.DataSource{UID: "ds-uid", Type: tc.dsType, URL: "http://localhost:3100"}
+			proxy, err := setupDSProxyTest(t, ctx, ds, nil, tc.path)
+			require.NoError(t, err)
+
+			err = proxy.validateRequest()
+			if !tc.expectErr {
+				require.NoError(t, err)
+				return
+			}
+			require.Error(t, err)
+			require.Contains(t, err.Error(), "non allow-listed")
+			require.Contains(t, err.Error(), tc.dsType)
+		})
+	}
+}
+
 func setupDSProxyTest(t *testing.T, ctx *contextmodel.ReqContext, ds *datasources.DataSource, routes []*plugins.Route, path string, opts ...func(proxy *DataSourceProxy)) (*DataSourceProxy, error) {
 	t.Helper()
 
