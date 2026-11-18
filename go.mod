@@ -1,6 +1,6 @@
 module github.com/grafana/grafana
 
-go 1.26.4
+go 1.26.10
 
 // Override containerd to fix CVE-2024-25621 (local privilege escalation)
 replace github.com/containerd/containerd => github.com/containerd/containerd v1.7.29
@@ -61,9 +61,9 @@ require (
 	github.com/fatih/color v1.18.0 // @grafana/grafana-backend-group
 	github.com/fullstorydev/grpchan v1.1.1 // @grafana/grafana-backend-group
 	github.com/gchaincl/sqlhooks v1.3.0 // @grafana/grafana-search-and-storage
-	github.com/getkin/kin-openapi v0.144.0 // @grafana/grafana-app-platform-squad
+	github.com/getkin/kin-openapi v0.149.0 // @grafana/grafana-app-platform-squad
 	github.com/go-jose/go-jose/v3 v3.0.5 // @grafana/identity-access-team
-	github.com/go-jose/go-jose/v4 v4.1.4 // indirect; @grafana/identity-access-team
+	github.com/go-jose/go-jose/v4 v4.1.6 // indirect; @grafana/identity-access-team
 	github.com/go-kit/log v0.2.1 //  @grafana/grafana-backend-group
 	github.com/go-ldap/ldap/v3 v3.4.4 // @grafana/identity-access-team
 	github.com/go-logfmt/logfmt v0.6.0 // @grafana/oss-big-tent
@@ -203,10 +203,10 @@ require (
 	golang.org/x/crypto v0.55.0 // @grafana/grafana-backend-group
 	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6 // @grafana/alerting-backend
 	golang.org/x/mod v0.40.0 // indirect; @grafana/grafana-backend-group
-	golang.org/x/net v0.58.0 // @grafana/oss-big-tent @grafana/partner-datasources
+	golang.org/x/net v0.62.0 // @grafana/oss-big-tent @grafana/partner-datasources
 	golang.org/x/oauth2 v0.36.0 // @grafana/identity-access-team
 	golang.org/x/sync v0.22.0 // @grafana/alerting-backend
-	golang.org/x/text v0.41.0 // @grafana/grafana-backend-group
+	golang.org/x/text v0.43.0 // @grafana/grafana-backend-group
 	golang.org/x/time v0.12.0 // @grafana/grafana-backend-group
 	golang.org/x/tools v0.49.0 // indirect; @grafana/grafana-as-code
 	gonum.org/v1/gonum v0.17.0 // @grafana/oss-big-tent
