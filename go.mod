@@ -170,7 +170,7 @@ require (
 	github.com/russellhaering/goxmldsig v1.6.0 // @grafana/grafana-backend-group
 	github.com/scottlepp/go-duck v0.0.21 // @grafana/grafana-app-platform-squad
 	github.com/spf13/cobra v1.8.0 // @grafana/grafana-app-platform-squad
-	github.com/spf13/pflag v1.0.5 // @grafana-app-platform-squad
+	github.com/spf13/pflag v1.1.0 // @grafana-app-platform-squad
 	github.com/spyzhov/ajson v0.9.0 // @grafana/grafana-app-platform-squad
 	github.com/stretchr/testify v1.11.1 // @grafana/grafana-backend-group
 	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf // @grafana/grafana-backend-group
