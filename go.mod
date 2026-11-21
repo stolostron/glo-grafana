@@ -66,7 +66,7 @@ require (
 	github.com/beevik/etree v1.6.0 // @grafana/grafana-backend-group
 	github.com/benbjohnson/clock v1.3.5 // @grafana/alerting-backend
 	github.com/blang/semver/v4 v4.0.0 // @grafana/grafana-release-guild
-	github.com/blugelabs/bluge v0.1.9 // @grafana/grafana-backend-group
+	github.com/blugelabs/bluge v0.2.2 // @grafana/grafana-backend-group
 	github.com/blugelabs/bluge_segment_api v0.2.0 // @grafana/grafana-backend-group
 	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b // @grafana/grafana-backend-group
 	github.com/bufbuild/connect-go v1.10.0 // @grafana/observability-traces-and-profiling
@@ -486,6 +486,7 @@ require (
 )
 
 require (
+	github.com/blugelabs/ice/v2 v2.0.1 // indirect
 	github.com/dprotaso/go-yit v0.0.0-20220510233725-9ba8df137936 // indirect
 	github.com/go-openapi/swag/jsonname v0.26.0 // indirect
 	github.com/oasdiff/yaml v0.1.1 // indirect
