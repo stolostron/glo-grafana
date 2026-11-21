@@ -164,7 +164,7 @@
     "common-tags": "1.8.2",
     "core-js": "3.49.0",
     "css-loader": "7.1.4",
-    "csstype": "3.2.3",
+    "csstype": "3.2.4",
     "esbuild": "0.28.1",
     "expose-loader": "5.0.1",
     "mock-raf": "1.0.1",
