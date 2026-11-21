@@ -317,7 +317,7 @@
     "i18next-browser-languagedetector": "^7.0.2",
     "immer": "10.1.1",
     "immutable": "4.3.6",
-    "jquery": "3.7.1",
+    "jquery": "3.8.0",
     "js-yaml": "^4.1.0",
     "json-markup": "^1.1.0",
     "json-source-map": "0.6.1",
