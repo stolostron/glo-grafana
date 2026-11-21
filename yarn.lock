@@ -5960,14 +5960,14 @@ __metadata:
   linkType: hard
 
 "@msagl/core@npm:^1.1.19, @msagl/core@npm:^1.1.24":
-  version: 1.1.24
-  resolution: "@msagl/core@npm:1.1.24"
+  version: 1.1.25
+  resolution: "@msagl/core@npm:1.1.25"
   dependencies:
     queue-typescript: "npm:^1.0.1"
     reliable-random: "npm:^0.0.1"
     stack-typescript: "npm:^1.0.4"
     typescript-string-operations: "npm:^1.4.1"
-  checksum: 10/1a80801c7f6f4775c9af4b0b25dc7de4216b56aefb95ed10394e1e87c549a882c71aee9061a6e2f3074025113aef9691f06a0ccc06f3da65c296442a1a1bbbed
+  checksum: 10/aeda6d7f88d09ee02cbb67e3bd721819a076c7cbbc66ad93dd9e8d6dee549242bc7975aefb0ce012d637715ca00d39d1b6b11048c926ba79995e1392e7d6de59
   languageName: node
   linkType: hard
 
