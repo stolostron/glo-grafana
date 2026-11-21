@@ -5016,7 +5016,7 @@ __metadata:
     react-colorful: "npm:5.6.1"
     react-custom-scrollbars-2: "npm:4.5.0"
     react-dom: "npm:18.3.1"
-    react-dropzone: "npm:14.2.3"
+    react-dropzone: "npm:14.4.1"
     react-highlight-words: "npm:0.20.0"
     react-hook-form: "npm:^7.49.2"
     react-i18next: "npm:^14.0.0"
@@ -12483,6 +12483,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"attr-accept@npm:^2.2.4":
+  version: 2.2.5
+  resolution: "attr-accept@npm:2.2.5"
+  checksum: 10/474b1c53e62c5b881c745d1f098196f190c8b493245e95d4b0fea9298d3acb56f551868fc12806885277e55e9d8ad3c5963e92d93456f4e4081dfc5190977bfd
+  languageName: node
+  linkType: hard
+
 "autoprefixer@npm:10.5.2":
   version: 10.5.2
   resolution: "autoprefixer@npm:10.5.2"
@@ -18010,6 +18017,15 @@ __metadata:
   dependencies:
     tslib: "npm:^2.4.0"
   checksum: 10/6add4098ae07fd1e9050b1e8d3fd9f128680c1d6648c0676af54ace4586e6e5bfcb8fdfa45b69e9131ffd8175bf630d54a445a5facf9be244f85b99ce309183e
+  languageName: node
+  linkType: hard
+
+"file-selector@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "file-selector@npm:2.1.2"
+  dependencies:
+    tslib: "npm:^2.7.0"
+  checksum: 10/2a6be0e1904df85f8705a5171fd3b93c1b1ff2ad0143556adb78ac4de899bfc0ba1a20083b4febd4f7000759ec9119a31af76a057e29dd9215907da69ac95e50
   languageName: node
   linkType: hard
 
@@ -27659,7 +27675,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dropzone@npm:14.2.3, react-dropzone@npm:^14.2.3":
+"react-dropzone@npm:14.4.1":
+  version: 14.4.1
+  resolution: "react-dropzone@npm:14.4.1"
+  dependencies:
+    attr-accept: "npm:^2.2.4"
+    file-selector: "npm:^2.1.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 10/dd00fd88e6a804d4fe5e82fb2dce4a98416e6094e0950f84045289afc26be320e19b6dae4544be1a3f9fddc744022b1b91d479b05d183d6cf813b97fe1700dcc
+  languageName: node
+  linkType: hard
+
+"react-dropzone@npm:^14.2.3":
   version: 14.2.3
   resolution: "react-dropzone@npm:14.2.3"
   dependencies:
@@ -32086,6 +32115,13 @@ __metadata:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10/7dbf34e6f55c6492637adb81b555af5e3b4f9cc6b998fb440dac82d3b42bdc91560a35a5fb75e20e24a076c651438234da6743d139e4feabf0783f3cdfe1dddb
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.7.0":
+  version: 2.9.1
+  resolution: "tslib@npm:2.9.1"
+  checksum: 10/20aa8c3282c88f8dd1bf0a62c5b1aa03b35998cbc6db4780f6e84d593ba4ffe232bd967916c6e0f96b9e5d719dade9e329d1b2cfede31043481d8fd13f10ca5f
   languageName: node
   linkType: hard
 
