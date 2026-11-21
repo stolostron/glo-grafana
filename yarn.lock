@@ -5959,7 +5959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@msagl/core@npm:^1.1.19, @msagl/core@npm:^1.1.24":
+"@msagl/core@npm:^1.1.19":
   version: 1.1.24
   resolution: "@msagl/core@npm:1.1.24"
   dependencies:
@@ -5971,25 +5971,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@msagl/drawing@npm:^1.1.24":
-  version: 1.1.24
-  resolution: "@msagl/drawing@npm:1.1.24"
+"@msagl/core@npm:^1.1.25":
+  version: 1.1.25
+  resolution: "@msagl/core@npm:1.1.25"
   dependencies:
-    "@msagl/core": "npm:^1.1.24"
-  checksum: 10/b49e50cf9e581e3c56cf747bd34c16e8028768fb799283ae19985c423aed3789460c88f33e0b8d363cf5fe9aa1d99d5b36cf77ebe5c279b2c113f8ff11151317
+    queue-typescript: "npm:^1.0.1"
+    reliable-random: "npm:^0.0.1"
+    stack-typescript: "npm:^1.0.4"
+    typescript-string-operations: "npm:^1.4.1"
+  checksum: 10/aeda6d7f88d09ee02cbb67e3bd721819a076c7cbbc66ad93dd9e8d6dee549242bc7975aefb0ce012d637715ca00d39d1b6b11048c926ba79995e1392e7d6de59
+  languageName: node
+  linkType: hard
+
+"@msagl/drawing@npm:^1.1.25":
+  version: 1.1.25
+  resolution: "@msagl/drawing@npm:1.1.25"
+  dependencies:
+    "@msagl/core": "npm:^1.1.25"
+  checksum: 10/532324af05f1ea3e4c045e721279a072740493b9f3f6934f94fbe4b2b16d3f040a135955e74e5d066a37b57baa8826993460631e1e135510b5b65070334f16cb
   languageName: node
   linkType: hard
 
 "@msagl/parser@npm:^1.1.19":
-  version: 1.1.24
-  resolution: "@msagl/parser@npm:1.1.24"
+  version: 1.1.25
+  resolution: "@msagl/parser@npm:1.1.25"
   dependencies:
-    "@msagl/core": "npm:^1.1.24"
-    "@msagl/drawing": "npm:^1.1.24"
+    "@msagl/core": "npm:^1.1.25"
+    "@msagl/drawing": "npm:^1.1.25"
     "@types/parse-color": "npm:^1.0.1"
     dotparser: "npm:^1.1.1"
     parse-color: "npm:^1.0.0"
-  checksum: 10/6c310901805ed570c44ec7209b164856484586b31e8e17991924c87da1f4e5aefad1d564e426e1de5a8b1127b63af15ce30e9c0f30ad76523f80942f81e69217
+  checksum: 10/c8cf6b5f2d6d120d269b25b5189f4cd1bf02cf26fbb174fab8966101dbbce5f94e3c5d9b3725d3583663690b3db6b8783fa8292f233a166937e71c08fceb6ed4
   languageName: node
   linkType: hard
 
