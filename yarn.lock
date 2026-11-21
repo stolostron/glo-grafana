@@ -4263,22 +4263,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@grafana/async-query-data@npm:0.1.4":
-  version: 0.1.4
-  resolution: "@grafana/async-query-data@npm:0.1.4"
+"@grafana/aws-sdk@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@grafana/aws-sdk@npm:0.13.0"
   dependencies:
-    tslib: "npm:^2.4.1"
-  checksum: 10/634dfe91c6bbc9742bf296062ead0414055b5e003da5ac776896d2ee22c8674476dd84c77637cc01a618906ab68531dfa9a45f971b0ffa78400943fe61378ab7
-  languageName: node
-  linkType: hard
-
-"@grafana/aws-sdk@npm:0.3.3":
-  version: 0.3.3
-  resolution: "@grafana/aws-sdk@npm:0.3.3"
-  dependencies:
-    "@grafana/async-query-data": "npm:0.1.4"
-    "@grafana/experimental": "npm:1.7.0"
-  checksum: 10/794de025e6c852ed77bd2bcc76f2b9bbe75af73e92c5d092824b4f053df23f1d4085a5710fe3851a158087283722f2b4b73a73c4b7a46c27fa879899d243bea9
+    "@openfeature/react-sdk": "npm:^1.3.0"
+    "@openfeature/web-sdk": "npm:^1.10.0"
+  peerDependencies:
+    "@grafana/plugin-ui": 0.18.0
+  checksum: 10/013b70713b93233639cab04bcb1873369a2863f7f5261aa7d3d2b6585211abcb34a3e3dcc371a5063fcdaad25915bec3c5e13314e1d2692c17fffe162b5dfc10
   languageName: node
   linkType: hard
 
@@ -4405,25 +4398,6 @@ __metadata:
     tslib: "npm:2.6.3"
   languageName: unknown
   linkType: soft
-
-"@grafana/experimental@npm:1.7.0":
-  version: 1.7.0
-  resolution: "@grafana/experimental@npm:1.7.0"
-  dependencies:
-    "@types/uuid": "npm:^8.3.3"
-    uuid: "npm:^8.3.2"
-  peerDependencies:
-    "@emotion/css": 11.1.3
-    "@grafana/data": ^10.0.0
-    "@grafana/runtime": ^10.0.0
-    "@grafana/ui": ^10.0.0
-    react: 17.0.2
-    react-dom: 17.0.2
-    react-select: ^5.2.1
-    rxjs: 7.8.0
-  checksum: 10/1d30e266d3b2b26f66ff8981ebd0f9804574349079e205b70690cff6f5e742a26096dc90fa90e8faa44cf4bc91a2650cae7994b5eb396663f8b7e73beaccda9b
-  languageName: node
-  linkType: hard
 
 "@grafana/experimental@npm:1.7.11":
   version: 1.7.11
@@ -6496,6 +6470,25 @@ __metadata:
   version: 2.1.0
   resolution: "@open-draft/until@npm:2.1.0"
   checksum: 10/622be42950afc8e89715d0fd6d56cbdcd13e36625e23b174bd3d9f06f80e25f9adf75d6698af93bca1e1bf465b9ce00ec05214a12189b671fb9da0f58215b6f4
+  languageName: node
+  linkType: hard
+
+"@openfeature/react-sdk@npm:^1.3.0":
+  version: 1.4.1
+  resolution: "@openfeature/react-sdk@npm:1.4.1"
+  peerDependencies:
+    "@openfeature/web-sdk": ^1.9.0
+    react: ">=16.8.0"
+  checksum: 10/a08519a15026aab095efac4ccd277f2b5adc2e8338b88a27fd0740546296ab7e50efef05a2a565c0a8607bcc09a2c1b456c5a8a9713ed9ca43946e835201676e
+  languageName: node
+  linkType: hard
+
+"@openfeature/web-sdk@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "@openfeature/web-sdk@npm:1.10.0"
+  peerDependencies:
+    "@openfeature/core": ^1.12.0
+  checksum: 10/a9dcfaa93c3093580526db4ee24ffbb3ff81a2c2bf52827d8e64a0e673e5faae5dda9ca31f58801739a7d0b92d5cc5d76111bbc2fc00621e4e002cd964a3dc09
   languageName: node
   linkType: hard
 
@@ -19172,7 +19165,7 @@ __metadata:
     "@fingerprintjs/fingerprintjs": "npm:^3.4.2"
     "@floating-ui/react": "npm:0.26.16"
     "@glideapps/glide-data-grid": "npm:^6.0.0"
-    "@grafana/aws-sdk": "npm:0.3.3"
+    "@grafana/aws-sdk": "npm:0.13.0"
     "@grafana/azure-sdk": "npm:0.0.3"
     "@grafana/data": "workspace:*"
     "@grafana/e2e-selectors": "workspace:*"
