@@ -89,7 +89,7 @@ require (
 	github.com/go-openapi/strfmt v0.23.0 // @grafana/alerting-backend
 	github.com/go-redis/redis/v8 v8.11.5 // @grafana/grafana-backend-group
 	github.com/go-sourcemap/sourcemap v2.1.3+incompatible // @grafana/grafana-backend-group
-	github.com/go-sql-driver/mysql v1.7.1 // @grafana/grafana-search-and-storage
+	github.com/go-sql-driver/mysql v1.8.1 // @grafana/grafana-search-and-storage
 	github.com/go-stack/stack v1.8.1 // @grafana/grafana-backend-group
 	github.com/gobwas/glob v0.2.3 // @grafana/grafana-backend-group
 	github.com/gogo/protobuf v1.3.2 // @grafana/alerting-backend
@@ -142,7 +142,7 @@ require (
 	github.com/influxdata/influxdb-client-go/v2 v2.13.0 // @grafana/observability-metrics
 	github.com/influxdata/line-protocol v0.0.0-20210922203350-b1ad95c89adf // @grafana/grafana-app-platform-squad
 	github.com/jmespath/go-jmespath v0.4.0 // @grafana/grafana-backend-group
-	github.com/jmoiron/sqlx v1.3.5 // @grafana/grafana-backend-group
+	github.com/jmoiron/sqlx v1.4.0 // @grafana/grafana-backend-group
 	github.com/json-iterator/go v1.1.12 // @grafana/grafana-backend-group
 	github.com/lib/pq v1.10.9 // @grafana/grafana-backend-group
 	github.com/linkedin/goavro/v2 v2.10.0 // @grafana/grafana-backend-group
@@ -151,7 +151,7 @@ require (
 	github.com/magefile/mage v1.15.0 // @grafana/grafana-release-guild
 	github.com/matryer/is v1.4.0 // @grafana/grafana-as-code
 	github.com/mattn/go-isatty v0.0.20 // @grafana/grafana-backend-group
-	github.com/mattn/go-sqlite3 v1.14.19 // @grafana/grafana-backend-group
+	github.com/mattn/go-sqlite3 v1.14.22 // @grafana/grafana-backend-group
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // @grafana/alerting-backend
 	github.com/microsoft/go-mssqldb v1.6.1-0.20240214161942-b65008136246 // @grafana/grafana-bi-squad
 	github.com/mitchellh/mapstructure v1.5.0 //@grafana/identity-access-team
@@ -486,6 +486,7 @@ require (
 )
 
 require (
+	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/dprotaso/go-yit v0.0.0-20220510233725-9ba8df137936 // indirect
 	github.com/go-openapi/swag/jsonname v0.26.0 // indirect
 	github.com/oasdiff/yaml v0.1.1 // indirect
