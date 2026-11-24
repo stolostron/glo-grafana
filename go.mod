@@ -172,7 +172,7 @@ require (
 	github.com/spf13/cobra v1.8.0 // @grafana/grafana-app-platform-squad
 	github.com/spf13/pflag v1.0.5 // @grafana-app-platform-squad
 	github.com/spyzhov/ajson v0.9.0 // @grafana/grafana-app-platform-squad
-	github.com/stretchr/testify v1.11.1 // @grafana/grafana-backend-group
+	github.com/stretchr/testify v1.12.1 // @grafana/grafana-backend-group
 	github.com/teris-io/shortid v0.0.0-20171029131806-771a37caa5cf // @grafana/grafana-backend-group
 	github.com/ua-parser/uap-go v0.0.0-20211112212520-00c877edfe0f // @grafana/grafana-backend-group
 	github.com/urfave/cli v1.22.15 // @grafana/grafana-backend-group
@@ -185,12 +185,12 @@ require (
 	go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace v0.51.0 // @grafana/grafana-operator-experience-squad
 	go.opentelemetry.io/contrib/propagators/jaeger v1.26.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/contrib/samplers/jaegerremote v0.20.0 // @grafana/grafana-backend-group
-	go.opentelemetry.io/otel v1.44.0 // @grafana/grafana-backend-group
+	go.opentelemetry.io/otel v1.47.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/exporters/jaeger v1.17.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.44.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.44.0 // @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/sdk v1.44.0 // @grafana/grafana-backend-group
-	go.opentelemetry.io/otel/trace v1.44.0 // @grafana/grafana-backend-group
+	go.opentelemetry.io/otel/trace v1.47.0 // @grafana/grafana-backend-group
 	go.uber.org/atomic v1.11.0 // @grafana/alerting-backend
 	go.uber.org/goleak v1.3.0 // @grafana/grafana-search-and-storage
 	gocloud.dev v0.25.0 // @grafana/grafana-app-platform-squad
@@ -310,7 +310,7 @@ require (
 	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32 // indirect
 	github.com/go-asn1-ber/asn1-ber v1.5.4 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
-	github.com/go-logr/logr v1.4.3 // indirect; @grafana/grafana-app-platform-squad
+	github.com/go-logr/logr v1.4.4 // indirect; @grafana/grafana-app-platform-squad
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/analysis v0.22.2 // indirect
 	github.com/go-openapi/errors v0.22.0 // indirect
@@ -406,7 +406,6 @@ require (
 	github.com/pierrec/lz4/v4 v4.1.21 // indirect
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/common/sigv4 v0.1.0 // indirect
 	github.com/prometheus/exporter-toolkit v0.11.0 // indirect
 	github.com/prometheus/procfs v0.14.0 // indirect
@@ -425,7 +424,7 @@ require (
 	github.com/shurcooL/vfsgen v0.0.0-20200824052919-0d455de96546 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/stoewer/go-strcase v1.3.0 // indirect
-	github.com/stretchr/objx v0.5.2 // indirect
+	github.com/stretchr/objx v0.5.3 // indirect
 	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	github.com/unknwon/bra v0.0.0-20200517080246-1e3013ecaff8 // indirect
@@ -445,7 +444,7 @@ require (
 	go.mongodb.org/mongo-driver v1.17.10 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.51.0 // indirect
-	go.opentelemetry.io/otel/metric v1.44.0 // indirect
+	go.opentelemetry.io/otel/metric v1.47.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.10.0 // indirect
 	go.starlark.net v0.0.0-20230525235612-a134d8f9ddca // indirect
 	go.uber.org/multierr v1.11.0 // indirect
@@ -494,6 +493,8 @@ require (
 	github.com/speakeasy-api/jsonpath v0.6.3 // indirect
 	github.com/speakeasy-api/openapi v1.24.0 // indirect
 	github.com/vmware-labs/yaml-jsonpath v0.3.2 // indirect
+	go.opentelemetry.io/otel/log v1.47.0 // indirect
+	go.yaml.in/yaml/v3 v3.0.5 // indirect
 )
 
 // Use fork of crewjam/saml with fixes for some issues until changes get merged into upstream
