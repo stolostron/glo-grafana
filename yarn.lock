@@ -19467,7 +19467,7 @@ __metadata:
     testing-library-selector: "npm:0.3.1"
     tether-drop: "https://github.com/torkelo/drop"
     tinycolor2: "npm:1.6.0"
-    tracelib: "npm:1.0.1"
+    tracelib: "npm:1.1.0"
     ts-jest: "npm:29.1.4"
     ts-node: "npm:10.9.2"
     tslib: "npm:2.6.3"
@@ -31851,10 +31851,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tracelib@npm:1.0.1":
-  version: 1.0.1
-  resolution: "tracelib@npm:1.0.1"
-  checksum: 10/4d7f5e6e38611d3920744c71bd33b29e24c84bde1d750a6735e95a45be041e9ceef0de595ec60a337dc9c0abbacc852268619af99d35843458a2ee5233d64b60
+"tracelib@npm:1.1.0":
+  version: 1.1.0
+  resolution: "tracelib@npm:1.1.0"
+  checksum: 10/eb85b5abc9cd1a6b8e0ccbcfaf75c8c87c47bb8b88f9a80e5b6e92338207c3de71ceaee82f9f4a77616170e42bf9c0200be96d3853f0494d25027370eda464cd
   languageName: node
   linkType: hard
 
