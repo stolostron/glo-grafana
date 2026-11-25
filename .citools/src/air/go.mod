@@ -22,6 +22,6 @@ require (
 	github.com/spf13/cast v1.8.0 // indirect
 	github.com/tdewolff/parse/v2 v2.8.1 // indirect
 	golang.org/x/sys v0.33.0 // indirect
-	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 )

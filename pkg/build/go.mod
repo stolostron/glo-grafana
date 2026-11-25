@@ -13,9 +13,9 @@ require (
 	go.opentelemetry.io/otel v1.43.0 // indirect; @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/sdk v1.43.0 // indirect; @grafana/grafana-backend-group
 	go.opentelemetry.io/otel/trace v1.43.0 // indirect; @grafana/grafana-backend-group
-	golang.org/x/net v0.54.0 // indirect; @grafana/oss-big-tent @grafana/partner-datasources
+	golang.org/x/net v0.62.0 // indirect; @grafana/oss-big-tent @grafana/partner-datasources
 	golang.org/x/sync v0.20.0 // @grafana/alerting-backend
-	golang.org/x/text v0.37.0 // indirect; @grafana/grafana-backend-group
+	golang.org/x/text v0.43.0 // indirect; @grafana/grafana-backend-group
 	google.golang.org/grpc v1.83.2 // indirect; @grafana/plugins-platform-backend
 	google.golang.org/protobuf v1.36.11 // indirect; @grafana/plugins-platform-backend
 )
