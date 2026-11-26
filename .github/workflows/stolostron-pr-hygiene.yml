@@ -1,0 +1,68 @@
+name: Stolostron PR Hygiene
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pr-hygiene:
+    name: DCO Sign-off & Jira Title Check
+    if: >-
+      github.event.pull_request.user.type != 'Bot' &&
+      !endsWith(github.event.pull_request.user.login, '[bot]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Verify Jira ID in PR title
+        shell: bash
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          set -euo pipefail
+          echo "PR title: ${PR_TITLE}"
+          jira_re='(^|[^A-Za-z0-9])(ACM|RHACM|OCPBUGS|OADP)-[0-9]+'
+          jira_re+='([^A-Za-z0-9]|$)'
+          if [[ "${PR_TITLE}" =~ ${jira_re} ]]; then
+            echo "Found Jira issue key in PR title."
+          else
+            msg="PR title must reference a Jira key (e.g., ACM-12345)."
+            echo "::error::${msg}"
+            exit 1
+          fi
+
+      - name: Verify DCO Signed-off-by on all PR commits
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          dco_re='(?m)^Signed-off-by:[[:space:]]+.+[[:space:]]+<[^>]+>'
+          dco_re+='[[:space:]]*$'
+          jq_filter='.[] | select((.commit.message | '
+          jq_filter+="test(\"${dco_re}\")) | not) | "
+          jq_filter+='"\(.sha[0:10]) \(.commit.message | split("\n")[0])"'
+          missing="$(
+            gh api --paginate "repos/${REPO}/pulls/${PR_NUMBER}/commits" \
+              --jq "${jq_filter}"
+          )"
+          if [ -n "${missing}" ]; then
+            echo "::error::Commit(s) missing DCO Signed-off-by trailer:"
+            echo "${missing}"
+            exit 1
+          fi
+          echo "All commits contain a valid Signed-off-by trailer."

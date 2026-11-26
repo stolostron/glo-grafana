@@ -1,16 +1,24 @@
 name: Trivy Scan
 on:
   pull_request:
-    # only run on PRs where go.mod/go.sum/etc have been updated
+    # only run on PRs where Go modules, workspace, or Containerfile changed
     paths:
-      - go.*
-      - .github/workflows/trivy-scan.yml
+      - 'go.*'
+      - '**/go.mod'
+      - '**/go.sum'
+      - 'go.work*'
+      - 'Containerfile.konflux'
+      - '.trivyignore'
   push:
     branches:
       - main
     paths:
-      - go.*
-      - .github/workflows/trivy-scan.yml
+      - 'go.*'
+      - '**/go.mod'
+      - '**/go.sum'
+      - 'go.work*'
+      - 'Containerfile.konflux'
+      - '.trivyignore'
 
 jobs:
   trivy-scan:

@@ -1,0 +1,194 @@
+name: Stolostron Go Checks
+
+on:
+  pull_request:
+    paths:
+      - '**.go'
+      - '**/go.mod'
+      - '**/go.sum'
+      - 'go.mod'
+      - 'go.sum'
+      - 'go.work'
+      - 'go.work.sum'
+      - 'Containerfile.konflux'
+      - 'Dockerfile.ocp'
+      - 'stolostron-patches/**'
+      - '.github/workflows/stolostron-go-checks.yml'
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
+
+jobs:
+  workspace-and-build:
+    name: Go Workspace & Binary Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
+
+      - name: Setup Go
+        uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Verify go.mod and go.work alignment
+        shell: bash
+        run: |
+          set -euo pipefail
+          mod_go="$(awk '/^go[[:space:]]+/ {print $2; exit}' go.mod)"
+          echo "go.mod go directive: ${mod_go}"
+          if [ -z "${mod_go}" ]; then
+            echo "::error::Failed to parse go directive from go.mod"
+            exit 1
+          fi
+          if [ -f go.work ]; then
+            work_go="$(awk '/^go[[:space:]]+/ {print $2; exit}' go.work)"
+            echo "go.work go directive: ${work_go}"
+            if [ "${mod_go}" != "${work_go}" ]; then
+              msg="go.mod (${mod_go}) and go.work (${work_go})"
+              echo "::error::${msg} have mismatched go directives"
+              exit 1
+            fi
+          fi
+          echo "Verifying Go workspace module graph..."
+          go list -m all > /dev/null
+          echo "Go workspace module graph resolved cleanly."
+
+      - name: Verify Stolostron patches apply cleanly
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          patches=(stolostron-patches/*.patch)
+          if [ "${#patches[@]}" -gt 0 ]; then
+            echo "Checking ${#patches[@]} stolostron patch(es)..."
+            git apply --check "${patches[@]}"
+            echo "All stolostron patches apply cleanly."
+          else
+            echo "No stolostron-patches/*.patch files found; skipping."
+          fi
+
+      - name: Build Grafana binaries
+        shell: bash
+        env:
+          CGO_ENABLED: '0'
+        run: |
+          set -euo pipefail
+          tmpbin="$(mktemp -d)"
+          trap 'rm -rf "${tmpbin}"' EXIT
+          go build -ldflags="-s -w" -o "${tmpbin}/" \
+            ./pkg/cmd/grafana \
+            ./pkg/cmd/grafana-server \
+            ./pkg/cmd/grafana-cli
+          ls -lh "${tmpbin}/"
+
+      - name: Verify Go module checksums
+        shell: bash
+        run: go mod verify
+
+  changed-go-tests:
+    name: Changed-Package Go Vet & Tests
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        with:
+          persist-credentials: false
+
+      - name: Detect changed Go directories
+        id: changed
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          changed_dirs="$(
+            gh api --paginate "repos/${REPO}/pulls/${PR_NUMBER}/files" \
+              --jq '.[].filename | select(endswith(".go"))' \
+            | while IFS= read -r file; do
+                [ -n "${file}" ] && dirname -- "${file}"
+              done \
+            | sort -u
+          )"
+          {
+            echo "dirs<<EOF"
+            echo "${changed_dirs}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+          if [ -n "${changed_dirs}" ]; then
+            echo "has_go_files=true" >> "${GITHUB_OUTPUT}"
+            echo "Changed Go directories:"
+            echo "${changed_dirs}"
+          else
+            echo "has_go_files=false" >> "${GITHUB_OUTPUT}"
+            echo "No .go files changed in this PR."
+          fi
+
+      - name: Setup Go
+        if: steps.changed.outputs.has_go_files == 'true'
+        uses: actions/setup-go@44694675825211faa026b3c33043df3e48a5fa00
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Run go vet and go test -race on changed packages
+        if: steps.changed.outputs.has_go_files == 'true'
+        shell: bash
+        env:
+          CHANGED_DIRS: ${{ steps.changed.outputs.dirs }}
+        run: |
+          set -euo pipefail
+          packages=()
+          fmt='{{if .Error}}{{.Error.Err}}{{end}}'
+          while IFS= read -r dir; do
+            [ -z "${dir}" ] && continue
+            if [ "${dir}" = "." ]; then
+              pkg="."
+            else
+              pkg="./${dir}"
+            fi
+            if [ ! -d "${pkg}" ]; then
+              echo "Skipping deleted directory: ${pkg}"
+              continue
+            fi
+            list_err="$(go list -e -f "${fmt}" "${pkg}" 2>&1 || true)"
+            case "${list_err}" in
+              *"does not contain package"* \
+              |*"outside modules listed in go.work"* \
+              |*"build constraints exclude all Go files"* \
+              |*"no Go files in"*)
+                echo "Skipping ${pkg}: ${list_err}"
+                continue
+                ;;
+            esac
+            packages+=("${pkg}")
+          done <<< "${CHANGED_DIRS}"
+
+          if [ "${#packages[@]}" -eq 0 ]; then
+            echo "No buildable workspace Go packages changed; skipping."
+            exit 0
+          fi
+
+          echo "Running go vet on ${#packages[@]} package(s):"
+          printf '  %s\n' "${packages[@]}"
+          go vet "${packages[@]}"
+
+          echo "Running go test -race -short on ${#packages[@]} pkg(s):"
+          go test -race -short -count=1 -timeout=10m "${packages[@]}"
