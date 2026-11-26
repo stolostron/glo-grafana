@@ -72,7 +72,7 @@ require (
 	github.com/bufbuild/connect-go v1.10.0 // @grafana/observability-traces-and-profiling
 	github.com/bwmarrin/snowflake v0.3.0 // @grafan/grafana-app-platform-squad
 	github.com/centrifugal/centrifuge v0.30.2 // @grafana/grafana-app-platform-squad
-	github.com/crewjam/saml v0.4.13 // @grafana/identity-access-team
+	github.com/crewjam/saml v0.5.2 // @grafana/identity-access-team
 	github.com/dave/dst v0.27.2 // @grafana/grafana-as-code
 	github.com/dlmiddlecote/sqlstats v1.0.2 // @grafana/grafana-backend-group
 	github.com/docker/docker v26.0.1+incompatible // @grafana/grafana-release-guild
