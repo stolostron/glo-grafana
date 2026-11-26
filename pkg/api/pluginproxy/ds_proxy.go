@@ -320,16 +320,21 @@ func (proxy *DataSourceProxy) validateRequest() error {
 		return nil
 	}
 
-	// Trailing validation below this point for routes that were not matched
-	if proxy.ds.Type == datasources.DS_PROMETHEUS || proxy.ds.Type == datasources.DS_AMAZON_PROMETHEUS || proxy.ds.Type == datasources.DS_AZURE_PROMETHEUS {
+	// Trailing validation below this point for routes that were not matched.
+	// Loki is included because its rules API (/loki/api/v1/rules) is reachable
+	// through the generic datasource proxy: without this guard a Viewer could
+	// create, modify or delete alerting rules (CVE-2026-9703). Legitimate rule
+	// writes go through the ruler API, which enforces datasources-scoped RBAC.
+	if proxy.ds.Type == datasources.DS_PROMETHEUS || proxy.ds.Type == datasources.DS_AMAZON_PROMETHEUS ||
+		proxy.ds.Type == datasources.DS_AZURE_PROMETHEUS || proxy.ds.Type == datasources.DS_LOKI {
 		if proxy.ctx.Req.Method == "DELETE" {
-			return errors.New("non allow-listed DELETEs not allowed on proxied Prometheus datasource")
+			return fmt.Errorf("non allow-listed DELETEs not allowed on proxied %s datasource", proxy.ds.Type)
 		}
 		if proxy.ctx.Req.Method == "PUT" {
-			return errors.New("non allow-listed PUTs not allowed on proxied Prometheus datasource")
+			return fmt.Errorf("non allow-listed PUTs not allowed on proxied %s datasource", proxy.ds.Type)
 		}
 		if proxy.ctx.Req.Method == "POST" {
-			return errors.New("non allow-listed POSTs not allowed on proxied Prometheus datasource")
+			return fmt.Errorf("non allow-listed POSTs not allowed on proxied %s datasource", proxy.ds.Type)
 		}
 	}
 
